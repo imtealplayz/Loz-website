@@ -672,7 +672,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">Latest</span><span class="pver">Version 4.1</span></div><span class="pdate">2026-02-27</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">Latest</span><span class="pver">Version 4.2</span></div><span class="pdate">2026-03-16</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">🐛 Fixed ULT cooldown — both players' ULT now ticks every round. Spam no longer possible.</div>
+        <div class="patch-item">🐛 Fixed all 17 combat bugs — passives, burns, Oni possession, Chimera stacks, God retribution all working correctly.</div>
+        <div class="patch-item">⚔️ Fight system overhauled — single embed with buttons attached, no more message spam.</div>
+        <div class="patch-item">🔄 Choice ULTs (Angel, Ice Dragon, Earth Dragon) now swap buttons inline.</div>
+        <div class="patch-item">📊 HP display now updates only after ALL effects fully resolve.</div>
+        <div class="patch-item">🤖 Bot turn shows Bot is thinking during AI delay.</div>
+        <div class="patch-item">🗄️ Migrated to MongoDB — persistent data, no more resets on bot restart.</div>
+        <div class="patch-item">📋 /species now shows full ranked species list with roll chances when used with no argument.</div>
+        <div class="patch-item">👑 /god species-add now supports up to 1,000,000 rolls.</div>
+        <div class="patch-item">🎲 /species-roll reroll menu stays in one message instead of spamming the channel.</div>
+      </div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.1</span></div><span class="pdate">2026-02-27</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
         <div class="patch-item">🐛 Reaper Quest fixed — progress no longer resets between sessions.</div>
         <div class="patch-item">⚙️ Constant healing bug under investigation.</div>
