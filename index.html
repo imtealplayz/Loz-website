@@ -48,13 +48,31 @@
 .cd-species-reveal{margin-top:2.5rem;text-align:center;position:relative;}
 .cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,210,255,0.6);margin-bottom:0.75rem;opacity:0;}
 .cd-species-names{display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;}
-.cd-species-sephian{
+.cd-sephian-wrap{
+  position:relative;display:inline-flex;align-items:baseline;
   font-family:var(--font-display);font-size:clamp(1.4rem,4.5vw,2.8rem);font-weight:900;
-  letter-spacing:0.14em;text-transform:uppercase;
-  color:#e8f0ff;text-shadow:0 0 50px rgba(200,225,255,0);
-  opacity:0;white-space:nowrap;
-  -webkit-mask-image:linear-gradient(to right,black 0%,transparent 8%);
-  mask-image:linear-gradient(to right,black 0%,transparent 8%);
+  letter-spacing:0.14em;text-transform:uppercase;color:#e8f0ff;
+  white-space:nowrap;
+}
+.cd-sephian-s{
+  color:#e8f0ff;
+  text-shadow:0 0 30px rgba(220,235,255,0.9),0 0 10px rgba(220,235,255,0.5);
+  opacity:1;position:relative;z-index:2;
+}
+.cd-sephian-rest{
+  color:#e8f0ff;opacity:1;position:relative;z-index:1;
+}
+.cd-sephian-blur{
+  position:absolute;
+  /* covers "ephian" only — starts right after the S */
+  left:0.72em;right:0;top:-2px;bottom:-2px;
+  background:rgba(10,15,25,0.55);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  border-radius:3px;
+  z-index:3;
+  opacity:1;
+  transition:none;
 }
 .cd-species-sep{
   font-family:var(--font-display);font-size:clamp(1rem,3vw,2rem);font-weight:300;
@@ -855,7 +873,10 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
     <div class="cd-species-reveal">
       <div class="cd-species-label" id="cd-species-label">Awakenings Incoming</div>
       <div class="cd-species-names">
-        <span class="cd-species-sephian" id="cd-sephian">Sephian</span>
+        <span class="cd-sephian-wrap" id="cd-sephian-wrap">
+          <span class="cd-sephian-s">S</span><span class="cd-sephian-rest" id="cd-sephian-rest">ephian</span>
+          <span class="cd-sephian-blur" id="cd-sephian-blur"></span>
+        </span>
         <span class="cd-species-sep" id="cd-sep">·</span>
         <span class="cd-species-archdemon" id="cd-archdemon">Archdemon</span>
       </div>
@@ -995,62 +1016,63 @@ function updateSpeciesReveal() {
   const diff  = CD_TARGET - now;
   const total = Math.max(1, CD_TARGET - CD_START);
 
-  const sephian   = document.getElementById('cd-sephian');
-  const sep       = document.getElementById('cd-sep');
-  const archdemon = document.getElementById('cd-archdemon');
-  const label     = document.getElementById('cd-species-label');
-  const msg       = document.getElementById('cd-reveal-msg');
-  if (!sephian || !archdemon) return;
+  const sephianWrap = document.getElementById('cd-sephian-wrap');
+  const blurBox      = document.getElementById('cd-sephian-blur');
+  const sep          = document.getElementById('cd-sep');
+  const archdemon    = document.getElementById('cd-archdemon');
+  const label        = document.getElementById('cd-species-label');
+  const msg          = document.getElementById('cd-reveal-msg');
+  if (!blurBox || !archdemon) return;
 
   if (diff <= 0) {
-    [sephian, sep, archdemon, label].forEach(el => {
-      el.style.opacity = '1';
-      el.style.webkitMaskImage = 'none';
-      el.style.maskImage = 'none';
-    });
-    sephian.style.filter           = 'blur(0px)';
+    // Full reveal at zero
+    blurBox.style.opacity          = '0';
+    blurBox.style.backdropFilter   = 'blur(0px)';
+    blurBox.style.webkitBackdropFilter = 'blur(0px)';
+    sephianWrap.style.opacity      = '1';
+    sephianWrap.style.textShadow   = '0 0 40px rgba(220,235,255,0.9),0 0 12px rgba(220,235,255,0.5)';
+    sep.style.opacity              = '1';
+    archdemon.style.opacity        = '1';
     archdemon.style.filter         = 'blur(0px)';
-    sephian.style.textShadow       = '0 0 40px rgba(200,225,255,0.9), 0 0 10px rgba(200,225,255,0.5)';
-    archdemon.style.textShadow     = '0 0 40px rgba(192,57,43,1), 0 0 15px rgba(192,57,43,0.6)';
-    msg.style.display = 'block';
+    archdemon.style.webkitMaskImage= 'none';
+    archdemon.style.maskImage      = 'none';
+    archdemon.style.textShadow     = '0 0 40px rgba(139,0,0,1),0 0 15px rgba(139,0,0,0.6)';
+    label.style.opacity            = '1';
+    msg.style.display              = 'block';
     return;
   }
 
   // progress 0 (day 1) -> 1 (at zero)
   const elapsed = now - CD_START;
   const rawProg = Math.max(0, Math.min(1, elapsed / total));
-  // ease-in: very slow start, accelerates near end
+  // ease-in: very slow start, accelerates near the end
   const eased   = Math.pow(rawProg, 2.8);
 
-  // opacity 0 -> 1
-  const opacity = eased;
-  // blur 10px -> 0
-  const blur    = Math.max(0, 10 * (1 - eased));
+  // ── Sephian wrap: always fully visible, "S" always clear ──
+  sephianWrap.style.opacity    = '1';
+  sephianWrap.style.textShadow = `0 0 30px rgba(220,235,255,${(eased*0.7).toFixed(2)})`;
 
-  // Left-to-right reveal via clip percentage
-  // Sephian leads, archdemon follows slightly behind
-  const sephPct = Math.min(100, eased * 115);
-  const archPct = Math.max(0, Math.min(100, (eased - 0.06) * 120));
-  const sepPct  = Math.max(0, Math.min(100, (eased - 0.03) * 115));
+  // ── Blur box over "ephian": opacity 1->0 and blur 8->0 as timer falls ──
+  const boxOpacity = Math.max(0, 1 - eased);
+  const boxBlur    = Math.max(0, 8 * (1 - eased));
+  blurBox.style.opacity              = boxOpacity.toFixed(3);
+  blurBox.style.backdropFilter       = `blur(${boxBlur.toFixed(1)}px)`;
+  blurBox.style.webkitBackdropFilter = `blur(${boxBlur.toFixed(1)}px)`;
+  blurBox.style.background           = `rgba(10,15,25,${(boxOpacity*0.55).toFixed(3)})`;
 
+  // ── Separator ──
+  sep.style.opacity = (eased * 0.8).toFixed(3);
+
+  // ── Archdemon: left-to-right unfade ──
+  const archPct = Math.max(0, Math.min(100, (eased - 0.04) * 120));
   const ltr = (pct) =>
-    `linear-gradient(to right, black ${Math.max(0,pct-2).toFixed(1)}%, transparent ${Math.min(100,pct+6).toFixed(1)}%)`;
+    `linear-gradient(to right,black ${Math.max(0,pct-2).toFixed(1)}%,transparent ${Math.min(100,pct+8).toFixed(1)}%)`;
 
-  sephian.style.opacity          = opacity.toFixed(3);
-  sephian.style.filter           = `blur(${blur.toFixed(1)}px)`;
-  sephian.style.webkitMaskImage  = ltr(sephPct);
-  sephian.style.maskImage        = ltr(sephPct);
-  sephian.style.textShadow       = `0 0 40px rgba(220,235,255,${(eased*0.8).toFixed(2)}), 0 0 12px rgba(220,235,255,${(eased*0.4).toFixed(2)})`;
-
-  sep.style.opacity              = (eased * 0.7).toFixed(3);
-  sep.style.webkitMaskImage      = ltr(sepPct);
-  sep.style.maskImage            = ltr(sepPct);
-
-  archdemon.style.opacity         = opacity.toFixed(3);
-  archdemon.style.filter          = `blur(${blur.toFixed(1)}px)`;
+  archdemon.style.opacity         = eased.toFixed(3);
+  archdemon.style.filter          = `blur(${Math.max(0,8*(1-eased)).toFixed(1)}px)`;
   archdemon.style.webkitMaskImage = ltr(archPct);
   archdemon.style.maskImage       = ltr(archPct);
-  archdemon.style.textShadow      = `0 0 40px rgba(139,0,0,${(eased*0.9).toFixed(2)}), 0 0 15px rgba(139,0,0,${(eased*0.5).toFixed(2)})`;
+  archdemon.style.textShadow      = `0 0 40px rgba(139,0,0,${(eased*0.9).toFixed(2)}),0 0 15px rgba(139,0,0,${(eased*0.5).toFixed(2)})`;
 
   label.style.opacity = (eased * 0.85).toFixed(3);
 }
