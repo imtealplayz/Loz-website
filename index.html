@@ -46,9 +46,9 @@
 
 /* SPECIES REVEAL */
 .cd-species-reveal{margin-top:2.5rem;text-align:center;position:relative;}
-.cd-species-ghost{font-family:var(--font-display);font-size:clamp(1.6rem,5vw,3rem);font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:#ff3355;text-shadow:0 0 60px rgba(255,50,80,0.5);opacity:0;filter:blur(14px);transition:opacity 0.8s ease,filter 0.8s ease;pointer-events:none;}
+.cd-species-ghost{font-family:var(--font-display);font-size:clamp(1.6rem,5vw,3rem);font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:#ff3355;text-shadow:0 0 60px rgba(255,50,80,0.1);opacity:0.08;filter:blur(18px);transition:none;pointer-events:none;}
 .cd-species-ghost.revealed{opacity:1;filter:blur(0px);}
-.cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,80,100,0.5);margin-bottom:0.5rem;opacity:0;transition:opacity 0.8s ease;}
+.cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,80,100,0.5);margin-bottom:0.5rem;opacity:0.07;}
 .cd-species-label.revealed{opacity:1;}
 .cd-reveal-msg{display:none;font-family:var(--font-display);font-size:clamp(1.1rem,3vw,1.8rem);font-weight:700;color:#ff3355;text-shadow:0 0 40px rgba(255,50,80,0.6);letter-spacing:0.08em;margin-top:0.75rem;animation:revealPop 0.6s ease forwards;}
 @keyframes revealPop{0%{opacity:0;transform:scale(0.85);}60%{transform:scale(1.06);}100%{opacity:1;transform:scale(1);}}
@@ -961,43 +961,48 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 // ==================== SPECIES REVEAL ====================
-const REVEAL_WINDOW = 72 * 3600 * 1000; // start fading in 72h before end
+// Total countdown duration — text starts maximally blurred at the very beginning
+// and becomes sharper/clearer as the timer approaches zero
 
 function updateSpeciesReveal() {
   const now = Date.now();
   const diff = CD_TARGET - now;
+  const TOTAL = CD_TARGET - 1742217000000; // approx start time (Mar 17 2026)
   const ghost = document.getElementById('cd-species-ghost');
   const label = document.getElementById('cd-species-label');
   const msg   = document.getElementById('cd-reveal-msg');
   if (!ghost) return;
 
   if (diff <= 0) {
-    // fully revealed
+    // fully revealed at zero
     ghost.style.opacity = '1';
     ghost.style.filter  = 'blur(0px)';
-    ghost.classList.add('revealed');
-    label.classList.add('revealed');
+    ghost.style.textShadow = '0 0 80px rgba(255,50,80,0.9), 0 0 30px rgba(255,50,80,0.6)';
+    label.style.opacity = '1';
     msg.style.display = 'block';
     return;
   }
 
-  if (diff >= REVEAL_WINDOW) {
-    ghost.style.opacity = '0';
-    ghost.style.filter  = 'blur(14px)';
-    label.style.opacity = '0';
-    return;
-  }
+  // progress: 0 = just started (far from end), 1 = at zero
+  const elapsed = CD_TARGET - diff;
+  const rawProgress = Math.max(0, Math.min(1, elapsed / Math.max(TOTAL, 1)));
 
-  // progress 0 (far away) → 1 (at zero)
-  const progress = 1 - (diff / REVEAL_WINDOW);
-  // ease: slow start, fast finish
-  const eased = Math.pow(progress, 2.2);
-  const opacity = Math.min(1, eased);
-  const blur    = Math.max(0, 14 * (1 - eased));
+  // easing: starts very slow, accelerates toward the end
+  const eased = Math.pow(rawProgress, 1.8);
+
+  // opacity: always visible (starts at 0.08, ends at 1)
+  const opacity = 0.08 + (eased * 0.92);
+
+  // blur: starts at 18px (very blurry), ends at 0px (sharp)
+  const blur = Math.max(0, 18 * (1 - eased));
+
+  // glow: intensifies as it clears up
+  const glowAlpha = (eased * 0.8).toFixed(2);
 
   ghost.style.opacity = opacity.toFixed(3);
   ghost.style.filter  = `blur(${blur.toFixed(1)}px)`;
-  label.style.opacity = (opacity * 0.85).toFixed(3);
+  ghost.style.textShadow = `0 0 60px rgba(255,50,80,${glowAlpha})`;
+  label.style.opacity = (opacity * 0.9).toFixed(3);
 }
 
 updateSpeciesReveal();
