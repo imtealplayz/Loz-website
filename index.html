@@ -46,40 +46,59 @@
 
 /* SPECIES REVEAL */
 .cd-species-reveal{margin-top:2.5rem;text-align:center;position:relative;}
-.cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,210,255,0.6);margin-bottom:0.75rem;opacity:0;}
-.cd-names-container{
-  position:relative;display:inline-block;
-  padding:6px 18px 8px;
-}
+.cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(200,210,255,0.6);margin-bottom:0.75rem;opacity:1;}
+.cd-names-container{position:relative;display:inline-block;padding:6px 18px 8px;}
 .cd-names-text{
   font-family:var(--font-display);font-size:clamp(1.4rem,4.5vw,2.8rem);font-weight:900;
   letter-spacing:0.14em;text-transform:uppercase;
   white-space:nowrap;display:flex;align-items:baseline;gap:0.5rem;
 }
-.cd-sephian-s{
-  color:#e8f0ff;
-  text-shadow:0 0 30px rgba(220,235,255,0.9),0 0 10px rgba(220,235,255,0.5);
-}
-.cd-sephian-rest{color:#e8f0ff;}
-.cd-species-sep{
-  font-family:var(--font-display);font-size:clamp(1rem,3vw,2rem);font-weight:300;
-  color:rgba(200,200,200,0.7);padding:0 4px;
-}
-.cd-species-archdemon{
-  color:#8b0000;
-  text-shadow:0 0 20px rgba(139,0,0,0.4);
-}
-/* The big blur box that sits on top of EVERYTHING and fades away */
-.cd-big-blur{
-  position:absolute;
-  inset:-4px;
-  background:rgba(5,8,16,0.92);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  border-radius:6px;
+.cd-sephian-s,.cd-sephian-rest{color:#e8f0ff;text-shadow:0 0 20px rgba(220,235,255,0.5);}
+.cd-species-sep{font-family:var(--font-display);font-size:clamp(1rem,3vw,2rem);font-weight:300;color:rgba(200,200,200,0.7);padding:0 4px;}
+.cd-species-archdemon{color:#8b0000;text-shadow:0 0 20px rgba(139,0,0,0.5);}
+
+/* White cover box */
+.cd-white-box{
+  position:absolute;inset:-6px;
+  background:linear-gradient(135deg,#ffffff 0%,#f0f4ff 40%,#ffffff 60%,#ffe8e8 100%);
+  border-radius:8px;
   z-index:10;
-  opacity:1;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(255,255,255,0.5),0 0 80px rgba(255,255,255,0.15),inset 0 1px 0 rgba(255,255,255,0.9);
 }
+.cd-white-box-shimmer{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,0.8) 50%,transparent 70%);
+  background-size:200% 100%;
+  animation:shimmer 2.8s ease-in-out infinite;
+}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.cd-white-box-pulse{
+  position:absolute;inset:0;
+  border-radius:8px;
+  border:2px solid rgba(255,50,80,0.25);
+  animation:boxPulse 2s ease-in-out infinite;
+}
+@keyframes boxPulse{0%,100%{opacity:0.4;transform:scale(1);}50%{opacity:1;transform:scale(1.01);}}
+.cd-white-box-content{
+  position:relative;z-index:2;
+  display:flex;align-items:center;gap:10px;
+  padding:0 12px;
+}
+.cd-white-box-icon{font-size:1rem;animation:iconBob 1.8s ease-in-out infinite alternate;}
+@keyframes iconBob{from{transform:translateY(-2px);}to{transform:translateY(2px);}}
+.cd-white-box-text{
+  font-family:var(--font-mono);font-size:clamp(0.58rem,1.5vw,0.72rem);
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:#1a0a0a;text-align:center;line-height:1.6;
+  text-shadow:none;
+}
+.cd-white-box-sub{
+  display:block;font-family:var(--font-display);font-size:clamp(0.75rem,2vw,0.95rem);
+  font-weight:700;letter-spacing:0.2em;color:#8b0000;margin-top:1px;
+}
+
 .cd-reveal-msg{display:none;margin-top:1.1rem;font-family:var(--font-display);font-size:clamp(1rem,2.5vw,1.5rem);font-weight:700;letter-spacing:0.06em;animation:revealPop 0.8s ease forwards;}
 .cd-reveal-msg .rs{color:#e8f0ff;text-shadow:0 0 20px rgba(200,225,255,0.9);}
 .cd-reveal-msg .ra{color:#8b0000;text-shadow:0 0 20px rgba(139,0,0,0.9);}
@@ -867,14 +886,21 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
     <div class="cd-species-reveal">
       <div class="cd-species-label" id="cd-species-label">Awakenings Incoming</div>
       <div class="cd-names-container" id="cd-names-container">
-        <!-- actual text, always rendered, covered by blur overlay -->
         <div class="cd-names-text">
           <span class="cd-sephian-s">S</span><span class="cd-sephian-rest">ephian</span>
           <span class="cd-species-sep"> · </span>
           <span class="cd-species-archdemon">Archdemon</span>
         </div>
-        <!-- big blur box covering everything — fades away as timer counts down -->
-        <div class="cd-big-blur" id="cd-big-blur"></div>
+        <!-- white cover box -->
+        <div class="cd-white-box" id="cd-white-box">
+          <div class="cd-white-box-shimmer"></div>
+          <div class="cd-white-box-content">
+            <span class="cd-white-box-icon">⚔️</span>
+            <span class="cd-white-box-text">Species arriving with the update<br><span class="cd-white-box-sub">be ready</span></span>
+            <span class="cd-white-box-icon">⚔️</span>
+          </div>
+          <div class="cd-white-box-pulse"></div>
+        </div>
       </div>
       <div class="cd-reveal-msg" id="cd-reveal-msg"><span class="rs">Sephian</span> &amp; <span class="ra">Archdemon</span> are here — go play now! ✨</div>
     </div>
@@ -1012,40 +1038,22 @@ function updateSpeciesReveal() {
   const diff  = CD_TARGET - now;
   const total = Math.max(1, CD_TARGET - CD_START);
 
-  const bigBlur = document.getElementById('cd-big-blur');
-  const label   = document.getElementById('cd-species-label');
-  const msg     = document.getElementById('cd-reveal-msg');
-  if (!bigBlur) return;
+  const whiteBox = document.getElementById('cd-white-box');
+  const label    = document.getElementById('cd-species-label');
+  const msg      = document.getElementById('cd-reveal-msg');
+  if (!whiteBox) return;
 
   if (diff <= 0) {
-    // Fully revealed at zero — remove blur box entirely
-    bigBlur.style.opacity              = '0';
-    bigBlur.style.backdropFilter       = 'blur(0px)';
-    bigBlur.style.webkitBackdropFilter = 'blur(0px)';
-    bigBlur.style.background           = 'transparent';
-    label.style.opacity                = '1';
-    msg.style.display                  = 'block';
+    // Timer hit zero — hide white box, show names + message
+    whiteBox.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    whiteBox.style.opacity    = '0';
+    whiteBox.style.transform  = 'scale(1.04)';
+    setTimeout(() => { whiteBox.style.display = 'none'; }, 650);
+    label.style.opacity = '1';
+    msg.style.display   = 'block';
     return;
   }
-
-  // progress 0 (day 1) -> 1 (at zero)
-  const elapsed = now - CD_START;
-  const rawProg = Math.max(0, Math.min(1, elapsed / total));
-  // ease-in: extremely slow at start, accelerates hard near the end
-  const eased   = Math.pow(rawProg, 3.0);
-
-  // Blur box: starts fully opaque (1), slowly fades to 0
-  const boxOpacity = Math.max(0, 1 - eased);
-  const boxBlur    = Math.max(0, 14 * (1 - eased));
-  const boxBg      = Math.max(0, 0.92 * (1 - eased));
-
-  bigBlur.style.opacity              = boxOpacity.toFixed(4);
-  bigBlur.style.backdropFilter       = `blur(${boxBlur.toFixed(1)}px)`;
-  bigBlur.style.webkitBackdropFilter = `blur(${boxBlur.toFixed(1)}px)`;
-  bigBlur.style.background           = `rgba(5,8,16,${boxBg.toFixed(4)})`;
-
-  // Label fades in as blur fades out
-  label.style.opacity = (eased * 0.85).toFixed(3);
+  // Before timer ends — white box stays fully on, no changes needed
 }
 
 updateSpeciesReveal();
