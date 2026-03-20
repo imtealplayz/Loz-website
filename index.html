@@ -44,7 +44,14 @@
 .cd-live{width:6px;height:6px;border-radius:50%;background:#ff3355;animation:cdpulse 1s ease-in-out infinite;flex-shrink:0;}
 @keyframes cdpulse{0%,100%{opacity:1;box-shadow:0 0 6px #ff3355;}50%{opacity:0.4;box-shadow:0 0 2px #ff3355;}}
 
-/* COUNTDOWN PAGE */
+/* SPECIES REVEAL */
+.cd-species-reveal{margin-top:2.5rem;text-align:center;position:relative;}
+.cd-species-ghost{font-family:var(--font-display);font-size:clamp(1.6rem,5vw,3rem);font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:#ff3355;text-shadow:0 0 60px rgba(255,50,80,0.5);opacity:0;filter:blur(14px);transition:opacity 0.8s ease,filter 0.8s ease;pointer-events:none;}
+.cd-species-ghost.revealed{opacity:1;filter:blur(0px);}
+.cd-species-label{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,80,100,0.5);margin-bottom:0.5rem;opacity:0;transition:opacity 0.8s ease;}
+.cd-species-label.revealed{opacity:1;}
+.cd-reveal-msg{display:none;font-family:var(--font-display);font-size:clamp(1.1rem,3vw,1.8rem);font-weight:700;color:#ff3355;text-shadow:0 0 40px rgba(255,50,80,0.6);letter-spacing:0.08em;margin-top:0.75rem;animation:revealPop 0.6s ease forwards;}
+@keyframes revealPop{0%{opacity:0;transform:scale(0.85);}60%{transform:scale(1.06);}100%{opacity:1;transform:scale(1);}}
 .cd-page-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 96px);text-align:center;padding:3rem 2rem;position:relative;overflow:hidden;}
 .cd-page-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(255,30,60,0.08),transparent 70%);}
 .cd-page-label{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,80,100,0.6);margin-bottom:1rem;}
@@ -409,7 +416,7 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
     <div class="hero-stats">
       <div class="hstat"><span class="hstat-num"><span class="a">20</span>+</span><span class="hstat-lbl">Species</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">4</span></span><span class="hstat-lbl">Bot Difficulties</span></div>
-      <div class="hstat"><span class="hstat-num"><span class="a">3</span></span><span class="hstat-lbl">Game Modes</span></div>
+      <div class="hstat"><span class="hstat-num"><span class="a">2</span></span><span class="hstat-lbl">Game Modes</span></div>
       <div class="hstat"><span class="hstat-num">v<span class="a">4.1</span></span><span class="hstat-lbl">Latest Version</span></div>
     </div>
   </div>
@@ -427,7 +434,6 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
     <div class="feature-card reveal"><span class="feature-icon">🎲</span><div class="feature-name">Species Rolling</div><p class="feature-desc">Roll for one of 20+ species from common Half-Blood (26%) to legendary Demi God (0.5%). Each roll is permanent until you switch.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">⚔️</span><div class="feature-name">Turn-Based Combat</div><p class="feature-desc">Full RPG fights with attack, heal, and ULT actions. Every species has a unique passive and ultimate that completely changes your playstyle.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🤖</span><div class="feature-name">Bot Fights</div><p class="feature-desc">Challenge AI opponents across 4 difficulties: Baby Bot, Warrior Bot, Demon Bot, and the terrifying God Bot. Earn leaderboard points for winning.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">💣</span><div class="feature-name">Bomb Game</div><p class="feature-desc">A high-stakes party game where players pass a ticking bomb. Duel mode, bot mode, or battle royale — last one standing wins.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🏆</span><div class="feature-name">Leaderboards</div><p class="feature-desc">Persistent server rankings for fight wins and bomb game victories. Compete for the top spot and prove your dominance.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🌑</span><div class="feature-name">Quest System</div><p class="feature-desc">Complete the Reaper Quest to unlock the legendary Reaper species. Progress is saved and carries across sessions.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">⚡</span><div class="feature-name">Awakenings</div><p class="feature-desc">Push your Cyborg to its limits — 25 wins, 500 damage, 15 ULT uses — and awaken into the transcendent Mechangel.</p></div>
@@ -621,7 +627,7 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Bot Difficulties</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v4.2</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v4.3</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Current Version</div>
         </div>
       </div>
@@ -640,38 +646,38 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
   </div>
   <div class="cmd-cat reveal"><span>⚔️</span> Core</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/roll</span><span class="cmd-desc">Roll for your species. Results are weighted by rarity.</span><span class="cmd-tag">Core</span></div>
+    <div class="cmd-row"><span class="cmd-name">/species-roll</span><span class="cmd-desc">Roll for a new species. Results are weighted by rarity.</span><span class="cmd-tag">Core</span></div>
     <div class="cmd-row"><span class="cmd-name">/species</span><span class="cmd-desc">View your current species, full stats, and ability descriptions.</span><span class="cmd-tag">Core</span></div>
-    <div class="cmd-row"><span class="cmd-name">/species change</span><span class="cmd-desc">Switch your species. 3-hour cooldown between switches.</span><span class="cmd-tag">Core</span></div>
+    <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Switch between your species. 3-hour cooldown between switches.</span><span class="cmd-tag">Core</span></div>
+    <div class="cmd-row"><span class="cmd-name">/daily</span><span class="cmd-desc">Claim your daily species roll. 7-day streak grants a bonus roll.</span><span class="cmd-tag">Core</span></div>
     <div class="cmd-row"><span class="cmd-name">/profile @user</span><span class="cmd-desc">View another player's species, win record, and fight stats.</span><span class="cmd-tag">Core</span></div>
+    <div class="cmd-row"><span class="cmd-name">/gift @user</span><span class="cmd-desc">Gift up to 2 rolls per day to another player. Receive up to 4 per day.</span><span class="cmd-tag">Core</span></div>
   </div>
   <div class="cmd-cat reveal"><span>🥊</span> Combat</div>
   <div class="cmd-list reveal">
     <div class="cmd-row"><span class="cmd-name">/fight @user</span><span class="cmd-desc">Challenge another player to a 1v1 RPG duel. They must accept.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight attack</span><span class="cmd-desc">Attack your opponent during your turn in an active fight.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight heal</span><span class="cmd-desc">Heal yourself during your turn in an active fight.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight ult</span><span class="cmd-desc">Use your species' ultimate ability when off cooldown.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/botfight</span><span class="cmd-desc">Fight an AI bot. Pick difficulty: easy, medium, hard, or impossible.</span><span class="cmd-tag">Combat</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fightbot</span><span class="cmd-desc">Fight an AI bot. Pick difficulty: easy, medium, hard, or impossible.</span><span class="cmd-tag">Combat</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>💣</span> Bomb Game</div>
+  <div class="cmd-cat reveal"><span>🏆</span> Stats & Social</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/bomb start</span><span class="cmd-desc">Start a bomb game. Choose duel, bot, or battle royale mode.</span><span class="cmd-tag">Games</span></div>
-    <div class="cmd-row"><span class="cmd-name">'pass @user</span><span class="cmd-desc">Pass the bomb to another player. Uses the ' prefix, not a slash command.</span><span class="cmd-tag">Games</span></div>
-  </div>
-  <div class="cmd-cat reveal"><span>🏆</span> Social</div>
-  <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/leaderboard</span><span class="cmd-desc">View the server's top fighters and bomb game champions.</span><span class="cmd-tag">Social</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fightstats</span><span class="cmd-desc">View your PvP fight stats — wins, losses, streak, and history.</span><span class="cmd-tag">Stats</span></div>
+    <div class="cmd-row"><span class="cmd-name">/botstats</span><span class="cmd-desc">View your bot fight stats broken down by difficulty.</span><span class="cmd-tag">Stats</span></div>
+    <div class="cmd-row"><span class="cmd-name">/history</span><span class="cmd-desc">View your recent fight history with outcomes and opponents.</span><span class="cmd-tag">Stats</span></div>
+    <div class="cmd-row"><span class="cmd-name">/lb</span><span class="cmd-desc">View the server bomb tag leaderboard.</span><span class="cmd-tag">Social</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fights</span><span class="cmd-desc">View the fight leaderboard — top fighters ranked by wins.</span><span class="cmd-tag">Social</span></div>
     <div class="cmd-row"><span class="cmd-name">/togglerequests</span><span class="cmd-desc">Toggle whether others can send you fight requests.</span><span class="cmd-tag">Social</span></div>
   </div>
   <div class="cmd-cat reveal"><span>🌑</span> Progression</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/quest</span><span class="cmd-desc">Check your Reaper Quest progress. Fight your way to Reaper.</span><span class="cmd-tag">Quest</span></div>
-    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your Cyborg awakening progress toward Mechangel.</span><span class="cmd-tag">Quest</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quest view</span><span class="cmd-desc">Check your Reaper Quest progress. Fight your way to Reaper.</span><span class="cmd-tag">Quest</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quest claim</span><span class="cmd-desc">Claim your Reaper Quest reward once all objectives are complete.</span><span class="cmd-tag">Quest</span></div>
+    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening progress. Cyborg awakens into Mechangel.</span><span class="cmd-tag">Quest</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>⚙️</span> Admin</div>
+  <div class="cmd-cat reveal"><span>⚙️</span> Info & Admin</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/setchannel</span><span class="cmd-desc">Set a persistent duel channel for the server. Admin only.</span><span class="cmd-tag">Admin</span></div>
     <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">View latest LOZ update notes and change history in Discord.</span><span class="cmd-tag">Info</span></div>
+    <div class="cmd-row"><span class="cmd-name">/guide</span><span class="cmd-desc">New player tutorial — learn how species, combat, and quests work.</span><span class="cmd-tag">Info</span></div>
+    <div class="cmd-row"><span class="cmd-name">/help</span><span class="cmd-desc">Show all available commands grouped by category.</span><span class="cmd-tag">Info</span></div>
   </div>
 </div>
 
@@ -726,7 +732,7 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
         <div class="patch-item">🔒 Cannot reroll species while in an active fight.</div>
         <div class="patch-item">👑 God-given species now always becomes the player's original species.</div>
         <div class="patch-item">🤖 Bot fights now show whose fight it is. Bot auto-resolves in player's favour if stuck for 60 seconds.</div>
-        <div class="patch-item">🐛 Fixed fight wins incorrectly counting toward bomb tag leaderboard.</div>
+        <div class="patch-item">🌟 <strong>Two new species awakenings coming soon</strong> — new paths to transcendence are being forged. Stay tuned.</div>
       </div>
     </div>
     <div class="patch-card reveal">
@@ -825,6 +831,11 @@ nav{position:fixed;top:36px;left:0;right:0;z-index:200;height:60px;display:flex;
       <div class="cd-mystery-item">New species to be revealed</div>
       <div class="cd-mystery-item">Major combat overhaul</div>
       <div class="cd-mystery-item">Secrets not yet known</div>
+    </div>
+    <div class="cd-species-reveal">
+      <div class="cd-species-label" id="cd-species-label">Awakening Incoming</div>
+      <div class="cd-species-ghost" id="cd-species-ghost">Sephian &nbsp;·&nbsp; Archdemon</div>
+      <div class="cd-reveal-msg" id="cd-reveal-msg">✨ They are here — go play now!</div>
     </div>
   </div>
 </div>
@@ -948,6 +959,49 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// ==================== SPECIES REVEAL ====================
+const REVEAL_WINDOW = 72 * 3600 * 1000; // start fading in 72h before end
+
+function updateSpeciesReveal() {
+  const now = Date.now();
+  const diff = CD_TARGET - now;
+  const ghost = document.getElementById('cd-species-ghost');
+  const label = document.getElementById('cd-species-label');
+  const msg   = document.getElementById('cd-reveal-msg');
+  if (!ghost) return;
+
+  if (diff <= 0) {
+    // fully revealed
+    ghost.style.opacity = '1';
+    ghost.style.filter  = 'blur(0px)';
+    ghost.classList.add('revealed');
+    label.classList.add('revealed');
+    msg.style.display = 'block';
+    return;
+  }
+
+  if (diff >= REVEAL_WINDOW) {
+    ghost.style.opacity = '0';
+    ghost.style.filter  = 'blur(14px)';
+    label.style.opacity = '0';
+    return;
+  }
+
+  // progress 0 (far away) → 1 (at zero)
+  const progress = 1 - (diff / REVEAL_WINDOW);
+  // ease: slow start, fast finish
+  const eased = Math.pow(progress, 2.2);
+  const opacity = Math.min(1, eased);
+  const blur    = Math.max(0, 14 * (1 - eased));
+
+  ghost.style.opacity = opacity.toFixed(3);
+  ghost.style.filter  = `blur(${blur.toFixed(1)}px)`;
+  label.style.opacity = (opacity * 0.85).toFixed(3);
+}
+
+updateSpeciesReveal();
+setInterval(updateSpeciesReveal, 1000);
 
 </script>
 </body>
