@@ -1,34 +1,25 @@
-# Loz-Website
+# LOZ Website
 
-This repository contains the source code for the Loz-Website, a static HTML website. It serves as a foundational web presence, showcasing basic web development practices using HTML.
+A static companion website for the LOZ RPG project.
 
-## Features
+## Purpose
 
-*   **Static Content:** Displays information through standard HTML pages.
-*   **Simple Structure:** Easy to understand and navigate.
-*   **Responsive Design:** (If applicable, based on content analysis) Adapts to various screen sizes for optimal viewing on different devices.
+The site presents the LOZ RPG project in a browser-friendly format and acts as a web-facing companion to the Discord RPG system.
 
-## Technologies Used
+## Stack
 
-*   **Frontend:** HTML, CSS (if present), JavaScript (if present)
+- HTML
+- CSS
+- JavaScript
 
-## Project Structure
+## Run locally
 
-```
-Loz-website/
-├── index.html              # Main landing page
-├── css/                    # Directory for CSS files (if present)
-├── js/                     # Directory for JavaScript files (if present)
-├── images/                 # Directory for image assets (if present)
-└── README.md               # Project documentation
-```
-
-## Setup Instructions
-
-To view this website locally, simply open the `index.html` file in your web browser.
+Open `index.html` in a modern browser, or serve the repository with a local static web server.
 
 ```bash
-open index.html
+npx serve .
 ```
 
-Alternatively, you can deploy it to any static site hosting service (e.g., GitHub Pages, Vercel, Netlify) by uploading the contents of this repository.
+## Status
+
+Companion website; the connected LOZ RPG systems are still evolving.
