@@ -615,7 +615,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan-bright),var(--amber-bright),var(--crimson-bright));"></div>
       <div style="font-family:var(--font-display);font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">About the Bot</div>
       <p style="font-size:1rem;font-weight:300;color:var(--text-muted);line-height:1.8;">
-        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 20+ unique species with hand-crafted abilities, a progression system with quests and awakenings, and multiple game modes. Every line of code was written by Teal.
+        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 25+ unique species, progression through quests and awakenings, and multiple game modes. Every line of code was written by Teal.
       </p>
       <div style="margin-top:1.25rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
         <div style="text-align:center;">
@@ -702,13 +702,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
       <span class="quest-reward">⭐ Reward: Mechangel — 140 HP · Quantum Processing · Fast ULT</span>
     </div>
-  </div>
     <div class="quest-card reveal">
       <span class="quest-icon">🟢</span>
       <div class="quest-name">Slime Lord Boss Hunt</div>
       <p class="quest-desc">Win a bot fight for a 7.5% chance to encounter the Slime Lord. Boss stats scale with the difficulty you just defeated; win the boss battle for a 9.2% chance to permanently unlock Slime Lord.</p>
       <span class="quest-reward">⭐ Reward: Slime Lord — 130 HP · 18–27 ATK · ULT CD 9</span>
     </div>
+  </div>
 </div>
 
 <!-- PATCH NOTES -->
@@ -723,15 +723,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="patch-card open reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.0</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">🟢 Slime Lord Boss Hunt — a 7.5% chance to spawn after a bot victory on any difficulty. Boss HP, attack, healing, and ultimate cooldown scale with the difficulty defeated.</div>
+        <div class="patch-item">🟢 Slime Lord Boss Hunt — a 7.5% chance to spawn after a bot victory on any difficulty. Boss HP, attack, healing, and ultimate cooldown scale with the difficulty defeated: Easy 120 HP, Medium 140, Hard 160, Impossible 185, Brutal 210.</div>
         <div class="patch-item">👑 Exclusive Slime Lord unlock — defeating the boss gives a 9.2% chance to permanently unlock the species. Once unlocked, it can be equipped later with /switch.</div>
         <div class="patch-item">📈 Adaptive Momentum — misses and being countered build the next attack multiplier from 1.2× up to 2.0×.</div>
         <div class="patch-item">🛡️ Predatory Assimilation — while the ultimate is active, incoming damage is converted to healing; damage beyond maximum HP is reflected back to the attacker.</div>
         <div class="patch-item">🔑 New owner command: /god species-unlock — permanently grants a supported exclusive species without requiring its normal quest or awakening.</div>
         <div class="patch-item">⚔️ Fight flow improvements — /fight player and /fight bot are separate subcommands, with one active incoming or outgoing player challenge per user and a 30-second post-fight cooldown.</div>
+        <div class="patch-item">🐉 Earth Dragon first path corrected so it no longer grants an unintended one-round invincibility effect.</div>
         <div class="patch-item">🧹 Website and gameplay info refreshed for the v5.0 release.</div>
       </div>
     </div>
+    <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">Final</span><span class="pver">Version 4.3</span></div><span class="pdate">2026-03-17</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
         <div class="patch-item">⚔️ Miss + Counter system restored — attacks can miss, defenders have a 30% chance to counter-strike on miss.</div>
