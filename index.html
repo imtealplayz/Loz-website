@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="Collect species, battle, complete quests, unlock awakenings, and rise through the ranks in LOZ, the Discord RPG.">
+<meta name="twitter:description" content="LOZ Version 5.0: collect 25 playable species, battle players and five bot difficulties, complete quests and awakenings, and hunt the Slime Lord boss.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -44,26 +44,6 @@
   --font-body: 'Crimson Pro', serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
-
-/* COUNTDOWN BAR */
-
-/* COUNTDOWN PAGE */
-.cd-page-hero{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 96px);text-align:center;padding:3rem 2rem;position:relative;overflow:hidden;}
-.cd-page-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(255,30,60,0.08),transparent 70%);}
-.cd-page-label{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(255,80,100,0.6);margin-bottom:1rem;}
-.cd-page-title{font-family:var(--font-display);font-size:clamp(2.5rem,7vw,5rem);font-weight:900;color:#ff3355;text-shadow:0 0 40px rgba(255,50,80,0.4);margin-bottom:0.4rem;letter-spacing:0.05em;}
-.cd-page-sub{font-family:var(--font-display);font-size:0.8rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--text-dim);margin-bottom:3rem;}
-.cd-big-timer{display:flex;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem;}
-.cd-big-seg{display:flex;flex-direction:column;align-items:center;gap:6px;}
-.cd-big-num{font-family:var(--font-display);font-size:clamp(3rem,10vw,6rem);font-weight:900;color:var(--text);line-height:1;min-width:1.2ch;text-align:center;transition:color 0.3s;}
-.cd-big-seg.ticking .cd-big-num{color:#ff3355;}
-.cd-big-unit{font-family:var(--font-mono);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);}
-.cd-big-sep{font-family:var(--font-display);font-size:clamp(2rem,6vw,4rem);font-weight:900;color:rgba(255,50,80,0.3);align-self:flex-start;margin-top:8px;line-height:1;}
-.cd-page-desc{max-width:480px;font-size:1rem;font-weight:300;color:var(--text-muted);line-height:1.8;margin-bottom:2rem;}
-.cd-mystery{display:flex;flex-direction:column;gap:10px;margin-top:1rem;}
-.cd-mystery-item{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.08em;color:var(--text-dim);padding:8px 18px;border:1px solid rgba(255,50,80,0.12);border-radius:4px;background:rgba(255,30,60,0.04);}
-.cd-mystery-item::before{content:"? ";color:rgba(255,50,80,0.4);}
-.cd-done-title{font-family:var(--font-display);font-size:clamp(2rem,6vw,4rem);font-weight:900;color:#ff3355;text-shadow:0 0 40px rgba(255,50,80,0.5);}
 
 /* BANNER */
 .about-banner{width:100%;max-height:220px;object-fit:cover;object-position:center 20%;border-radius:8px;margin-bottom:2rem;border:1px solid rgba(80,120,255,0.2);box-shadow:0 8px 32px rgba(0,0,0,0.5);}
@@ -159,7 +139,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 .b-rare{background:rgba(34,211,238,0.12);color:#22d3ee;}
 .b-epic{background:rgba(167,139,250,0.12);color:#a78bfa;}
 .b-special{background:rgba(251,191,36,0.14);color:#fbbf24;border:1px solid rgba(251,191,36,0.25);}
-.sp-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0;}
+.sp-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 14px;}
 .sp-stat{background:var(--surface2);border-radius:6px;padding:9px 6px;text-align:center;min-width:0;}
 .sp-stat-l{font-size:0.59rem;font-family:var(--font-mono);color:var(--text-dim);letter-spacing:0.06em;margin-bottom:3px;}
 .sp-stat-v{font-size:0.86rem;font-weight:600;color:var(--text);overflow-wrap:anywhere;}
@@ -251,32 +231,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 .founder-creator-tag{margin-top:1.1rem;font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dim);}
 .cyan-theme .founder-creator-tag{color:rgba(80,120,255,0.6);}
 
-/* PREVIEWS */
-.preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;}
-.preview-card{background:#1e1e2e;border:1px solid rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;}
-.preview-card:hover{transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.6);}
-.dbar{background:#2b2d31;padding:7px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(0,0,0,0.3);}
-.ddots{display:flex;gap:5px;}
-.ddots span{width:10px;height:10px;border-radius:50%;}
-.ddots span:nth-child(1){background:#ed6a5e;}
-.ddots span:nth-child(2){background:#f5c133;}
-.ddots span:nth-child(3){background:#61c554;}
-.dch{font-family:var(--font-mono);font-size:0.6rem;color:#72767d;letter-spacing:0.05em;}
-.dbody{padding:12px;background:#313338;}
-.dmsg{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;}
-.davatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:white;font-family:var(--font-display);}
-.dname{font-size:0.73rem;font-weight:600;color:#fff;margin-bottom:2px;font-family:'Crimson Pro',serif;}
-.btag{font-size:0.53rem;background:#5865f2;color:white;padding:1px 4px;border-radius:3px;margin-left:4px;font-family:var(--font-mono);vertical-align:middle;}
-.dtext{font-size:0.78rem;color:#dcddde;line-height:1.4;font-family:'Crimson Pro',serif;font-weight:300;}
-.dembed{border-left:3px solid;background:#2b2d31;border-radius:4px;padding:9px 11px;margin-top:4px;max-width:350px;}
-.etitle{font-size:0.82rem;font-weight:600;color:#fff;margin-bottom:4px;font-family:'Cinzel',serif;}
-.efields{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:7px;}
-.efname{font-size:0.6rem;font-weight:600;color:#b9bbbe;font-family:var(--font-mono);letter-spacing:0.04em;}
-.efval{font-size:0.72rem;color:#dcddde;}
-.edesc{font-size:0.73rem;color:#b9bbbe;line-height:1.5;}
-.efooter{font-size:0.58rem;color:#72767d;margin-top:7px;font-family:var(--font-mono);}
-.plbl{font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);padding:7px 12px;background:#1a1a24;text-align:center;border-top:1px solid rgba(255,255,255,0.04);}
-
 /* INVITE */
 .invite-center{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:calc(100vh - 60px);padding:3rem 2rem;}
 .invite-big{font-family:var(--font-display);font-size:clamp(4rem,12vw,9rem);font-weight:900;background:linear-gradient(135deg,var(--cyan-bright),var(--amber-bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.5rem;}
@@ -360,6 +314,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 @media(max-width:820px){.home-quickstart{grid-template-columns:repeat(2,minmax(0,1fr));}.home-featured-card{grid-column:1/-1;}}
 @media(max-width:560px){.home-quickstart{grid-template-columns:1fr;padding:0 1rem;}.home-featured-card{grid-column:auto;}.home-quick-card{padding:1.25rem;}.sp-card{padding:1.1rem;}.species-grid{gap:12px;}}
 
+
+.sp-abilities{display:grid;grid-template-columns:1fr;gap:10px;margin-top:3px;position:relative;z-index:1;}
+.ability-block{border-radius:7px;padding:11px 12px;font-size:.88rem;font-weight:300;line-height:1.65;overflow-wrap:anywhere;}
+.ability-passive{background:rgba(5,150,105,.08);border:1px solid rgba(52,211,153,.18);color:#b5f3d8;}
+.ability-active{background:rgba(217,119,6,.08);border:1px solid rgba(251,191,36,.18);color:#fde8a6;}
+.ability-label{display:inline-block;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;border-radius:4px;margin-bottom:7px;font-weight:600;}
+.label-passive{background:rgba(52,211,153,.14);color:#34d399;}
+.label-active{background:rgba(251,191,36,.14);color:#fbbf24;}
+.sp-card .type-chips{position:relative;z-index:1;margin-top:13px;}
+.sp-card .type-chips .chip{line-height:1.5;white-space:normal;}
+.sp-stat-l{font-size:.6rem;}
+.sp-stat-v{font-size:.88rem;}
+.patch-card.open .patch-body{max-height:1400px;padding:0 1.4rem 1.1rem;}
+.species-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:18px;}
+.sp-card{padding:1.25rem;min-height:100%;border-radius:10px;}
+.sp-header{gap:10px;margin-bottom:10px;align-items:flex-start;}
+.sp-name{font-size:.98rem;line-height:1.4;overflow-wrap:anywhere;}
+.sp-badge{white-space:normal;text-align:center;max-width:48%;line-height:1.4;}
+.boss-stat-table{display:flex;flex-direction:column;gap:7px;margin:1rem 0 1.2rem;}
+.boss-stat-row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:8px 9px;border-radius:5px;background:var(--surface2);font-size:.78rem;line-height:1.5;color:var(--text-muted);}
+.boss-stat-row span:first-child{font-family:var(--font-mono);font-weight:600;color:var(--cyan-bright);min-width:82px;}
+.boss-stat-row span:last-child{text-align:right;}
+@media(max-width:980px){.home-quickstart{grid-template-columns:repeat(2,minmax(0,1fr));}.home-featured-card{grid-column:1/-1;}}
+@media(max-width:760px){.page{padding:2rem 1.1rem;}.home-quickstart{grid-template-columns:1fr;padding:0 1rem;}.home-featured-card{grid-column:auto;}.sp-card{padding:1.05rem;}.species-grid{grid-template-columns:1fr;gap:12px;}.sp-stats{gap:7px;}.ability-block{font-size:.85rem;}.boss-stat-row{flex-direction:column;gap:2px;}.boss-stat-row span:last-child{text-align:left;}}
+
 </style>
 </head>
 <body>
@@ -381,9 +360,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
   <span class="sidebar-label">Navigation</span>
   <button class="nav-item active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⚔️</span>Home</button>
   <button class="nav-item" data-page="features" onclick="showPage('features')"><span class="nav-icon">✨</span>Features</button>
-  <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">👥</span>About</button>
-  <button class="nav-item" data-page="previews" onclick="showPage('previews')"><span class="nav-icon">🖼️</span>Previews</button>
-  <span class="sidebar-label">The Game</span>
+  <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">👑</span>Creators</button>
+    <span class="sidebar-label">The Game</span>
   <button class="nav-item" data-page="species" onclick="showPage('species')"><span class="nav-icon">🎲</span>Species</button>
   <button class="nav-item" data-page="commands" onclick="showPage('commands')"><span class="nav-icon">💬</span>Commands</button>
   <button class="nav-item" data-page="quests" onclick="showPage('quests')"><span class="nav-icon">🌑</span>Quests</button>
@@ -439,55 +417,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 <!-- FEATURES -->
 <div id="page-features" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">What's inside</div>
+    <div class="page-eyebrow">What LOZ offers</div>
     <h1 class="page-title">Features</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">A Discord RPG built around collection, progression, and battles that reward mastery.</p>
+    <p class="page-desc">Collect species, master their combat styles, and progress through turn-based battles and permanent unlocks.</p>
   </div>
   <div class="features-grid">
-    <div class="feature-card reveal"><span class="feature-icon">🎲</span><div class="feature-name">25+ Species</div><p class="feature-desc">Roll for a species, learn its strengths, and switch between species you've unlocked.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">⚔️</span><div class="feature-name">Player Battles</div><p class="feature-desc">Challenge other players to turn-based fights, with each match testing your timing and choices.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">🤖</span><div class="feature-name">Five Bot Difficulties</div><p class="feature-desc">Fight through Easy, Medium, Hard, Impossible, and Brutal. Every victory is a chance to prove yourself.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">🟢</span><div class="feature-name">Slime Lord Boss Hunt</div><p class="feature-desc">A bot victory has a 7.5% chance to spawn the Slime Lord boss. Boss stats scale with the difficulty you beat.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">👑</span><div class="feature-name">Rare Unlocks</div><p class="feature-desc">Defeat the Slime Lord for a 9.2% chance to permanently unlock the exclusive species and equip it later.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">🌑</span><div class="feature-name">Quests & Awakenings</div><p class="feature-desc">Progress through special paths to unlock species that aren't part of the normal roll pool.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">🏆</span><div class="feature-name">Leaderboards</div><p class="feature-desc">Track fight wins and compete with others in your server for the top position.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">💣</span><div class="feature-name">Bomb Game</div><p class="feature-desc">Switch things up with bomb-game modes built for fast, competitive server sessions.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">💾</span><div class="feature-name">Saved Progress</div><p class="feature-desc">Your species and progression are stored across sessions, so your journey can continue.</p></div>
-  </div>
-</div>
-
-<!-- PREVIEWS -->
-<div id="page-previews" class="page">
-  <div class="page-header">
-    <div class="page-eyebrow">In action</div>
-    <h1 class="page-title">Previews</h1>
-    <div class="glow-line"></div>
-    <p class="page-desc">A glimpse of what LOZ looks like inside your Discord server.</p>
-  </div>
-  <div class="preview-grid">
-    <div class="preview-card reveal">
-      <div class="dbar"><div class="ddots"><span></span><span></span><span></span></div><span class="dch"># duel-channel</span></div>
-      <div class="dbody">
-        <div class="dmsg"><div class="davatar" style="background:linear-gradient(135deg,#5865f2,#3a3f70)">S</div><div><div class="dname">Shion</div><div class="dtext">/roll</div></div></div>
-        <div class="dmsg"><div class="davatar" style="background:linear-gradient(135deg,#0891b2,#d97706)">L</div><div><div class="dname">LOZ <span class="btag">BOT</span></div><div class="dembed" style="border-color:#ff4500;"><div class="etitle">🔥 Demon Lord</div><div class="edesc">The dice have spoken — you rolled <strong>Demon Lord</strong>, a rare 1.0% species.</div><div class="efields"><div><div class="efname">HP</div><div class="efval">125</div></div><div><div class="efname">ATK</div><div class="efval">20–28</div></div><div><div class="efname">HEAL</div><div class="efval">20–35</div></div><div><div class="efname">ULT CD</div><div class="efval">10 rounds</div></div></div><div class="efooter">Rarity: Rare · Chance: 1.0%</div></div></div></div>
-      </div>
-      <div class="plbl">Species Roll</div>
-    </div>
-    <div class="preview-card reveal">
-      <div class="dbar"><div class="ddots"><span></span><span></span><span></span></div><span class="dch"># duel-channel</span></div>
-      <div class="dbody">
-        <div class="dmsg"><div class="davatar" style="background:linear-gradient(135deg,#0891b2,#d97706)">L</div><div><div class="dname">LOZ <span class="btag">BOT</span></div><div class="dembed" style="border-color:#22d3ee;"><div class="etitle">⚔️ Round 3 — Combat</div><div class="edesc">🔥 <strong>Doe</strong> (Demon Lord) attacks <strong>Kira</strong> (Angel) for <strong>26 dmg!</strong><br>💫 Burning Aura: 5 additional burn damage!</div><div class="efields"><div><div class="efname">Doe HP</div><div class="efval" style="color:#61c554">98 / 125</div></div><div><div class="efname">Kira HP</div><div class="efval" style="color:#ed6a5e">41 / 100</div></div></div><div class="efooter">ULT in 7 rounds · /fight attack | heal | ult</div></div></div></div>
-      </div>
-      <div class="plbl">Live Fight</div>
-    </div>
-    <div class="preview-card reveal">
-      <div class="dbar"><div class="ddots"><span></span><span></span><span></span></div><span class="dch"># duel-channel</span></div>
-      <div class="dbody">
-        <div class="dmsg"><div class="davatar" style="background:linear-gradient(135deg,#0891b2,#d97706)">L</div><div><div class="dname">LOZ <span class="btag">BOT</span></div><div class="dembed" style="border-color:#fbbf24;"><div class="etitle">🏆 Server Leaderboard</div><div style="margin-top:8px;font-size:0.73rem;font-family:'Crimson Pro',serif;font-weight:300;color:#dcddde;line-height:1.9;"><div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:3px;margin-bottom:3px;"><span>🥇 Shion (Demi God ⚡)</span><span style="color:#fbbf24;">142 pts</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.06);padding-bottom:3px;margin-bottom:3px;"><span>🥈 Doe (Demon Lord 🔥)</span><span style="color:#b9bbbe;">98 pts</span></div><div style="display:flex;justify-content:space-between;"><span>🥉 Kira (Angel 👼)</span><span style="color:#cd7f32;">73 pts</span></div></div><div class="efooter">Updated live · /leaderboard for full list</div></div></div></div>
-      </div>
-      <div class="plbl">Leaderboard</div>
-    </div>
+    <div class="feature-card reveal"><span class="feature-icon">🎲</span><div class="feature-name">25 Playable Species</div><p class="feature-desc">Compare species stats, rarity, passives, ultimates, and elemental type matchups.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">⚔️</span><div class="feature-name">Player Battles</div><p class="feature-desc">Challenge another player with <code>/fight player</code>. Challenges must be accepted before combat starts.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🤖</span><div class="feature-name">Five Bot Difficulties</div><p class="feature-desc">Battle Easy, Medium, Hard, Impossible, or Brutal. Higher difficulties feature stronger species and more tactical ultimate use.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🫧</span><div class="feature-name">Slime Lord Boss Hunt</div><p class="feature-desc">A genuine bot victory has a 7.5% chance to spawn a separate boss encounter with difficulty-scaled stats.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">👑</span><div class="feature-name">Rare Unlocks</div><p class="feature-desc">Defeat Slime Lord for a 9.2% chance to permanently unlock the species, then equip it with <code>/switch</code>.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🌑</span><div class="feature-name">Quests & Awakenings</div><p class="feature-desc">Progress through the Reaper quest, Cyborg awakening, and Demon awakening to unlock permanent species.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🎁</span><div class="feature-name">Daily Rewards & Gifts</div><p class="feature-desc">Claim a daily reward and gift up to two species rolls per day to another player.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🎒</span><div class="feature-name">Species Tokens</div><p class="feature-desc">Use eligible inventory items to choose a new species; exclusive unlocks are protected from token rerolls.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">📊</span><div class="feature-name">Records & Leaderboards</div><p class="feature-desc">Review fight stats, match history, bot records, and your server's fight leaderboard.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">📢</span><div class="feature-name">Update Notifications</div><p class="feature-desc">Opt in or out of major update announcements with <code>/updates</code>.</p></div>
   </div>
 </div>
 
@@ -497,7 +442,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">The Roster</div>
     <h1 class="page-title">Species</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Compare each species’ core stats, rarity, and matchup traits. Unlock special species through progression and boss encounters.</p>
+    <p class="page-desc">Browse every playable species with HP, attack range, healing, ultimate cooldown, passive, ultimate, rarity, and type matchups.</p>
   </div>
   <div class="species-filters">
     <button class="filter-btn active" onclick="filterSp('all',this)">All</button>
@@ -509,61 +454,356 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <button class="filter-btn" onclick="filterSp('special',this)">Special</button>
   </div>
   <div class="species-grid" id="spGrid">
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">👤 Human</span><span class="sp-badge b-common">Default</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">50</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">5–10</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">—</div></div></div><div class="type-chips"><span class="chip chip-neutral">No matchups</span></div></div>
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">🩸 Half-Blood</span><span class="sp-badge b-common">26%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">90</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">10–16</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div></div><div class="type-chips"><span class="chip chip-neutral">No weaknesses</span></div></div>
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">🟢 Orc</span><span class="sp-badge b-common">22%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–18</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Goblin</span><span class="chip chip-weak">Weak vs Ogre</span></div></div>
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">👺 Goblin</span><span class="sp-badge b-common">18%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">95</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">8–14</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Ogre</span><span class="chip chip-weak">Weak vs Orc</span></div></div>
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">👹 Ogre</span><span class="sp-badge b-common">12%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">10–16</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Orc</span><span class="chip chip-weak">Weak vs Goblin</span></div></div>
-
-    <div class="sp-card reveal" data-tier="common"><div class="sp-header"><span class="sp-name">⚔️ High Orc</span><span class="sp-badge b-common">9%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">105</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">14–20</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Kijin</span><span class="chip chip-weak">Weak vs Oni</span></div></div>
-
-    <div class="sp-card reveal" data-tier="uncommon"><div class="sp-header"><span class="sp-name">🎭 Kijin</span><span class="sp-badge b-uncommon">7%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–18</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">8</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Oni</span><span class="chip chip-weak">Weak vs High Orc</span></div></div>
-
-    <div class="sp-card reveal" data-tier="uncommon"><div class="sp-header"><span class="sp-name">🤖 Cyborg</span><span class="sp-badge b-uncommon">7%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–19</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div></div><div class="type-chips"><span class="chip chip-neutral">No type effects</span></div></div>
-
-    <div class="sp-card reveal" data-tier="uncommon"><div class="sp-header"><span class="sp-name">👑 Orc Lord</span><span class="sp-badge b-uncommon">6%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–22</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Demon</span><span class="chip chip-weak">Weak vs Demon King</span></div></div>
-
-    <div class="sp-card reveal" data-tier="uncommon"><div class="sp-header"><span class="sp-name">👿 Oni</span><span class="sp-badge b-uncommon">5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–24</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs High Orc</span><span class="chip chip-weak">Weak vs Kijin</span></div></div>
-
-    <div class="sp-card reveal" data-tier="uncommon"><div class="sp-header"><span class="sp-name">😈 Demon</span><span class="sp-badge b-uncommon">4%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">105</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">14–20</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">4</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Demon King</span><span class="chip chip-weak">Weak vs Orc Lord</span></div></div>
-
-    <div class="sp-card reveal" data-tier="rare"><div class="sp-header"><span class="sp-name">👼 Angel</span><span class="sp-badge b-rare">3%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–23</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Demon</span><span class="chip chip-weak">Weak vs Demon Lord</span></div></div>
-
-    <div class="sp-card reveal" data-tier="rare"><div class="sp-header"><span class="sp-name">🎭 Chimera</span><span class="sp-badge b-rare">2.2%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–26</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">15</div></div></div><div class="type-chips"><span class="chip chip-neutral">Adapts to any foe</span></div></div>
-
-    <div class="sp-card reveal" data-tier="rare"><div class="sp-header"><span class="sp-name">👑😈 Demon King</span><span class="sp-badge b-rare">1.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">120</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">17–25</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">15</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Orc Lord</span><span class="chip chip-weak">Weak vs Demon</span></div></div>
-
-    <div class="sp-card reveal" data-tier="rare"><div class="sp-header"><span class="sp-name">🔥 Demon Lord</span><span class="sp-badge b-rare">1.0%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">20–28</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Demi God</span><span class="chip chip-weak">Weak vs God</span></div></div>
-
-    <div class="sp-card reveal" data-tier="epic"><div class="sp-header"><span class="sp-name">⚡ Demi God</span><span class="sp-badge b-epic">0.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">130</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">22–32</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs God</span><span class="chip chip-weak">Weak vs Demon Lord</span></div></div>
-
-    <div class="sp-card reveal" data-tier="dragon"><div class="sp-header"><span class="sp-name">🔥 Fire Dragon</span><span class="sp-badge b-epic">~0.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">22–32</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">11</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Ice Dragon</span><span class="chip chip-weak">Weak vs Earth Dragon</span></div></div>
-
-    <div class="sp-card reveal" data-tier="dragon"><div class="sp-header"><span class="sp-name">⚡ Thunder Dragon</span><span class="sp-badge b-epic">~0.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">24–34</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Ice Dragon</span><span class="chip chip-weak">Weak vs Earth Dragon</span></div></div>
-
-    <div class="sp-card reveal" data-tier="dragon"><div class="sp-header"><span class="sp-name">❄️ Ice Dragon</span><span class="sp-badge b-epic">~0.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">120</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">18–28</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Earth Dragon</span><span class="chip chip-weak">Weak vs Fire Dragon</span></div></div>
-
-    <div class="sp-card reveal" data-tier="dragon"><div class="sp-header"><span class="sp-name">🌍 Earth Dragon</span><span class="sp-badge b-epic">~0.5%</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">135</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–26</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">11</div></div></div><div class="type-chips"><span class="chip chip-strong">Strong vs Thunder Dragon</span><span class="chip chip-weak">Weak vs Ice Dragon</span></div></div>
-
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,0.15)"><div class="sp-header"><span class="sp-name">🌑 Reaper</span><span class="sp-badge b-special">Quest Only</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">25–38</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div></div><div class="type-chips"><span class="chip chip-neutral">Death is absolute</span></div></div>
-
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,0.15)"><div class="sp-header"><span class="sp-name">⚡🤖 Mechangel</span><span class="sp-badge b-special">Awakening</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–23</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div></div><div class="type-chips"><span class="chip chip-neutral">Divine Machine — no type effects</span></div></div>
-
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,0.15)"><div class="sp-header"><span class="sp-name">👿 Archdemon</span><span class="sp-badge b-special">Special</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">150</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">28–40</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div></div><div class="type-chips"><span class="chip chip-neutral">Ignores opponent's damage reduction</span></div></div>
-
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(34,211,238,0.26)">
-      <div class="sp-header"><span class="sp-name">🟢 Slime Lord</span><span class="sp-badge b-special">Boss Exclusive</span></div>
-      <div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">130</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">18–27</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div></div>
-      <div class="type-chips"><span class="chip chip-neutral">Boss unlock · 9.2%</span><span class="chip chip-neutral">Equip after unlock</span></div>
+    <div class="sp-card reveal" data-tier="epic" >
+      <div class="sp-header"><span class="sp-name">⚡ Demi God</span><span class="sp-badge b-epic">0.5%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">130</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">22–32</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">22–40</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Divine Shield — always reduces incoming damage by 15%.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Divine Wrath — your next attack deals 2.5× damage.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: God</span><span class="chip chip-weak">Weak against: Demon Lord</span></div>
     </div>
-
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,0.2)"><div class="sp-header"><span class="sp-name">👑✨ God</span><span class="sp-badge b-special">Owner Only</span></div><div class="sp-stats"><div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div><div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">25–35</div></div><div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div></div><div class="type-chips"><span class="chip chip-neutral">No weaknesses. No advantages.</span></div></div>
-
+    <div class="sp-card reveal" data-tier="epic" >
+      <div class="sp-header"><span class="sp-name">🔥 Demon Lord</span><span class="sp-badge b-epic">1.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">20–28</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">20–35</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Burning Aura — successful hits apply 5 burn for the next burn tick.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Hellfire — your next attack deals 2× damage and applies 7 burn for 2 rounds.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Demi God</span><span class="chip chip-weak">Weak against: God</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="epic" >
+      <div class="sp-header"><span class="sp-name">👑😈 Demon King</span><span class="sp-badge b-epic">1.5%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">120</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">17–25</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">18–30</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">15</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Fear Aura — opponents deal 10% less damage to you.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Infernal Domain — increase your damage by 30% for 3 turns.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Orc Lord</span><span class="chip chip-weak">Weak against: Demon</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="rare" >
+      <div class="sp-header"><span class="sp-name">😈 Demon</span><span class="sp-badge b-rare">4.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">105</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">14–20</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">12–22</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">4</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Life Steal — heal for 20% of damage dealt.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Soul Steal — your next attack deals 2× damage.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Demon King</span><span class="chip chip-weak">Weak against: Orc Lord</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="uncommon" >
+      <div class="sp-header"><span class="sp-name">👿 Oni</span><span class="sp-badge b-uncommon">5.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–24</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">15–25</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Demonic Resilience — take 10% less damage.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Demonic Possession — force the opponent to attack themselves on their next turn.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: High Orc</span><span class="chip chip-weak">Weak against: Kijin</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="uncommon" >
+      <div class="sp-header"><span class="sp-name">👑 Orc Lord</span><span class="sp-badge b-uncommon">6.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–22</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">16–28</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Despair — add bonus damage equal to 7.5% of the opponent’s maximum HP to each successful hit.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Royal Command — block the opponent’s next heal.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Demon</span><span class="chip chip-weak">Weak against: Demon King</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="uncommon" >
+      <div class="sp-header"><span class="sp-name">🎭 Kijin</span><span class="sp-badge b-uncommon">7.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–18</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">10–20</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">8</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Shadow Dance — 15% chance to add a second hit’s damage to your attack.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Shadow Clone — the clone absorbs the next incoming hit.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Oni</span><span class="chip chip-weak">Weak against: High Orc</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="uncommon" >
+      <div class="sp-header"><span class="sp-name">⚔️ High Orc</span><span class="sp-badge b-uncommon">9.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">105</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">14–20</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">14–24</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Critical Strike — 10% chance to deal 2× damage.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>War Cry — increase attack damage by 50% for 2 attacks.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Kijin</span><span class="chip chip-weak">Weak against: Oni</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="common" >
+      <div class="sp-header"><span class="sp-name">👹 Ogre</span><span class="sp-badge b-common">12.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">10–16</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">18–30</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Regeneration — restore 5 HP at the start of your turns.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Massive Blow — empower your next attack with 1.5× damage, a stun, and an extra turn.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Orc</span><span class="chip chip-weak">Weak against: Goblin</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="common" >
+      <div class="sp-header"><span class="sp-name">👺 Goblin</span><span class="sp-badge b-common">18.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">95</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">8–14</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">8–16</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Speed Dodge — 10% chance to dodge an incoming attack.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Nimble Escape — guarantee a dodge against the next incoming attack.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Ogre</span><span class="chip chip-weak">Weak against: Orc</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="common" >
+      <div class="sp-header"><span class="sp-name">🟢 Orc</span><span class="sp-badge b-common">22.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–18</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">12–20</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Berserker — deal +5 damage while below 30% HP.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Berserker Rage — your next attack deals 2× damage, with 20% recoil.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Goblin</span><span class="chip chip-weak">Weak against: Ogre</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="rare" >
+      <div class="sp-header"><span class="sp-name">👼 Angel</span><span class="sp-badge b-rare">3.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">100</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–23</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">15–32</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Holy Touch — heal for 10% of damage dealt.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Divine Blessing — choose Smite (1.5× next attack and heal 35% of current HP) or Prayer (heal 60% of current HP).</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Demon</span><span class="chip chip-weak">Weak against: Demon Lord</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="rare" >
+      <div class="sp-header"><span class="sp-name">🎭 Chimera</span><span class="sp-badge b-rare">2.2%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–26</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">14–22</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">15</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Adaptive Evolution — taking damage builds +2 damage for your next attack, stacking up to 3 times.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Mirror Realm — copy the opponent’s most recently used ultimate.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="uncommon" >
+      <div class="sp-header"><span class="sp-name">🤖 Cyborg</span><span class="sp-badge b-uncommon">7.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">12–19</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">8–14</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Overclock — listed as a 1.3× surge every 3 attacks in LOZ&#39;s species data.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Self-Repair — heal 30% of max HP and reduce incoming damage by 15% for 2 turns.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="common" >
+      <div class="sp-header"><span class="sp-name">🩸 Half-Blood</span><span class="sp-badge b-common">26.0%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">90</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">10–16</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">10–18</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">7</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Scrappy — deal +3 damage while below 25% HP.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Awakened Blood — your next attack deals 1.4× damage and restores 10 HP.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="dragon" >
+      <div class="sp-header"><span class="sp-name">🔥🐉 Fire Dragon</span><span class="sp-badge b-epic">2.0% shared Dragon pool</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">125</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">22–32</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">8–14</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">11</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Burning Aura — successful hits apply 4 burn for the next burn tick.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Inferno Blast — your next attack deals 1.7× damage and applies 10 burn for 2 rounds.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Ice Dragon</span><span class="chip chip-weak">Weak against: Earth Dragon</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="dragon" >
+      <div class="sp-header"><span class="sp-name">⚡🐉 Thunder Dragon</span><span class="sp-badge b-epic">2.0% shared Dragon pool</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">115</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">24–34</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">6–12</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Paralyzing Shock — 10% chance to nullify an incoming attack.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Thunder Surge — your next attack deals 1.4× damage and attempts to paralyze the opponent.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Ice Dragon</span><span class="chip chip-weak">Weak against: Earth Dragon</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="dragon" >
+      <div class="sp-header"><span class="sp-name">❄️🐉 Ice Dragon</span><span class="sp-badge b-epic">2.0% shared Dragon pool</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">120</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">18–28</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">16–24</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Frost Armor — restore HP equal to 10% of damage received.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Glacial Spike — choose a 1.9× attack or boost your next heal by 50%.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Earth Dragon</span><span class="chip chip-weak">Weak against: Fire Dragon</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="dragon" >
+      <div class="sp-header"><span class="sp-name">🌍🐉 Earth Dragon</span><span class="sp-badge b-epic">2.0% shared Dragon pool</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">135</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">16–26</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">10–18</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">11</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Stone Skin — always reduces incoming damage by 15%.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Terra Shield — choose Terra Strike (1.2× next attack, no invincibility) or Terra Shield (reduce the next incoming hit by 60%).</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-strong">Strong against: Thunder Dragon</span><span class="chip chip-weak">Weak against: Ice Dragon</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+      <div class="sp-header"><span class="sp-name">⚡🤖 Mechangel</span><span class="sp-badge b-special">Cyborg awakening</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–23</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">10–18</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Quantum Processing — every second attack receives a 1.4× damage multiplier.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>System Restoration — heal 40% of max HP and reduce incoming damage by 20% for 2 turns.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+      <div class="sp-header"><span class="sp-name">🌑 Reaper</span><span class="sp-badge b-special">Reaper quest</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">110</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">25–38</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">8–16</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Soul Reaper — deal 10% more damage and heal for 30% of damage dealt.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Death’s Judgment — instantly kill an opponent below 20% HP; otherwise deal 1.7× damage and gain 50% life steal.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+      <div class="sp-header"><span class="sp-name">👿 Archdemon</span><span class="sp-badge b-special">Demon awakening</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">150</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">28–40</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">15–25</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">10</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Lord of Darkness — +15% damage and +5 flat damage on attacks.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Abyssal Gate — your next attack deals 2× damage and applies a 10-point curse for 3 turns.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(34,211,238,.32)">
+      <div class="sp-header"><span class="sp-name">🫧 Slime Lord</span><span class="sp-badge b-special">Boss unlock · 9.2%</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">130</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">18–27</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">15–25</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Adaptive Momentum — each miss or counter builds your next-attack multiplier: 1.2×, 1.4×, 1.6×, 1.8×, up to 2.0×. A successful hit consumes the bonus.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Predatory Assimilation — while active, the next incoming damage hit becomes HP; any overflow beyond max HP is reflected to the attacker.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">Boss spawn: 7.5% after a non-boss bot victory</span><span class="chip chip-neutral">Excluded from normal rolls and Species Tokens</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+      <div class="sp-header"><span class="sp-name">👑✨ God</span><span class="sp-badge b-special">Owner only</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">25–35</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">25–45</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">12</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Divine Retribution — heal 20% of current HP when an attack misses.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Divine Judgment — remove 50% of the opponent’s current HP and heal 50% of your current HP.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+      <div class="sp-header"><span class="sp-name">👤 Human</span><span class="sp-badge b-special">Default</span></div>
+      <div class="sp-stats">
+        <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">50</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">5–10</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">5–10</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">—</div></div>
+      </div>
+      <div class="sp-abilities">
+        <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>No passive ability.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>No ultimate ability.</div></div>
+      </div>
+      <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
+    </div>
   </div>
 </div>
 
@@ -615,19 +855,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan-bright),var(--amber-bright),var(--crimson-bright));"></div>
       <div style="font-family:var(--font-display);font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">About the Bot</div>
       <p style="font-size:1rem;font-weight:300;color:var(--text-muted);line-height:1.8;">
-        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 25+ unique species, progression through quests and awakenings, and multiple game modes. Every line of code was written by Teal.
+        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 25 playable species, five bot difficulties, progression through quests and awakenings, and rare boss encounters. Created by Teal.
       </p>
       <div style="margin-top:1.25rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--cyan-bright);">20+</div>
-          <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Species</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--cyan-bright);">25</div>
+          <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Playable Species</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-bright);">4</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--amber-bright);">5</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Bot Difficulties</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v4.2</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v5.0</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Current Version</div>
         </div>
       </div>
@@ -637,41 +877,78 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 </div>
 
 <!-- PREVIEWS -->
+<!-- COMMANDS -->
 <div id="page-commands" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">Reference</div>
+    <div class="page-eyebrow">Live command reference</div>
     <h1 class="page-title">Commands</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The main commands to get started, fight, and progress in LOZ. Some commands are restricted to server admins or the bot owner.</p>
+    <p class="page-desc">This reference mirrors the bot's current slash-command registrations. Restricted commands are only available to authorized users.</p>
   </div>
   <div class="cmd-cat reveal"><span>🚀</span> Getting Started</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/guide</span><span class="cmd-desc">Learn the basics and get started with LOZ.</span><span class="cmd-tag">Core</span></div>
-    <div class="cmd-row"><span class="cmd-name">/species-roll</span><span class="cmd-desc">Roll for a species. Results are weighted by rarity.</span><span class="cmd-tag">Core</span></div>
-    <div class="cmd-row"><span class="cmd-name">/species</span><span class="cmd-desc">View species information and available species details.</span><span class="cmd-tag">Core</span></div>
-    <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Equip a species you have permanently unlocked.</span><span class="cmd-tag">Progression</span></div>
+    <div class="cmd-row"><span class="cmd-name">/help</span><span class="cmd-desc">Show the command guide and categories.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/guide</span><span class="cmd-desc">Open the step-by-step tutorial and one-time tutorial reward.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/daily</span><span class="cmd-desc">Claim your daily species-roll reward.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/species</span><span class="cmd-desc">Browse species and rarity ranks; add species:&lt;name&gt; for stats and abilities.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/species-roll</span><span class="cmd-desc">Roll for a new species.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Switch to a permanently unlocked species; a 3-hour cooldown applies.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/profile user:&lt;user&gt;</span><span class="cmd-desc">View a player&#39;s species, resources, and progression. The user is optional.</span><span class="cmd-tag">Everyone</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>⚔️</span> Combat</div>
+
+  <div class="cmd-cat reveal"><span>⚔️</span> Combat & Records</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/fight player</span><span class="cmd-desc">Challenge another player to a 1v1 battle. They must accept.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight bot</span><span class="cmd-desc">Fight a bot and choose one of five difficulties: Easy, Medium, Hard, Impossible, or Brutal.</span><span class="cmd-tag">Combat</span></div>
-    <div class="cmd-row"><span class="cmd-name">/quest</span><span class="cmd-desc">Check your Reaper Quest progress.</span><span class="cmd-tag">Progression</span></div>
-    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your awakening progression.</span><span class="cmd-tag">Progression</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fight player user:&lt;user&gt;</span><span class="cmd-desc">Send a player challenge. The other player must accept it.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fight bot difficulty:&lt;difficulty&gt;</span><span class="cmd-desc">Fight Easy, Medium, Hard, Impossible, or Brutal bot opponents.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fightstats user:&lt;user&gt;</span><span class="cmd-desc">View player fight statistics; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/history user:&lt;user&gt;</span><span class="cmd-desc">View fight history; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/botstats user:&lt;user&gt;</span><span class="cmd-desc">View bot-fight results by difficulty; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fights</span><span class="cmd-desc">View the fight leaderboard.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/togglerequests status:&lt;enable|disable&gt;</span><span class="cmd-desc">Choose whether to accept incoming player challenges.</span><span class="cmd-tag">Everyone</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>💣</span> Games & Social</div>
+
+  <div class="cmd-cat reveal"><span>🌑</span> Quests & Items</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/leaderboard</span><span class="cmd-desc">View your server's top fighters.</span><span class="cmd-tag">Social</span></div>
-    <div class="cmd-row"><span class="cmd-name">/togglerequests</span><span class="cmd-desc">Choose whether other players can send you fight requests.</span><span class="cmd-tag">Social</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quest view user:&lt;user&gt;</span><span class="cmd-desc">View your quests or inspect another user&#39;s quests; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quest claim quest:Reaper</span><span class="cmd-desc">Claim the Reaper quest reward if eligible.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening requirements and progress.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Use an eligible inventory Species Token to choose a new species.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/gift user:&lt;user&gt; amount:&lt;1–2&gt;</span><span class="cmd-desc">Gift 1–2 species rolls. Daily limits allow up to 2 sent and 4 received.</span><span class="cmd-tag">Everyone</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>⚙️</span> Server Admin</div>
+
+  <div class="cmd-cat reveal"><span>📣</span> Updates & Information</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/setchannel</span><span class="cmd-desc">Set a persistent duel channel for your server. Admin only.</span><span class="cmd-tag">Admin</span></div>
-    <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">View recent LOZ update notes in Discord.</span><span class="cmd-tag">Info</span></div>
+    <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">Read release notes and historical changes.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates subscribe</span><span class="cmd-desc">Opt in to major-update direct messages.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates unsubscribe</span><span class="cmd-desc">Opt out of major-update direct messages.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates status</span><span class="cmd-desc">Check your update-notification preference.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/view subscribers</span><span class="cmd-desc">View the active update-subscriber count.</span><span class="cmd-tag">Admin / Owner</span></div>
   </div>
-  <div class="cmd-cat reveal"><span>👑</span> Bot Owner</div>
+
+  <div class="cmd-cat reveal"><span>🛠️</span> Server & Owner Tools</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/god species-unlock</span><span class="cmd-desc">Permanently unlock a supported exclusive species for a target user without requiring its normal quest or awakening. Owner only.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/servers</span><span class="cmd-desc">List LOZ servers with server details and invite links.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/broadtest</span><span class="cmd-desc">Send the major-update DM preview to yourself.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/broadcast</span><span class="cmd-desc">DM the major-update announcement to opted-in users.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god menu</span><span class="cmd-desc">Show the God command menu.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god species-unlock user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Permanently unlock Reaper, Archdemon, Mechangel, or Slime Lord without the normal quest/awakening.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god add items user:&lt;user&gt; item:Species Token quantity:&lt;number&gt;</span><span class="cmd-desc">Grant inventory items such as Species Tokens.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god species-change user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Set a user&#39;s current species directly.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god species-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s species to Human.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god species-add user:&lt;user&gt; amount:&lt;number&gt;</span><span class="cmd-desc">Grant species rolls.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god rolls-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s roll count to zero.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god quest-reset user:&lt;user&gt; quest:&lt;Reaper|All&gt;</span><span class="cmd-desc">Reset a user&#39;s quest progress.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god debug-db</span><span class="cmd-desc">Inspect database keys for debugging.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/god repair-user-db</span><span class="cmd-desc">Archive duplicates and repair duplicate player records.</span><span class="cmd-tag">Owner only</span></div>
   </div>
+
+  <div class="cmd-cat reveal"><span>⌨️</span> Text-prefix commands</div>
+  <div class="cmd-list reveal">
+    <div class="cmd-row"><span class="cmd-name">&#39;disable all</span><span class="cmd-desc">Disable LOZ commands in the current channel. Requires Discord Administrator permission.</span><span class="cmd-tag">Admin</span></div>
+    <div class="cmd-row"><span class="cmd-name">&#39;enable all</span><span class="cmd-desc">Re-enable LOZ commands in the current channel. Requires Discord Administrator permission.</span><span class="cmd-tag">Admin</span></div>
+    <div class="cmd-row"><span class="cmd-name">&#39;disintegrate</span><span class="cmd-desc">End the owner&#39;s active PvP fight via divine intervention.</span><span class="cmd-tag">Owner only</span></div>
+  </div>
+  <p class="page-desc" style="margin-top:1.5rem">Older names such as <code>/botfight</code>, <code>/roll</code>, and <code>/setchannel</code> are not current slash commands.</p>
 </div>
 
 <!-- QUESTS -->
@@ -680,33 +957,39 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Progression</div>
     <h1 class="page-title">Quests & Awakenings</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Progress through quests, awakenings, and rare boss encounters to claim exclusive species.</p>
+    <p class="page-desc">Track your quests in Discord. Permanent unlock paths include awakenings and the rare Slime Lord boss hunt.</p>
   </div>
   <div class="quests-grid">
     <div class="quest-card reveal">
       <span class="quest-icon">🌑</span>
-      <div class="quest-name">The Reaper Quest</div>
-      <p class="quest-desc">Prove yourself worthy of Death's mantle. Win enough fights, deal enough damage, and push through the grind to claim the Reaper — one of the strongest species with an instant-kill ultimate that ends fights before they start.</p>
-      <p class="quest-desc" style="margin-top:0.6rem;font-size:0.88rem;">Track your progress with <code style="font-family:var(--font-mono);font-size:0.73rem;color:var(--cyan-bright);background:var(--surface3);padding:2px 6px;border-radius:2px;">/quest</code></p>
-      <br>
-      <span class="quest-reward">⭐ Reward: Reaper — 110 HP · 25–38 ATK · Instant Kill ULT</span>
+      <div class="quest-name">Reaper Quest</div>
+      <p class="quest-desc">The timed Reaper quest stopped accepting new progress after 24 March 2026 at 6 PM IST. Use <code>/quest view</code> to inspect saved progress.</p>
+      <span class="quest-reward">⭐ Reward: Reaper · 110 HP · 25–38 ATK · Death’s Judgment</span>
     </div>
     <div class="quest-card reveal">
       <span class="quest-icon">⚡🤖</span>
       <div class="quest-name">Cyborg Awakening</div>
-      <p class="quest-desc">Already a Cyborg? Complete all three requirements to transcend into Mechangel — a direct evolution that does not require rerolling.</p>
-      <div style="margin:1.1rem 0;">
-        <div class="progress-item"><div class="progress-row"><span>Win 25 fights</span><span class="progress-val">0 / 25</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--cyan-bright)"></div></div></div>
-        <div class="progress-item"><div class="progress-row"><span>Deal 500 total damage</span><span class="progress-val">0 / 500</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--amber-bright)"></div></div></div>
-        <div class="progress-item"><div class="progress-row"><span>Use ULT 15 times</span><span class="progress-val">0 / 15</span></div><div class="progress-bar"><div class="progress-fill" style="width:0%;background:var(--emerald-bright)"></div></div></div>
-      </div>
-      <span class="quest-reward">⭐ Reward: Mechangel — 140 HP · Quantum Processing · Fast ULT</span>
+      <p class="quest-desc">Become Mechangel by completing all three requirements as a Cyborg: win 25 fights, deal 500 total damage, and use your ultimate 15 times. The awakening is permanent.</p>
+      <span class="quest-reward">⭐ Reward: Mechangel · 140 HP · Quantum Processing</span>
     </div>
     <div class="quest-card reveal">
-      <span class="quest-icon">🟢</span>
+      <span class="quest-icon">👿</span>
+      <div class="quest-name">Demon Awakening</div>
+      <p class="quest-desc">Become Archdemon by winning 25 player fights, defeating 20 Demon bots, and spending 20 species rolls. The awakening is permanent; use <code>/switch</code> to return after changing species.</p>
+      <span class="quest-reward">⭐ Reward: Archdemon · 150 HP · 28–40 ATK</span>
+    </div>
+    <div class="quest-card reveal">
+      <span class="quest-icon">🫧</span>
       <div class="quest-name">Slime Lord Boss Hunt</div>
-      <p class="quest-desc">Win a bot fight for a 7.5% chance to encounter the Slime Lord. Boss stats scale with the difficulty you just defeated; win the boss battle for a 9.2% chance to permanently unlock Slime Lord.</p>
-      <span class="quest-reward">⭐ Reward: Slime Lord — 130 HP · 18–27 ATK · ULT CD 9</span>
+      <p class="quest-desc">After a genuine victory against a non-boss bot, there is a 7.5% chance Slime Lord appears. Your HP and temporary effects reset for the fresh boss battle. Defeat the boss for a 9.2% chance to permanently unlock Slime Lord. Boss victories never chain-spawn another boss.</p>
+      <div class="boss-stat-table">
+        <div class="boss-stat-row"><span>Easy</span><span>120 HP · ATK 14–20 · Heal 10–16 · CD 10</span></div>
+        <div class="boss-stat-row"><span>Medium</span><span>140 HP · ATK 16–23 · Heal 12–18 · CD 9</span></div>
+        <div class="boss-stat-row"><span>Hard</span><span>160 HP · ATK 19–27 · Heal 14–21 · CD 8</span></div>
+        <div class="boss-stat-row"><span>Impossible</span><span>185 HP · ATK 22–31 · Heal 16–24 · CD 8</span></div>
+        <div class="boss-stat-row"><span>Brutal</span><span>210 HP · ATK 25–35 · Heal 18–26 · CD 7</span></div>
+      </div>
+      <span class="quest-reward">⭐ Reward: Slime Lord · 130 HP · Adaptive Momentum</span>
     </div>
   </div>
 </div>
@@ -717,136 +1000,106 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Every update to LOZ, newest first.</p>
+    <p class="page-desc">The current release is Version 5.0. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.0</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.0</span></div><span class="pdate">2026-10-10</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">🟢 Slime Lord Boss Hunt — a 7.5% chance to spawn after a bot victory on any difficulty. Boss HP, attack, healing, and ultimate cooldown scale with the difficulty defeated: Easy 120 HP, Medium 140, Hard 160, Impossible 185, Brutal 210.</div>
-        <div class="patch-item">👑 Exclusive Slime Lord unlock — defeating the boss gives a 9.2% chance to permanently unlock the species. Once unlocked, it can be equipped later with /switch.</div>
-        <div class="patch-item">📈 Adaptive Momentum — misses and being countered build the next attack multiplier from 1.2× up to 2.0×.</div>
-        <div class="patch-item">🛡️ Predatory Assimilation — while the ultimate is active, incoming damage is converted to healing; damage beyond maximum HP is reflected back to the attacker.</div>
-        <div class="patch-item">🔑 New owner command: /god species-unlock — permanently grants a supported exclusive species without requiring its normal quest or awakening.</div>
-        <div class="patch-item">⚔️ Fight flow improvements — /fight player and /fight bot are separate subcommands, with one active incoming or outgoing player challenge per user and a 30-second post-fight cooldown.</div>
-        <div class="patch-item">🐉 Earth Dragon first path corrected so it no longer grants an unintended one-round invincibility effect.</div>
-        <div class="patch-item">🧹 Website and gameplay info refreshed for the v5.0 release.</div>
+        <div class="patch-item">🫧 Added Slime Lord boss encounters: a 7.5% spawn chance after a genuine victory against any bot difficulty. Boss stats scale to the difficulty defeated, and player HP and temporary effects reset for this fresh fight.</div>
+        <div class="patch-item">👑 Defeating Slime Lord grants a 9.2% chance to permanently unlock the species. It is excluded from normal species rolls and Species Tokens; equip it later through <code>/switch</code>.</div>
+        <div class="patch-item">📈 Slime Lord passive, Adaptive Momentum: misses and counters build the next attack multiplier from 1.2× to a 2.0× maximum.</div>
+        <div class="patch-item">🛡️ Slime Lord ultimate, Predatory Assimilation: converts the next incoming damage hit into HP and reflects any overflow beyond maximum HP to the attacker.</div>
+        <div class="patch-item">🔑 Added owner-only <code>/god species-unlock</code> to permanently unlock Reaper, Archdemon, Mechangel, or Slime Lord without requiring the usual quest or awakening.</div>
+        <div class="patch-item">🐉 Earth Dragon Terra Strike now boosts the next attack by 1.2× without granting invincibility. Terra Shield reduces the next incoming hit by 60%.</div>
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">Final</span><span class="pver">Version 4.3</span></div><span class="pdate">2026-03-17</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.8</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">⚔️ Miss + Counter system restored — attacks can miss, defenders have a 30% chance to counter-strike on miss.</div>
-        <div class="patch-item">🎭 Chimera ULT overhauled — copies opponent's species ULT directly, no waiting required. Works for bots too.</div>
-        <div class="patch-item">🎁 New /gift command — gift rolls to other players. 2 sent / 4 received per day.</div>
-        <div class="patch-item">✨ /awakening renamed to Awakening Altar — now a universal system for all species awakenings.</div>
-        <div class="patch-item">🌑 Reaper Quest now has a deadline — quest expires 24 March 2026 at 6PM.</div>
-        <div class="patch-item">🔒 Cannot reroll species while in an active fight.</div>
-        <div class="patch-item">👑 God-given species now always becomes the player's original species.</div>
-        <div class="patch-item">🤖 Bot fights now show whose fight it is. Bot auto-resolves in player's favour if stuck for 60 seconds.</div>
-        <div class="patch-item">🐛 Fixed fight wins incorrectly counting toward bomb tag leaderboard.</div>
+        <div class="patch-item">🎟️ Added Species Tokens. Use <code>/items use</code> to choose and confirm an eligible species; Reaper, Archdemon, Mechangel, and God are excluded.</div>
+        <div class="patch-item">👑 Added <code>/god add items</code> so the owner can grant inventory items such as Species Tokens.</div>
+      </div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.7</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body"><div class="patch-item">🎲 Replaced generic dice icons with the custom reroll-dice emoji across species-roll displays and rewards.</div></div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.6</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body"><div class="patch-item">🏆 Fight results now display leaderboard rewards and species-roll rewards with clearer icons.</div></div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.5</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">🤖 Fixed bot-fight leaderboard rewards: Easy 1 point, Medium 2, Hard 3, and Impossible 5.</div>
+        <div class="patch-item">💀 Added Brutal difficulty with Reaper, Mechangel, and Archdemon opponents.</div>
+        <div class="patch-item">🧠 Brutal bots use species-aware ultimate decisions and more tactical timing.</div>
+        <div class="patch-item">🏆 Brutal wins award 10 leaderboard points and one species roll. Brutal results are included in <code>/botstats</code>.</div>
+      </div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.4</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">👿 Added the Demon awakening: win 25 player fights, defeat 20 Demon bots, and spend 20 rolls to become Archdemon.</div>
+        <div class="patch-item">🔒 Archdemon awakening is permanent. Use <code>/switch</code> to return to Archdemon after changing species.</div>
+        <div class="patch-item">📋 Consolidated the changelog into <code>/patchnotes</code>.</div>
+      </div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.3</span></div><span class="pdate">2026-03-17</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">⚔️ Restored the Miss + Counter system; attacks can miss and defenders have a 30% chance to counter-strike.</div>
+        <div class="patch-item">🎭 Chimera's ultimate copies the opponent's last ultimate.</div>
+        <div class="patch-item">🎁 Added <code>/gift</code>; players can send up to 2 rolls daily and receive up to 4 daily.</div>
+        <div class="patch-item">✨ Added the universal awakening altar through <code>/awakening</code>.</div>
+        <div class="patch-item">🌑 The Reaper quest had a deadline of 24 March 2026 at 6 PM IST.</div>
+        <div class="patch-item">🔒 Species rerolls are blocked during active fights; God-given species are saved as original species.</div>
+        <div class="patch-item">🤖 Improved bot-fight recovery and labels; fixed fight wins counting toward the wrong leaderboard.</div>
+        <div class="patch-item">💾 Persistent game data is stored in MongoDB.</div>
       </div>
     </div>
     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.2</span></div><span class="pdate">2026-03-16</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">🐛 Fixed ULT cooldown — both players' ULT now ticks every round. Spam no longer possible.</div>
-        <div class="patch-item">🐛 Fixed all 17 combat bugs — passives, burns, Oni possession, Chimera stacks, God retribution all working correctly.</div>
-        <div class="patch-item">⚔️ Fight system overhauled — single embed with buttons attached, no more message spam.</div>
-        <div class="patch-item">🗄️ Migrated to MongoDB — persistent data, no more resets on bot restart.</div>
-        <div class="patch-item">📋 /species now shows full ranked species list with roll chances when used with no argument.</div>
-        <div class="patch-item">👑 /god species-add now supports up to 1,000,000 rolls.</div>
+        <div class="patch-item">🐛 Fixed combat bugs involving passives, burns, possession, Chimera stacks, and God retribution.</div>
+        <div class="patch-item">⚔️ Overhauled fight cards so combat buttons stay attached to one message and health updates after effects resolve.</div>
+        <div class="patch-item">🗄️ Added persistent MongoDB storage and improved species-compendium details.</div>
+        <div class="patch-item">👑 <code>/god species-add</code> supports up to 1,000,000 rolls.</div>
       </div>
     </div>
     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.1</span></div><span class="pdate">2026-02-27</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">🐛 Reaper Quest fixed — progress no longer resets between sessions.</div>
-        <div class="patch-item">⚙️ Constant healing bug under investigation.</div>
-        <div class="patch-item">⚙️ ULT turn assignment bug fix in progress.</div>
-        <div class="patch-item">⚙️ Several fights not counting toward quests — corrected.</div>
-        <div class="patch-item">📢 Found a bug? Report it directly to the developer.</div>
+        <div class="patch-item">🐛 Fixed Reaper quest progress resets and several quest-progress tracking issues.</div>
+        <div class="patch-item">⚙️ Healing and ultimate turn-assignment fixes were tracked in this release.</div>
       </div>
     </div>
     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.0</span></div><span class="pdate">2024-04-01</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">✨ Added Chimera species (2.2%) — copies opponent's ULT at 100% accuracy.</div>
-        <div class="patch-item">✨ Added exclusive badges: OG Tester & Doe's Favourite.</div>
-        <div class="patch-item">⚖️ Complete species rarity overhaul across the board.</div>
-        <div class="patch-item">⚖️ Dragon chance: 2.3% → 2.0% | Angel: 3.5% → 3.0%.</div>
-        <div class="patch-item">🤖 Chimera added to Medium bot fights; Angel added to Easy.</div>
-        <div class="patch-item">👑 /god species-add now supports 1–500 rolls.</div>
-        <div class="patch-item">🐛 Fixed Chimera copying, turn order after ULT, counter damage instant kill.</div>
+        <div class="patch-item">✨ Added Chimera, which copies the opponent's ultimate.</div>
+        <div class="patch-item">⚖️ Overhauled species rarity and adjusted Dragon and Angel chances.</div>
+        <div class="patch-item">🐛 Fixed Chimera copying, ultimate turn order, and counter-damage edge cases.</div>
       </div>
     </div>
     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.5</span></div><span class="pdate">2024-03-20</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">🌑 Added Reaper quest system.</div>
-        <div class="patch-item">🔄 Added class switch with 3-hour cooldown.</div>
-        <div class="patch-item">🚫 Single active request limit per player.</div>
-        <div class="patch-item">🔘 Added /togglerequests command.</div>
-        <div class="patch-item">💾 Added persistent duel channels.</div>
-        <div class="patch-item">👑 Added /god rolls-reset command.</div>
-        <div class="patch-item">💀 Enhanced disintegrate with 52 dramatic messages.</div>
+        <div class="patch-item">🌑 Added the Reaper quest and a three-hour species-switch cooldown.</div>
+        <div class="patch-item">🚫 Added active challenge request limits and request toggles.</div>
+        <div class="patch-item">💾 Added persistent duel channels and owner roll-reset tools.</div>
       </div>
     </div>
     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.0</span></div><span class="pdate">2024-03-15</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
-        <div class="patch-item">✨ Added Angel species.</div>
-        <div class="patch-item">✨ Added 4 Elemental Dragon variants.</div>
-        <div class="patch-item">✨ Added /species change command.</div>
-        <div class="patch-item">⚖️ Goblin dodge nerfed: 50% → 10% | Demon King: -5 flat → -10%.</div>
-        <div class="patch-item">🐛 Fixed all ULT abilities and double reply bug.</div>
+        <div class="patch-item">✨ Added Angel and four elemental Dragon variants.</div>
+        <div class="patch-item">⚖️ Adjusted type matchup balance and fixed ultimate/counter-damage issues.</div>
       </div>
     </div>
   </div>
 </div>
-
-
-<!-- COUNTDOWN PAGE -->
-<div id="page-countdown" class="page">
-  <div class="cd-page-hero">
-    <div class="cd-page-glow"></div>
-    <div class="cd-page-label">Legends of the Rift</div>
-    <div class="cd-page-title" id="cd-page-main-title">MASSIVE UPDATE</div>
-    <div class="cd-page-sub">Something big is coming</div>
-    <div class="cd-big-timer" id="cd-big-timer">
-      <div class="cd-big-seg" id="cd-days-seg">
-        <div class="cd-big-num" id="cd-days">--</div>
-        <div class="cd-big-unit">Days</div>
-      </div>
-      <div class="cd-big-sep">:</div>
-      <div class="cd-big-seg" id="cd-hours-seg">
-        <div class="cd-big-num" id="cd-hours">--</div>
-        <div class="cd-big-unit">Hours</div>
-      </div>
-      <div class="cd-big-sep">:</div>
-      <div class="cd-big-seg" id="cd-mins-seg">
-        <div class="cd-big-num" id="cd-mins">--</div>
-        <div class="cd-big-unit">Minutes</div>
-      </div>
-      <div class="cd-big-sep">:</div>
-      <div class="cd-big-seg" id="cd-secs-seg">
-        <div class="cd-big-num" id="cd-secs">--</div>
-        <div class="cd-big-unit">Seconds</div>
-      </div>
-    </div>
-    <p class="cd-page-desc">
-      We're sorry for the delay — the dev team ran into some issues.<br>
-      But the massive update is still coming, bigger than ever.<br>
-      The rift will tear open soon. Thank you for your patience. 🙏
-    </p>
-    <div class="cd-mystery">
-      <div class="cd-mystery-item">New species to be revealed</div>
-      <div class="cd-mystery-item">Major combat overhaul</div>
-      <div class="cd-mystery-item">Worth the wait — we promise</div>
-    </div>
-  </div>
-</div>
-
 
 <!-- FOOTER -->
 <footer style="margin-left:0;padding:2rem 2.5rem;border-top:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
