@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, quests, awakenings, leaderboards, and the Version 5.1 Eclipsed Sovereign awakening.">
+<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, quests, awakenings, leaderboards, and the Version 5.2 Eclipsed Sovereign awakening and revised Half-Blood trials.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="Roll your species, challenge rivals, conquer five bot difficulties, master sequential awakenings, and unlock the Eclipsed Sovereign in LOZ Version 5.1.">
+<meta property="og:description" content="Roll your species, challenge rivals, conquer five bot difficulties, master sequential awakenings, and unlock the Eclipsed Sovereign in LOZ Version 5.2.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.1: collect 26 playable forms, battle players and five bot difficulties, complete sequential awakenings, and unlock the Eclipsed Sovereign.">
+<meta name="twitter:description" content="LOZ Version 5.2: collect 26 playable forms, battle players and five bot difficulties, complete sequential awakenings, and unlock the Eclipsed Sovereign.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -377,10 +377,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 <div id="page-home" class="page active">
   <div class="hero-center">
     <div class="hero-bg-glow" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 40%,rgba(8,145,178,0.14) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 20% 80%,rgba(217,119,6,0.08) 0%,transparent 60%);"></div>
-    <div class="hero-eyebrow">DISCORD RPG · VERSION 5.1</div>
+    <div class="hero-eyebrow">DISCORD RPG · VERSION 5.2</div>
     <div class="hero-logo"><span class="l">L</span><span class="o">O</span><span class="z">Z</span></div>
     <div class="hero-sub">Legends of the Rift</div>
-    <p class="hero-desc">Enter the Rift. Roll your species, challenge rivals, conquer powerful bots, and hunt for the rare Slime Lord. Your legend starts here.</p>
+    <p class="hero-desc">Enter the Rift. Roll your species, challenge rivals, conquer powerful bots, and discover what two bloodlines can become when they refuse to break.</p>
     <div class="hero-btns">
       <a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer" class="btn-primary">Add LOZ to Discord</a>
       <button class="btn-ghost" onclick="showPage('commands')">How to Play</button>
@@ -407,9 +407,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </article>
     <article class="home-quick-card home-featured-card">
       <div class="home-quick-icon">🟢</div>
-      <h2>Version 5.1: Eclipsed Sovereign</h2>
-      <p>Half-Blood can now awaken through three sequential trials and become the Eclipsed Sovereign, mastering both lineages as one.</p>
-      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.1 <span>→</span></button>
+      <h2>Version 5.2: The Eclipse Within</h2>
+      <p>The Rift remembers endurance, not just victory. Half-Blood now awakens after 15 completed battles, 200 damage, and 10 ultimates.</p>
+      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.2 <span>→</span></button>
     </article>
   </div>
 </div>
@@ -676,7 +676,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
         <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Hybrid Instinct — below 50% HP, deal 20% more damage and take 10% less damage.</div></div>
         <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Bloodline Overdrive — empower your next attack by 1.8× and restore 15 HP.</div></div>
       </div>
-      <div class="type-chips"><span class="chip chip-neutral">Unlock through the Half-Blood awakening</span><span class="chip chip-neutral">Not available from normal rolls</span></div>
+      <div class="type-chips"><span class="chip chip-neutral">15 completed fights, wins or losses</span><span class="chip chip-neutral">200 damage + 10 ultimates</span><span class="chip chip-neutral">Not available from normal rolls</span></div>
     </div>
 <div class="sp-card reveal" data-tier="dragon" >
       <div class="sp-header"><span class="sp-name">🔥🐉 Fire Dragon</span><span class="sp-badge b-epic">2.0% shared Dragon pool</span></div>
@@ -1013,11 +1013,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.1. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 5.2. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.2</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">🌘 The Rift remembers endurance, not only victory. Half-Blood's first awakening trial now requires 15 completed battles, whether won or lost.</div>
+        <div class="patch-item">⚔️ The second Half-Blood trial now requires 200 damage instead of 350. The final trial remains 10 ultimate uses.</div>
+        <div class="patch-item">🧬 Existing awakening progress carries forward. Previously recorded wins count toward the new completed-fight total, and stored damage/ultimate progress is retained.</div>
+        <div class="patch-item">📜 Reworked <code>/switch</code> into a vertical list: each species name appears directly above its own button. The list uses pages to fit Discord's component limits; locked forms display <code>Locked</code>.</div>
+        <div class="patch-item">👑 Added Eclipsed Sovereign to <code>/god species-unlock</code>. <code>/god species-change</code> now supports both Eclipsed Sovereign and Slime Lord, and sets their permanent unlock flags so they remain available in <code>/switch</code>.</div>
+        <div class="patch-item">📣 Updated the major-update broadcast with the lore of the Eclipsed Sovereign and the revised three-trial awakening path.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
         <div class="patch-item">🌘 After relentless training, Half-Blood harmonizes both sides of its lineage and awakens as the Eclipsed Sovereign, a form born where two bloodlines become one.</div>
         <div class="patch-item">📜 Added three sequential Half-Blood trials: win 10 battles, deal 350 damage, and use 10 ultimates. Only the current quest is shown, and previously saved progress is preserved.</div>
