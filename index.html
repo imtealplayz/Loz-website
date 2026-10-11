@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, quests, awakenings, leaderboards, and the Version 5.2 Eclipsed Sovereign awakening and revised Half-Blood trials.">
+<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, quests, awakenings, leaderboards, the Version 5.2 Eclipsed Sovereign awakening, and the Version 5.2.1 combat hotfix.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="Roll your species, challenge rivals, conquer five bot difficulties, master sequential awakenings, and unlock the Eclipsed Sovereign in LOZ Version 5.2.">
+<meta property="og:description" content="Roll your species, challenge rivals, conquer five bot difficulties, master sequential awakenings, and unlock the Eclipsed Sovereign in LOZ Version 5.2.1, including the combat hotfix for active ULT effects.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.2: collect 26 playable forms, battle players and five bot difficulties, complete sequential awakenings, and unlock the Eclipsed Sovereign.">
+<meta name="twitter:description" content="LOZ Version 5.2.1: collect 26 playable forms, battle players and five bot difficulties, complete sequential awakenings, and use improved ULT interactions in bot battles.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -389,7 +389,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div class="hstat"><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">5</span></span><span class="hstat-lbl">Bot Difficulties</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Boss Spawn Chance</span></div>
-      <div class="hstat"><span class="hstat-num">v<span class="a">5.0</span></span><span class="hstat-lbl">Latest Update</span></div>
+      <div class="hstat"><span class="hstat-num">v<span class="a">5.2.1</span></span><span class="hstat-lbl">Latest Update</span></div>
     </div>
   </div>
   <div class="home-quickstart">
@@ -407,9 +407,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </article>
     <article class="home-quick-card home-featured-card">
       <div class="home-quick-icon">🟢</div>
-      <h2>Version 5.2: The Eclipse Within</h2>
-      <p>The Rift remembers endurance, not just victory. Half-Blood now awakens after 15 completed battles, 200 damage, and 10 ultimates.</p>
-      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.2 <span>→</span></button>
+      <h2>Version 5.2.1: Rift Assimilation Hotfix</h2>
+      <p>Active ULT effects now persist correctly in bot fights. Predatory Assimilation can intercept Reaper’s Death’s Judgment instead of losing its protection.</p>
+      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.2.1 <span>→</span></button>
     </article>
   </div>
 </div>
@@ -1013,11 +1013,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.2. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 5.2.1. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.2</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.2.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">🛠️ Fixed player ULT state persistence in bot fights. Activated ULT effects now survive through the bot’s response and clear correctly after they are consumed.</div>
+        <div class="patch-item">🫧 Predatory Assimilation now reliably intercepts Reaper’s Death’s Judgment. The incoming hit is converted into HP, overflow is reflected, and a blocked instant-kill consumes Reaper’s queued ULT.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
         <div class="patch-item">🌘 The Rift remembers endurance, not only victory. Half-Blood's first awakening trial now requires 15 completed battles, whether won or lost.</div>
         <div class="patch-item">⚔️ The second Half-Blood trial now requires 200 damage instead of 350. The final trial remains 10 ultimate uses.</div>
