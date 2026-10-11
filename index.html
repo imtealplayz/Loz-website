@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, quests, awakenings, leaderboards, the Version 5.2 Eclipsed Sovereign awakening, and the Version 5.2.1 combat hotfix.">
+<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, rarity-based quests, verified Top.gg vote rewards, and permanent awakenings in Version 5.3.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="Roll your species, challenge rivals, conquer five bot difficulties, master sequential awakenings, and unlock the Eclipsed Sovereign in LOZ Version 5.2.1, including the combat hotfix for active ULT effects.">
+<meta property="og:description" content="Roll your species, conquer five bot difficulties, complete rotating quests, earn verified Top.gg vote rewards, and unlock permanent awakenings in LOZ Version 5.3.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.2.1: collect 26 playable forms, battle players and five bot difficulties, complete sequential awakenings, and use improved ULT interactions in bot battles.">
+<meta name="twitter:description" content="LOZ Version 5.3: collect 26 playable forms, complete rarity-based quests, earn Species Rolls from verified Top.gg votes, and pursue permanent awakenings.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -389,7 +389,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div class="hstat"><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">5</span></span><span class="hstat-lbl">Bot Difficulties</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Boss Spawn Chance</span></div>
-      <div class="hstat"><span class="hstat-num">v<span class="a">5.2.1</span></span><span class="hstat-lbl">Latest Update</span></div>
+      <div class="hstat"><span class="hstat-num">v<span class="a">5.3</span></span><span class="hstat-lbl">Latest Update</span></div>
     </div>
   </div>
   <div class="home-quickstart">
@@ -407,9 +407,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </article>
     <article class="home-quick-card home-featured-card">
       <div class="home-quick-icon">🟢</div>
-      <h2>Version 5.2.1: Rift Assimilation Hotfix</h2>
-      <p>Active ULT effects now persist correctly in bot fights. Predatory Assimilation can intercept Reaper’s Death’s Judgment instead of losing its protection.</p>
-      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.2.1 <span>→</span></button>
+      <h2>Version 5.3: The Quest Board</h2>
+      <p>Take on rotating Common-to-Mythic quests, claim rewards, and earn 2 Species Rolls for each verified Top.gg vote every 12 hours.</p>
+      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.3 <span>→</span></button>
     </article>
   </div>
 </div>
@@ -922,8 +922,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 
   <div class="cmd-cat reveal"><span>🌑</span> Quests & Items</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/quest view user:&lt;user&gt;</span><span class="cmd-desc">View your quests or inspect another user&#39;s quests; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/quest claim quest:Reaper</span><span class="cmd-desc">Claim the Reaper quest reward if eligible.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quest</span><span class="cmd-desc">Explains how to open the quest board.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quests</span><span class="cmd-desc">View the permanent vote quest and rotating quests, track objectives, and claim rewards.</span><span class="cmd-tag">Everyone</span></div>
+    
     <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening requirements and progress.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Use an eligible inventory Species Token to choose a new species.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/gift user:&lt;user&gt; amount:&lt;1–2&gt;</span><span class="cmd-desc">Gift 1–2 species rolls. Daily limits allow up to 2 sent and 4 received.</span><span class="cmd-tag">Everyone</span></div>
@@ -970,13 +971,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Progression</div>
     <h1 class="page-title">Quests & Awakenings</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Track your quests in Discord. Permanent unlock paths include awakenings and the rare Slime Lord boss hunt.</p>
+    <p class="page-desc">Use /quests in Discord for rotating rewards and the permanent Top.gg vote quest. Awakenings and the rare Slime Lord boss hunt remain separate progression paths.</p>
   </div>
   <div class="quests-grid">
     <div class="quest-card reveal">
+      <span class="quest-icon">🗳️</span>
+      <div class="quest-name">Permanent Vote Quest</div>
+      <p class="quest-desc">Vote for LOZ on Top.gg every 12 hours. After Top.gg verifies the vote, LOZ automatically adds 2 Species Rolls and sends a DM confirmation. Vote reminder DMs can be disabled.</p>
+      <span class="quest-reward">⭐ Reward: +2 Species Rolls per verified vote</span>
+    </div>
+    <div class="quest-card reveal">
+      <span class="quest-icon">🎲</span>
+      <div class="quest-name">Rotating Quest Board</div>
+      <p class="quest-desc">Start with one random quest. Common, Uncommon, Rare, Epic, Legendary, and Mythic quests have different appearance chances and rewards. New quests are added every 12 hours when a slot is available; active progress does not expire. Up to 3 rotating quests plus the vote quest.</p>
+      <span class="quest-reward">⭐ Rewards: Species Rolls · Mythic grants 1 Species Token</span>
+    </div>
+    <div class="quest-card reveal">
       <span class="quest-icon">🌑</span>
       <div class="quest-name">Reaper Quest</div>
-      <p class="quest-desc">The timed Reaper quest stopped accepting new progress after 24 March 2026 at 6 PM IST. Use <code>/quest view</code> to inspect saved progress.</p>
+      <p class="quest-desc">The original timed Reaper quest ended on 24 March 2026 at 6 PM IST and remains historical content. New rotating rewards are available in the <code>/quests</code> board.</p>
       <span class="quest-reward">⭐ Reward: Reaper · 110 HP · 25–38 ATK · Death’s Judgment</span>
     </div>
     <div class="quest-card reveal">
@@ -1013,11 +1026,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.2.1. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 5.3. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.2.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.3</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">📜 Added the personal quest board. Use <code>/quest</code> for the introduction and <code>/quests</code> to view progress and claim rewards; the previous <code>/quest view</code> and <code>/quest claim</code> subcommands are retired.</div>
+        <div class="patch-item">🗳️ Added a permanent Top.gg vote quest. Each eligible, verified vote grants <strong>2 Species Rolls</strong> once every 12 hours, with automatic delivery and a confirmation DM.</div>
+        <div class="patch-item">🎲 Added rotating quests with Common 45%, Uncommon 27%, Rare 15%, Epic 8%, Legendary 4%, and Mythic 1% appearance chances. Rewards scale with difficulty and rarity.</div>
+        <div class="patch-item">🔑 The Mythic Trial of the Rift is a long-term but achievable objective that rewards <strong>1 Species Token</strong>. Other quest tiers reward Species Rolls.</div>
+        <div class="patch-item">⏳ Quest boards start with one random quest and gain another every 12 hours when space is available, up to 3 rotating quests plus the permanent vote quest. Active quest progress does not reset or expire when new quests arrive.</div>
+        <div class="patch-item">🟡 Quest buttons show In Progress, Claim Reward, and Claimed states. Claimed quests remain visible for 5 minutes before disappearing. Vote reminders repeat every 12 hours and can be switched off.</div>
+        <div class="patch-item">🛡️ Vote rewards are granted only through Top.gg's authenticated webhook. Duplicate/cooldown events and test votes do not earn rewards.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
         <div class="patch-item">🛠️ Fixed player ULT state persistence in bot fights. Activated ULT effects now survive through the bot’s response and clear correctly after they are consumed.</div>
         <div class="patch-item">🫧 Predatory Assimilation now reliably intercepts Reaper’s Death’s Judgment. The incoming hit is converted into HP, overflow is reflected, and a blocked instant-kill consumes Reaper’s queued ULT.</div>
