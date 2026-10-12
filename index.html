@@ -176,11 +176,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 .progress-fill{height:100%;border-radius:2px;}
 
 /* PATCH NOTES */
-.patch-list{display:flex;flex-direction:column;gap:8px;}
+.patch-list{display:flex;flex-direction:column;gap:8px;width:100%;max-width:1100px;margin:0 auto;min-width:0;}
 .patch-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
 .patch-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.4rem;cursor:pointer;transition:background 0.2s;gap:1rem;flex-wrap:wrap;}
 .patch-header:hover{background:var(--surface2);}
-.pvwrap{display:flex;align-items:center;gap:9px;}
+.pvwrap{display:flex;align-items:center;gap:9px;min-width:0;}.patch-meta{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-left:auto;flex-shrink:0;}
 .pver{font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--text);}
 .platest{font-family:var(--font-mono);font-size:0.58rem;padding:3px 8px;background:rgba(34,211,238,0.12);color:var(--cyan-bright);border-radius:2px;border:1px solid rgba(34,211,238,0.2);}
 .pdate{font-family:var(--font-mono);font-size:0.66rem;color:var(--text-dim);}
@@ -250,6 +250,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
   .btn-primary,.btn-ghost{width:200px;text-align:center;}
 }
 @media(max-width:480px){
+  .patch-header{align-items:center;padding:0.9rem 1rem;gap:0.65rem;}.patch-meta{gap:0.65rem;}.pdate{font-size:0.6rem;}
   .species-grid{grid-template-columns:1fr;}
   .efields{grid-template-columns:1fr;}
   .hero-stats{gap:1.5rem;}
@@ -1014,7 +1015,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.4</span></div><span class="pdate">2026-10-12</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.4</span></div><div class="patch-meta"><span class="pdate">2026-10-12</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">👑 God is now available through normal Species Rolls with a <strong>0.2% chance per roll</strong>. The species compendium marks God as a Divine-tier roll.</div>
         <div class="patch-item">⚖️ Balanced God’s Divine Judgment: it now removes <strong>40% of the opponent’s current HP</strong> and restores <strong>40% of God’s current HP</strong>, down from 50% for each effect.</div>
@@ -1025,7 +1026,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </div>
 
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.3</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.3</span></div><div class="patch-meta"><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">📜 Added the personal quest board. Use <code>/quest</code> for the introduction and <code>/quests</code> to view progress and claim rewards; the previous <code>/quest view</code> and <code>/quest claim</code> subcommands are retired.</div>
         <div class="patch-item">🗳️ Added a permanent Top.gg vote quest. Each eligible, verified vote grants <strong>2 Species Rolls</strong> once every 12 hours, with automatic delivery and a confirmation DM.</div>
@@ -1038,7 +1039,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </div>
 
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2.1</span></div><div class="patch-meta"><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🛠️ Fixed player ULT state persistence in bot fights. Activated ULT effects now survive through the bot’s response and clear correctly after they are consumed.</div>
         <div class="patch-item">🫧 Predatory Assimilation now reliably intercepts Reaper’s Death’s Judgment. The incoming hit is converted into HP, overflow is reflected, and a blocked instant-kill consumes Reaper’s queued ULT.</div>
@@ -1046,7 +1047,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </div>
 
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.2</span></div><div class="patch-meta"><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🌘 The Rift remembers endurance, not only victory. Half-Blood's first awakening trial now requires 15 completed battles, whether won or lost.</div>
         <div class="patch-item">⚔️ The second Half-Blood trial now requires 200 damage instead of 350. The final trial remains 10 ultimate uses.</div>
@@ -1058,7 +1059,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </div>
 
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.1</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.1</span></div><div class="patch-meta"><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🌘 After relentless training, Half-Blood harmonizes both sides of its lineage and awakens as the Eclipsed Sovereign, a form born where two bloodlines become one.</div>
         <div class="patch-item">📜 Added three sequential Half-Blood trials: win 10 battles, deal 350 damage, and use 10 ultimates. Only the current quest is shown, and previously saved progress is preserved.</div>
@@ -1070,34 +1071,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.0</span></div><span class="pdate">2026-10-10</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.0</span></div><div class="patch-meta"><span class="pdate">2026-10-10</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🫧 Added Slime Lord boss encounters: a 7.5% spawn chance after a genuine victory against any bot difficulty. Boss stats scale to the difficulty defeated, and player HP and temporary effects reset for this fresh fight.</div>
         <div class="patch-item">👑 Defeating Slime Lord grants a 9.2% chance to permanently unlock the species. It is excluded from normal species rolls and Species Tokens; equip it later through <code>/switch</code>.</div>
         <div class="patch-item">📈 Slime Lord passive, Adaptive Momentum: misses and counters build the next attack multiplier from 1.2× to a 2.0× maximum.</div>
         <div class="patch-item">🛡️ Slime Lord ultimate, Predatory Assimilation: converts the next incoming damage hit into HP and reflects any overflow beyond maximum HP to the attacker.</div>
         <div class="patch-item">🔑 Added owner-only <code>/god species-unlock</code> to permanently unlock Reaper, Archdemon, Mechangel, or Slime Lord without requiring the usual quest or awakening.</div>
-        <div class="patch-item">🐉 Earth Dragon Terra Strike now boosts the next attack by 1.2× without granting invincibility. Terra Shield reduces the next incoming hit by 60%.
-        <div class="patch-item">🤖 Fixed Cyborg's Overclock passive: every third successful attack now gains a 1.3× damage multiplier.</div></div>
+        <div class="patch-item">🐉 Earth Dragon Terra Strike now boosts the next attack by 1.2× without granting invincibility. Terra Shield reduces the next incoming hit by 60%.</div>
+        <div class="patch-item">🤖 Fixed Cyborg's Overclock passive: every third successful attack now gains a 1.3× damage multiplier.</div>
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.8</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.8</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🎟️ Added Species Tokens. Use <code>/items use</code> to choose and confirm an eligible species; Reaper, Archdemon, Mechangel, and God are excluded.</div>
         <div class="patch-item">👑 Added <code>/god add items</code> so the owner can grant inventory items such as Species Tokens.</div>
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.7</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.7</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body"><div class="patch-item">🎲 Replaced generic dice icons with the custom reroll-dice emoji across species-roll displays and rewards.</div></div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.6</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.6</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body"><div class="patch-item">🏆 Fight results now display leaderboard rewards and species-roll rewards with clearer icons.</div></div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.5</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.5</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🤖 Fixed bot-fight leaderboard rewards: Easy 1 point, Medium 2, Hard 3, and Impossible 5.</div>
         <div class="patch-item">💀 Added Brutal difficulty with Reaper, Mechangel, and Archdemon opponents.</div>
@@ -1106,7 +1107,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.4</span></div><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.4</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">👿 Added the Demon awakening: win 25 player fights, defeat 20 Demon bots, and spend 20 rolls to become Archdemon.</div>
         <div class="patch-item">🔒 Archdemon awakening is permanent. Use <code>/switch</code> to return to Archdemon after changing species.</div>
@@ -1114,7 +1115,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.3</span></div><span class="pdate">2026-03-17</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.3</span></div><div class="patch-meta"><span class="pdate">2026-03-17</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">⚔️ Restored the Miss + Counter system; attacks can miss and defenders have a 30% chance to counter-strike.</div>
         <div class="patch-item">🎭 Chimera's ultimate copies the opponent's last ultimate.</div>
@@ -1127,7 +1128,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.2</span></div><span class="pdate">2026-03-16</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.2</span></div><div class="patch-meta"><span class="pdate">2026-03-16</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🐛 Fixed combat bugs involving passives, burns, possession, Chimera stacks, and God retribution.</div>
         <div class="patch-item">⚔️ Overhauled fight cards so combat buttons stay attached to one message and health updates after effects resolve.</div>
@@ -1136,14 +1137,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.1</span></div><span class="pdate">2026-02-27</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.1</span></div><div class="patch-meta"><span class="pdate">2026-02-27</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🐛 Fixed Reaper quest progress resets and several quest-progress tracking issues.</div>
         <div class="patch-item">⚙️ Healing and ultimate turn-assignment fixes were tracked in this release.</div>
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.0</span></div><span class="pdate">2024-04-01</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.0</span></div><div class="patch-meta"><span class="pdate">2024-04-01</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">✨ Added Chimera, which copies the opponent's ultimate.</div>
         <div class="patch-item">⚖️ Overhauled species rarity and adjusted Dragon and Angel chances.</div>
@@ -1151,7 +1152,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.5</span></div><span class="pdate">2024-03-20</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.5</span></div><div class="patch-meta"><span class="pdate">2024-03-20</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🌑 Added the Reaper quest and a three-hour species-switch cooldown.</div>
         <div class="patch-item">🚫 Added active challenge request limits and request toggles.</div>
@@ -1159,7 +1160,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
     </div>
     <div class="patch-card reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.0</span></div><span class="pdate">2024-03-15</span><span class="ptoggle">▾</span></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 3.0</span></div><div class="patch-meta"><span class="pdate">2024-03-15</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">✨ Added Angel and four elemental Dragon variants.</div>
         <div class="patch-item">⚖️ Adjusted type matchup balance and fixed ultimate/counter-damage issues.</div>
