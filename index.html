@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ, a Discord RPG with 26 playable forms, PvP and bot battles, rarity-based quests, verified Top.gg vote rewards, and permanent awakenings in Version 5.3.">
+<meta name="description" content="Enter the Rift in LOZ Version 5.4: collect species, battle players and bots, complete quests, and roll for the Divine God species with a 0.2% chance.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="Roll your species, conquer five bot difficulties, complete rotating quests, earn verified Top.gg vote rewards, and unlock permanent awakenings in LOZ Version 5.3.">
+<meta property="og:description" content="LOZ Version 5.4: roll for God at a 0.2% chance, master turn-based combat, complete quests, and unlock permanent awakenings.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.3: collect 26 playable forms, complete rarity-based quests, earn Species Rolls from verified Top.gg votes, and pursue permanent awakenings.">
+<meta name="twitter:description" content="LOZ Version 5.4: roll for God at a 0.2% chance, battle players and bots, complete quests, and pursue permanent awakenings.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -389,7 +389,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div class="hstat"><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">5</span></span><span class="hstat-lbl">Bot Difficulties</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Boss Spawn Chance</span></div>
-      <div class="hstat"><span class="hstat-num">v<span class="a">5.3</span></span><span class="hstat-lbl">Latest Update</span></div>
+      <div class="hstat"><span class="hstat-num">v<span class="a">5.4</span></span><span class="hstat-lbl">Latest Update</span></div>
     </div>
   </div>
   <div class="home-quickstart">
@@ -407,9 +407,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </article>
     <article class="home-quick-card home-featured-card">
       <div class="home-quick-icon">🟢</div>
-      <h2>Version 5.3: The Quest Board</h2>
-      <p>Take on rotating Common-to-Mythic quests, claim rewards, and earn 2 Species Rolls for each verified Top.gg vote every 12 hours.</p>
-      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.3 <span>→</span></button>
+      <h2>Version 5.4: Divine Balance</h2>
+      <p>God is now a 0.2% normal roll, and Divine Judgment has been balanced to 40% damage and healing.</p>
+      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.4 <span>→</span></button>
     </article>
   </div>
 </div>
@@ -427,7 +427,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="feature-card reveal"><span class="feature-icon">⚔️</span><div class="feature-name">Player Battles</div><p class="feature-desc">Challenge another player with <code>/fight player</code>. Challenges must be accepted before combat starts.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🤖</span><div class="feature-name">Five Bot Difficulties</div><p class="feature-desc">Battle Easy, Medium, Hard, Impossible, or Brutal. Higher difficulties feature stronger species and more tactical ultimate use.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🫧</span><div class="feature-name">Slime Lord Boss Hunt</div><p class="feature-desc">A genuine bot victory has a 7.5% chance to spawn a separate boss encounter with difficulty-scaled stats.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">👑</span><div class="feature-name">Rare Unlocks</div><p class="feature-desc">Defeat Slime Lord for a 9.2% chance to permanently unlock the species, then equip it with <code>/switch</code>.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">👑</span><div class="feature-name">Rare Unlocks</div><p class="feature-desc">Defeat Slime Lord for a 9.2% unlock chance, or try rolling God with a 0.2% chance per Species Roll.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🌑</span><div class="feature-name">Quests & Awakenings</div><p class="feature-desc">Progress through the Reaper quest, Cyborg awakening, and Demon awakening to unlock permanent species.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🎁</span><div class="feature-name">Daily Rewards & Gifts</div><p class="feature-desc">Claim a daily reward and gift up to two species rolls per day to another player.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🎒</span><div class="feature-name">Species Tokens</div><p class="feature-desc">Use eligible inventory items to choose a new species; exclusive unlocks are protected from token rerolls.</p></div>
@@ -791,7 +791,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div class="type-chips"><span class="chip chip-neutral">Boss spawn: 7.5% after a non-boss bot victory</span><span class="chip chip-neutral">Excluded from normal rolls and Species Tokens</span></div>
     </div>
     <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
-      <div class="sp-header"><span class="sp-name">👑✨ God</span><span class="sp-badge b-special">Owner only</span></div>
+      <div class="sp-header"><span class="sp-name">👑✨ God</span><span class="sp-badge b-special">0.2% roll chance</span></div>
       <div class="sp-stats">
         <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div>
         <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">25–35</div></div>
@@ -800,7 +800,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       </div>
       <div class="sp-abilities">
         <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Divine Retribution — heal 20% of current HP when an attack misses.</div></div>
-        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Divine Judgment — remove 50% of the opponent’s current HP and heal 50% of your current HP.</div></div>
+        <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Divine Judgment — remove 40% of the opponent’s current HP and heal 40% of your current HP.</div></div>
       </div>
       <div class="type-chips"><span class="chip chip-neutral">No special type advantage</span></div>
     </div>
@@ -944,16 +944,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="cmd-row"><span class="cmd-name">/servers</span><span class="cmd-desc">List LOZ servers with server details and invite links.</span><span class="cmd-tag">Owner only</span></div>
     <div class="cmd-row"><span class="cmd-name">/broadtest</span><span class="cmd-desc">Send the major-update DM preview to yourself.</span><span class="cmd-tag">Owner only</span></div>
     <div class="cmd-row"><span class="cmd-name">/broadcast</span><span class="cmd-desc">DM the major-update announcement to opted-in users.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god menu</span><span class="cmd-desc">Show the God command menu.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god species-unlock user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Permanently unlock Reaper, Archdemon, Mechangel, or Slime Lord without the normal quest/awakening.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god add items user:&lt;user&gt; item:Species Token quantity:&lt;number&gt;</span><span class="cmd-desc">Grant inventory items such as Species Tokens.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god species-change user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Set a user&#39;s current species directly.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god species-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s species to Human.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god species-add user:&lt;user&gt; amount:&lt;number&gt;</span><span class="cmd-desc">Grant species rolls.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god rolls-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s roll count to zero.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god quest-reset user:&lt;user&gt; quest:&lt;Reaper|All&gt;</span><span class="cmd-desc">Reset a user&#39;s quest progress.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god debug-db</span><span class="cmd-desc">Inspect database keys for debugging.</span><span class="cmd-tag">Owner only</span></div>
-    <div class="cmd-row"><span class="cmd-name">/god repair-user-db</span><span class="cmd-desc">Archive duplicates and repair duplicate player records.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner menu</span><span class="cmd-desc">Show the Owner command menu.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-unlock user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Permanently unlock Reaper, Archdemon, Mechangel, or Slime Lord without the normal quest/awakening.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner add items user:&lt;user&gt; item:Species Token quantity:&lt;number&gt;</span><span class="cmd-desc">Grant inventory items such as Species Tokens.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-change user:&lt;user&gt; species:&lt;species&gt;</span><span class="cmd-desc">Set a user&#39;s current species directly.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s species to Human.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-add user:&lt;user&gt; amount:&lt;number&gt;</span><span class="cmd-desc">Grant species rolls.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner rolls-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user&#39;s roll count to zero.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner quest-reset user:&lt;user&gt; quest:&lt;Reaper|All&gt;</span><span class="cmd-desc">Reset a user&#39;s quest progress.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner debug-db</span><span class="cmd-desc">Inspect database keys for debugging.</span><span class="cmd-tag">Owner only</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner repair-user-db</span><span class="cmd-desc">Archive duplicates and repair duplicate player records.</span><span class="cmd-tag">Owner only</span></div>
   </div>
 
   <div class="cmd-cat reveal"><span>⌨️</span> Text-prefix commands</div>
@@ -1026,9 +1026,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.3. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 5.4. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
+    <div class="patch-card open reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.4</span></div><span class="pdate">2026-10-12</span><span class="ptoggle">▾</span></div>
+      <div class="patch-body">
+        <div class="patch-item">👑 God is now available through normal Species Rolls with a <strong>0.2% chance per roll</strong>. The species compendium marks God as a Divine-tier roll.</div>
+        <div class="patch-item">⚖️ Balanced God’s Divine Judgment: it now removes <strong>40% of the opponent’s current HP</strong> and restores <strong>40% of God’s current HP</strong>, down from 50% for each effect.</div>
+        <div class="patch-item">🔐 Renamed the privileged slash-command group from <code>/god</code> to <code>/owner</code>. Owner-ID checks remain in place; rolling God does not grant access to owner commands.</div>
+        <div class="patch-item">💀 The <code>'disintegrate</code> prefix command remains restricted to the bot owner, independently of the user's species.</div>
+      </div>
+    </div>
+
     <div class="patch-card open reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.3</span></div><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div>
       <div class="patch-body">
