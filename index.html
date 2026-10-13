@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ Version 5.4: collect species, battle players and bots, complete quests, and roll for the Divine God species with a 0.2% chance.">
+<meta name="description" content="Enter the Rift in LOZ Version 5.9: collect species, battle players and bots, complete quests, earn leaderboard badges, and master improved rerolls.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="LOZ Version 5.4: roll for God at a 0.2% chance, master turn-based combat, complete quests, and unlock permanent awakenings.">
+<meta property="og:description" content="LOZ Version 5.9: battle with improved fight recovery, collect leaderboard badges, complete quests, and roll for new species.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.4: roll for God at a 0.2% chance, battle players and bots, complete quests, and pursue permanent awakenings.">
+<meta name="twitter:description" content="LOZ Version 5.9: battle players and bots, complete quests, collect leaderboard badges, and use the improved species-roll system.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -378,7 +378,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
 <div id="page-home" class="page active">
   <div class="hero-center">
     <div class="hero-bg-glow" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 40%,rgba(8,145,178,0.14) 0%,transparent 70%),radial-gradient(ellipse 40% 30% at 20% 80%,rgba(217,119,6,0.08) 0%,transparent 60%);"></div>
-    <div class="hero-eyebrow">DISCORD RPG · VERSION 5.2</div>
+    <div class="hero-eyebrow">DISCORD RPG · VERSION 5.9</div>
     <div class="hero-logo"><span class="l">L</span><span class="o">O</span><span class="z">Z</span></div>
     <div class="hero-sub">Legends of the Rift</div>
     <p class="hero-desc">Enter the Rift. Roll your species, challenge rivals, conquer powerful bots, and discover what two bloodlines can become when they refuse to break.</p>
@@ -390,7 +390,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
       <div class="hstat"><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">5</span></span><span class="hstat-lbl">Bot Difficulties</span></div>
       <div class="hstat"><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Boss Spawn Chance</span></div>
-      <div class="hstat"><span class="hstat-num">v<span class="a">5.4</span></span><span class="hstat-lbl">Latest Update</span></div>
+      <div class="hstat"><span class="hstat-num">v<span class="a">5.9</span></span><span class="hstat-lbl">Latest Update</span></div>
     </div>
   </div>
   <div class="home-quickstart">
@@ -408,9 +408,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     </article>
     <article class="home-quick-card home-featured-card">
       <div class="home-quick-icon">🟢</div>
-      <h2>Version 5.4: Divine Balance</h2>
-      <p>God is now a 0.2% normal roll, and Divine Judgment has been balanced to 40% damage and healing.</p>
-      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.4 <span>→</span></button>
+      <h2>Version 5.9: Profile &amp; Reroll Update</h2>
+      <p>Profiles are cleaner, badges are easier to spot, and opening a new species-roll panel no longer costs your existing panel or roll.</p>
+      <button class="home-card-link" onclick="showPage('patchnotes')">What's new in v5.9 <span>→</span></button>
     </article>
   </div>
 </div>
@@ -882,7 +882,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Bot Difficulties</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v5.1</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v5.9</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Current Version</div>
         </div>
       </div>
@@ -1009,11 +1009,70 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;ali
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.4. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 5.9, released October 14, 2026. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.4</span></div><div class="patch-meta"><span class="pdate">2026-10-12</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.9</span></div><div class="patch-meta"><span class="pdate">2026-10-14</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">👤 Removed passive and ultimate ability descriptions from <code>/profile</code>, keeping profiles focused on species, inventory, fight record, badges, and membership.</div>
+        <div class="patch-item">ᯓ★ Added the <strong>ᯓ★</strong> marker to every displayed profile badge, including Founder, Creator, legacy, and leaderboard badges.</div>
+        <div class="patch-item">🎲 Added a <strong>10-second <code>/species-roll</code> command cooldown</strong> and allowed players to open a fresh roll panel without cancelling an older one first.</div>
+        <div class="patch-item">✅ The old roll panel is invalidated only after the new panel posts successfully. Opening or replacing a panel does not spend a roll; only pressing <code>Reroll</code> does.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.8</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">🛠️ Fixed a fight-lock failure where an error during battle resolution could leave players marked as fighting.</div>
+        <div class="patch-item">🧹 Added owner-only <code>/owner clear-fight</code> to clear stuck PvP or bot fights and pending challenges without awarding wins, losses, or rewards.</div>
+        <div class="patch-item">↩️ Added rollback when an initial bot-fight message cannot be posted, preventing an orphaned active-fight lock.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.7</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">🔒 Added persistent LOZ access bans through owner-only <code>/owner ban</code> and <code>/owner unban</code>.</div>
+        <div class="patch-item">⏳ Ban durations accept seconds, minutes, hours, days, weeks, or years. Omitting the duration creates a permanent ban, while timed bans expire automatically.</div>
+        <div class="patch-item">🚫 Banned users are blocked from slash commands, buttons and menus, prefix commands, and bot mentions. Access-denial notices disappear after 7 seconds.</div>
+        <div class="patch-item">💬 Ban and unban actions send direct-message notices with a link to the LOZ Support Server.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.6.1</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">📨 Reworked leaderboard award and rank-change DMs into styled Components V2 containers with native dividers and a clearer <code>/profile</code> prompt.</div>
+        <div class="patch-item">🏷️ Reordered profile badges so Founder, Creator, Co-Founder, and legacy badges appear before leaderboard badges.</div>
+        <div class="patch-item">🥇 Confirmed distinct #1, #2, and #3 badges for both Fight Wins and Species Rolls leaderboards.</div>
+        <div class="patch-item">📣 Corrected the one-time first-start leaderboard announcement and explained that the previous message was an accidental test.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.6</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">🏆 Added live badges for both Fight Wins and Species Rolls leaderboards: unique rank badges for the top 3 and Top 10 badges for ranks 4–10.</div>
+        <div class="patch-item">📨 Added setup DMs for current top-10 players and automatic rank-up, rank-down, and out-of-top-10 notifications.</div>
+        <div class="patch-item">🔄 Leaderboard badges appear on <code>/profile</code>, update as rankings change, and are removed when a player falls outside the top 10.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.5</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">🌀 Added Chaos Creator, a primary-owner-exclusive species with 50% incoming damage reduction, attacks that cannot miss, counter-countering, and <strong>Disintegrate</strong> on a 2-round cooldown.</div>
+        <div class="patch-item">⚡ Chaos Creator can publicly nullify enemy ultimates, undo enemy healing, or reverse incoming attack damage after primary-owner confirmation. Prompts expire after 15 seconds, and resolved messages are cleaned up.</div>
+        <div class="patch-item">🛠️ Fixed the owner-only <code>disintegrate</code> command so battle messages update with the final result and normal victory rewards and statistics are recorded.</div>
+        <div class="patch-item">📖 Rebuilt <code>/help</code> into six categorized command pages with navigation, usage, and brief descriptions. Simplified <code>/guide</code> to point to the command directory.</div>
+        <div class="patch-item">🗳️ Hardened Top.gg vote reminders: failed DMs retry after 15 minutes, and the 12-hour reminder schedule advances only after successful delivery.</div>
+      </div>
+    </div>
+
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.4</span></div><div class="patch-meta"><span class="pdate">2026-10-12</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">👑 God is now available through normal Species Rolls with a <strong>0.2% chance per roll</strong>. The species compendium marks God as a Divine-tier roll.</div>
         <div class="patch-item">⚖️ Balanced God’s Divine Judgment: it now removes <strong>40% of the opponent’s current HP</strong> and restores <strong>40% of God’s current HP</strong>, down from 50% for each effect.</div>
