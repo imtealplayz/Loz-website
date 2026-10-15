@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ Version 5.9: collect species, battle players and bots, complete quests, earn leaderboard badges, and master improved rerolls.">
+<meta name="description" content="Enter the Rift in LOZ Version 6.0: earn Glory through achievements, awaken True Dragon, and climb the Top 25 leaderboard.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="LOZ Version 5.9: battle with improved fight recovery, collect leaderboard badges, complete quests, and roll for new species.">
+<meta property="og:description" content="LOZ Version 6.0: master species, earn Glory through achievements, and awaken True Dragon.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 5.9: battle players and bots, complete quests, collect leaderboard badges, and use the improved species-roll system.">
+<meta name="twitter:description" content="LOZ Version 6.0: master species, earn Glory through achievements, and awaken True Dragon.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -750,7 +750,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="hstat"><span class="hstat-icon">✧</span><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species to Discover</span></div>
     <div class="hstat"><span class="hstat-icon">⚔</span><span class="hstat-num"><span class="a">05</span></span><span class="hstat-lbl">Battle Difficulties</span></div>
     <div class="hstat"><span class="hstat-icon">🫧</span><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Slime Lord Spawn Chance</span></div>
-    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num">v<span class="a">5.9</span></span><span class="hstat-lbl">Latest Release</span></div>
+    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num">v<span class="a">6.0</span></span><span class="hstat-lbl">Latest Release</span></div>
   </div>
 
   <div class="home-section-heading reveal">
@@ -806,7 +806,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <article class="guide-step reveal"><div class="guide-step-number">06</div><div class="guide-step-content"><div class="guide-step-topline"><span class="guide-step-tag">Know your record</span><span>Help & rankings</span></div><h3>Track results and find commands</h3><p>/help has six paginated categories. Use the fight stats, history, and bot stats commands to review results, then open the leaderboard to compare Fight Wins or your current Species Rolls.</p><div class="guide-command-list"><div class="guide-command"><code>/help</code><button class="command-copy" onclick="copyGuideCommand('/help', this)">Copy</button></div><div class="guide-command"><code>/fightstats</code><button class="command-copy" onclick="copyGuideCommand('/fightstats', this)">Copy</button></div><div class="guide-command"><code>/leaderboard</code><button class="command-copy" onclick="copyGuideCommand('/leaderboard', this)">Copy</button></div></div></div></article>
   </div>
 
-  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 5.9 · Your roll panel is safe</h3><p>You can open <code>/species-roll</code> again after the 10-second command cooldown. A new panel replaces the old one only after the new message posts successfully. Opening or replacing a panel never spends a roll; pressing Reroll does.</p></div></div>
+  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 6.0 · The Rift evolves</h3><p>Earn Glory through normal milestones and individual species trials, awaken all four elemental dragons to unlock True Dragon, and use <code>/fight stats</code> to review your combined battle record. Rotating quests now refresh every six hours.</p></div></div>
 
   <div class="guide-section-label">02 / Choose a battle that fits</div><p class="guide-section-intro">Winning a bot fight earns Fight Wins leaderboard points. Higher difficulties also offer a chance to earn a Species Roll, while Brutal guarantees one on a genuine victory.</p>
   <div class="guide-difficulty-grid">
@@ -814,7 +814,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <article class="guide-difficulty" style="--difficulty-accent:#9ca3af"><div class="guide-difficulty-icon">⚔️</div><h3>Medium</h3><p>Practice timing and healing.</p><span class="guide-reward-pill">+2 POINTS</span><span class="guide-extra">20% chance of +1 roll</span></article>
     <article class="guide-difficulty" style="--difficulty-accent:#fb923c"><div class="guide-difficulty-icon">👹</div><h3>Hard</h3><p>Learn when to save your ultimate.</p><span class="guide-reward-pill">+3 POINTS</span><span class="guide-extra">50% chance of +1 roll</span></article>
     <article class="guide-difficulty" style="--difficulty-accent:#e74c3c"><div class="guide-difficulty-icon">💀</div><h3>Impossible</h3><p>Demanding opponents and narrow openings.</p><span class="guide-reward-pill">+5 POINTS</span><span class="guide-extra">90% chance of +1 roll</span></article>
-    <article class="guide-difficulty" style="--difficulty-accent:#c084fc"><div class="guide-difficulty-icon">☠</div><h3>Brutal</h3><p>Reaper, Mechangel, and Archdemon.</p><span class="guide-reward-pill">+10 POINTS</span><span class="guide-extra">+1 roll on a genuine win</span></article>
+    <article class="guide-difficulty" style="--difficulty-accent:#c084fc"><div class="guide-difficulty-icon">☠</div><h3>Brutal</h3><p>Reaper, Mechangel, Archdemon, and True Dragon.</p><span class="guide-reward-pill">+10 POINTS</span><span class="guide-extra">+1 roll on a genuine win</span></article>
   </div>
 
   <div class="guide-section-label">03 / Three awakening paths</div><p class="guide-section-intro">Awakenings unlock permanent forms. Requirements are tracked in sequence, so use <code>/awakening</code> to check your current trial and progress before grinding.</p>
@@ -841,7 +841,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
   <div class="page-header"><div class="page-eyebrow">A living chronicle of Legends of the Rift</div><h1 class="page-title">The Rift Chronicles</h1><div class="glow-line"></div><p class="page-desc">Every species carries a history. Every awakening has a cost. And the wound between worlds is still widening.</p></div>
   <section class="lore-hero reveal"><div class="lore-hero-main"><div class="lore-kicker">Volume I · The First Fracture</div><div class="lore-volume">From the surviving pages of the Rift Archive</div><h2 class="lore-title">When the world <span>split open.</span></h2><p class="lore-hero-copy">Before there were species, there was one world. Before there were legends, there was one impossible wound. What came through did not merely invade reality. It changed what reality could become.</p><div class="lore-meta"><span>ORIGIN MYTH</span><span>BLOODLINES</span><span>THE ALTAR</span><span>THE ECLIPSE</span></div></div><div class="lore-sigil-wrap" aria-hidden="true"><span class="lore-sigil">R</span></div></section>
 
-  <nav class="lore-toc reveal" aria-label="Rift Chronicle chapters"><a href="#lore-fracture"><span class="lore-toc-number">I</span><span class="lore-toc-label">The First Fracture</span></a><a href="#lore-bloodlines"><span class="lore-toc-number">II</span><span class="lore-toc-label">The Bloodlines</span></a><a href="#lore-wars"><span class="lore-toc-number">III</span><span class="lore-toc-label">The War of Claims</span></a><a href="#lore-altar"><span class="lore-toc-number">IV</span><span class="lore-toc-label">The Awakening Altar</span></a><a href="#lore-eclipse"><span class="lore-toc-number">V</span><span class="lore-toc-label">The Eclipsed Sovereign</span></a><a href="#lore-hunger"><span class="lore-toc-number">VI</span><span class="lore-toc-label">The Hunger Below</span></a><a href="#lore-divine"><span class="lore-toc-number">VII</span><span class="lore-toc-label">God & the Exception</span></a><a href="#lore-now"><span class="lore-toc-number">VIII</span><span class="lore-toc-label">The Living Record</span></a></nav>
+  <nav class="lore-toc reveal" aria-label="Rift Chronicle chapters"><a href="#lore-fracture"><span class="lore-toc-number">I</span><span class="lore-toc-label">The First Fracture</span></a><a href="#lore-bloodlines"><span class="lore-toc-number">II</span><span class="lore-toc-label">The Bloodlines</span></a><a href="#lore-wars"><span class="lore-toc-number">III</span><span class="lore-toc-label">The War of Claims</span></a><a href="#lore-altar"><span class="lore-toc-number">IV</span><span class="lore-toc-label">The Awakening Altar</span></a><a href="#lore-eclipse"><span class="lore-toc-number">V</span><span class="lore-toc-label">The Eclipsed Sovereign</span></a><a href="#lore-hunger"><span class="lore-toc-number">VI</span><span class="lore-toc-label">The Hunger Below</span></a><a href="#lore-divine"><span class="lore-toc-number">VII</span><span class="lore-toc-label">God & the Exception</span></a><a href="#lore-now"><span class="lore-toc-number">VIII</span><span class="lore-toc-label">The Living Record</span></a><a href="#lore-true-dragon"><span class="lore-toc-number">IX</span><span class="lore-toc-label">The True Dragon</span></a></nav>
 
   <section class="lore-prologue reveal" id="lore-fracture"><div class="lore-chapter-index"><strong>I</strong><span>Origin<br>Before the Age</span></div><div class="lore-prologue-content"><div class="lore-kicker">The First Fracture</div><h2>The world did not end. It came apart.</h2><p>In the oldest account, reality was once a single unbroken realm. Its laws were cruel but consistent: flame rose, stone fell, the dead stayed dead, and every living thing belonged to one sky. Then the horizon split without thunder. A line of pale light crossed the heavens, and every reflection in the world showed a different place.</p><p>The wound became known as the <strong>Rift</strong>. Through it drifted fragments of other realities: forests that remembered extinct suns, oceans suspended above empty ground, ruins built by civilizations that had never existed here. The laws of those places clung to the fragments. Where fragments touched, their laws collided. People changed. Creatures changed. Some survived only by becoming something new.</p><p>The first survivors called the event a disaster. Their descendants would call it a beginning. From the wreckage emerged the species that now struggle for power, each carrying a different answer to the same question: <em>what must you become to survive a broken world?</em></p><blockquote class="lore-quote">“The Rift does not choose the worthy. It reveals what survives.”<cite>Inscription recovered from the First Altar</cite></blockquote></div></section>
 
@@ -861,7 +861,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
   <div class="lore-section-head"><div><div class="lore-kicker">Chapter III · The age of challengers</div><h2 id="lore-wars">The War of Claims</h2></div><div class="lore-section-note">Power invites challengers. It never ends the argument.</div></div>
   <div class="lore-chapter-grid">
     <article class="lore-chapter reveal" data-mark="01"><div class="lore-chapter-top"><span class="lore-chapter-tag">Fragment 01</span><span class="lore-chapter-type">The arenas</span></div><h3>No throne survives without a test.</h3><p>As the new bloodlines spread, every settlement found a different way to measure strength. Some held ceremonial duels; others sent their champions against creatures left behind by the Fracture. The custom that survived all of them was simple: a claim meant nothing until it could be defended.</p><p>That is why a battle in the Rift is more than violence. It is evidence. The winner leaves with a record; the loser leaves with a lesson, if they can bear to learn it.</p><div class="lore-rule">The arena remembers results, not boasts.</div></article>
-    <article class="lore-chapter reveal" data-mark="02"><div class="lore-chapter-top"><span class="lore-chapter-tag">Fragment 02</span><span class="lore-chapter-type">The five trials</span></div><h3>Every victory opens a harder gate.</h3><p>New challengers begin against lesser opponents, learning the weight of an attack, the risk of a heal, and the moment an ultimate can change the fight. Beyond them wait more tactical enemies; at the edge of known endurance, Brutal opponents carry the names Reaper, Mechangel, and Archdemon.</p><p>The Archive refuses to call the hardest trial impossible. It calls it a question that has not yet been answered consistently.</p><div class="lore-rule">Master the turn before you seek the throne.</div></article>
+    <article class="lore-chapter reveal" data-mark="02"><div class="lore-chapter-top"><span class="lore-chapter-tag">Fragment 02</span><span class="lore-chapter-type">The five trials</span></div><h3>Every victory opens a harder gate.</h3><p>New challengers begin against lesser opponents, learning the weight of an attack, the risk of a heal, and the moment an ultimate can change the fight. Beyond them wait more tactical enemies; at the edge of known endurance, Brutal opponents carry the names Reaper, Mechangel, Archdemon, and True Dragon.</p><p>The Archive refuses to call the hardest trial impossible. It calls it a question that has not yet been answered consistently.</p><div class="lore-rule">Master the turn before you seek the throne.</div></article>
   </div>
 
   <div class="lore-section-head"><div><div class="lore-kicker">Chapter IV · The old mechanism</div><h2 id="lore-altar">The Awakening Altar</h2></div><div class="lore-section-note">Three paths. Three kinds of sacrifice.</div></div>
@@ -881,7 +881,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
   </div>
 
   <div class="lore-section-head"><div><div class="lore-kicker">Chapter VIII · The present age</div><h2 id="lore-now">The Living Record</h2></div><div class="lore-section-note">The chronicles are still being written.</div></div>
-  <section class="lore-endgame reveal"><div class="lore-kicker">The archive remains open</div><h2>The Rift has not revealed its final form.</h2><p>Every completed battle adds a line to a fighter's record. The leaderboards preserve the names of those who gather the most Fight Wins and Species Rolls. Badges mark the top three and the wider top ten, but those honours move when the rankings move. A title can be earned, lost, and earned again.</p><p>The quests continue to turn old lessons into new trials. The Altar waits for those willing to endure. Somewhere beyond the known battlefields, the next anomaly gathers its shape. The Rift has survived every answer offered so far because none of them has been final.</p><p><strong>Your profile tells the Archive where you stand. Your next battle tells it who you are becoming.</strong></p><div class="lore-final-line"><span>✦</span> END OF VOLUME I <span>·</span> THE CHRONICLE CONTINUES</div><div class="guide-bottom-links" style="margin-top:1.1rem"><button onclick="showPage('guide')">Start Your Journey</button><button onclick="showPage('species')">Explore Species</button><button onclick="showPage('quests')">View Quests</button></div></section>
+  <div class="lore-section-head"><div><div class="lore-kicker">Chapter IX · The convergence</div><h2 id="lore-true-dragon">The True Dragon</h2></div><div class="lore-section-note">Four awakenings. One force of nature.</div></div><article class="lore-chapter reveal" data-mark="IX"><div class="lore-chapter-top"><span class="lore-chapter-tag">The Fourfold Chronicle</span><span class="lore-chapter-type">Secret awakening</span></div><h3>When the four elements stop standing apart.</h3><p>The Fire, Thunder, Ice, and Earth Dragons were long recorded as separate calamities. Their awakenings were independent, their temperaments incompatible, and their power too volatile to command as a single will. The Rift's oldest seers believed no fighter could bring all four paths to completion.</p><p>That belief ended when every elemental trial was completed. Fire lent its devastation, Thunder its decisive speed, Ice its control, and Earth its unyielding endurance. The four signatures did not cancel each other. They converged into the True Dragon: a secret spiritual existence whose aura can suppress incoming force and whose perception sees through evasive tricks.</p><p>Its Dragon Spirit Haki reduces the harm it receives. Fourfold Cataclysm combines its elemental power into a single overwhelming strike, weakens the foe's next attack, and pierces part of the foe's damage reduction. Yet the form is not a random roll. Each of the four dragon variants must be awakened separately before the True Dragon can be claimed.</p><div class="lore-rule">The four dragons were not ingredients. They were four trials proving one will could carry them all.</div></article><section class="lore-endgame reveal"><div class="lore-kicker">The archive remains open</div><h2>The Rift has not revealed its final form.</h2><p>Every completed battle adds a line to a fighter's record. The leaderboards preserve the names of those who gather the most Fight Wins and Species Rolls. Badges mark the top three and the wider top ten, but those honours move when the rankings move. A title can be earned, lost, and earned again.</p><p>The quests continue to turn old lessons into new trials. The Altar waits for those willing to endure. Somewhere beyond the known battlefields, the next anomaly gathers its shape. The Rift has survived every answer offered so far because none of them has been final.</p><p><strong>Your profile tells the Archive where you stand. Your next battle tells it who you are becoming.</strong></p><div class="lore-final-line"><span>✦</span> END OF VOLUME I <span>·</span> THE CHRONICLE CONTINUES</div><div class="guide-bottom-links" style="margin-top:1.1rem"><button onclick="showPage('guide')">Start Your Journey</button><button onclick="showPage('species')">Explore Species</button><button onclick="showPage('quests')">View Quests</button></div></section>
 </div>
 
 <!-- FEATURES -->
@@ -1204,13 +1204,13 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
       </div>
       <div class="type-chips"><span class="chip chip-strong">Strong against: Thunder Dragon</span><span class="chip chip-weak">Weak against: Ice Dragon</span></div>
     </div>
-    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
+    <div class="sp-card reveal" data-tier="special" style="border-color:rgba(167,139,250,.50)">       <div class="sp-header"><span class="sp-name">🐉✨ True Dragon</span><span class="sp-badge b-special">Secret Awakening</span></div>       <div class="sp-stats">         <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">200</div></div>         <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">32–42</div></div>         <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">18–28</div></div>         <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div>       </div>       <div class="sp-abilities">         <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Dragon Spirit Haki — reduce incoming damage by 20%.</div></div>         <div class="ability-block ability-active"><span class="ability-label label-active">Ultimate</span><div>Fourfold Cataclysm — your next attack deals 2× damage and bypasses 10% of enemy damage reduction; the opponent’s next attack deals 20% less damage.</div></div>       </div>       <div class="type-chips"><span class="chip chip-neutral">Universal Perception: sees through evasion</span><span class="chip chip-neutral">Awaken Fire, Thunder, Ice, and Earth Dragons</span></div>     </div>     <div class="sp-card reveal" data-tier="special" style="border-color:rgba(251,191,36,.20)">
       <div class="sp-header"><span class="sp-name">⚡🤖 Mechangel</span><span class="sp-badge b-special">Cyborg awakening</span></div>
       <div class="sp-stats">
         <div class="sp-stat"><div class="sp-stat-l">HP</div><div class="sp-stat-v">140</div></div>
         <div class="sp-stat"><div class="sp-stat-l">ATK</div><div class="sp-stat-v">15–23</div></div>
         <div class="sp-stat"><div class="sp-stat-l">HEAL</div><div class="sp-stat-v">10–18</div></div>
-        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">6</div></div>
+        <div class="sp-stat"><div class="sp-stat-l">ULT CD</div><div class="sp-stat-v">9</div></div>
       </div>
       <div class="sp-abilities">
         <div class="ability-block ability-passive"><span class="ability-label label-passive">Passive</span><div>Quantum Processing — every second attack receives a 1.4× damage multiplier.</div></div>
@@ -1392,7 +1392,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 
   <div class="cmd-cat reveal"><span>🌑</span> Quests & Items</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/quest</span><span class="cmd-desc">Explains how to open the quest board.</span><span class="cmd-tag">Everyone</span></div>
+    
     <div class="cmd-row"><span class="cmd-name">/quests</span><span class="cmd-desc">View the permanent vote quest and rotating quests, track objectives, and claim rewards.</span><span class="cmd-tag">Everyone</span></div>
     
     <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening requirements and progress.</span><span class="cmd-tag">Everyone</span></div>
@@ -1435,7 +1435,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="quest-card reveal">
       <span class="quest-icon">🎲</span>
       <div class="quest-name">Rotating Quest Board</div>
-      <p class="quest-desc">Start with one random quest. Common, Uncommon, Rare, Epic, Legendary, and Mythic quests have different appearance chances and rewards. New quests are added every 12 hours when a slot is available; active progress does not expire. Up to 3 rotating quests plus the vote quest.</p>
+      <p class="quest-desc">Start with one random quest. Common, Uncommon, Rare, Epic, Legendary, and Mythic quests have different appearance chances and rewards. New quests are added every 6 hours when a slot is available; active progress does not expire. Up to 3 rotating quests plus the vote quest.</p>
       <span class="quest-reward">⭐ Rewards: Species Rolls · Mythic grants 1 Species Token</span>
     </div>
     <div class="quest-card reveal">
@@ -1478,20 +1478,10 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 5.9, released October 14, 2026. Older release notes are preserved below.</p>
+    <p class="page-desc">The current release is Version 6.0, released October 15, 2026. Older release notes are preserved below.</p>
   </div>
   <div class="patch-list">
-    <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 5.9</span></div><div class="patch-meta"><span class="pdate">2026-10-14</span><span class="ptoggle">▾</span></div></div>
-      <div class="patch-body">
-        <div class="patch-item">👤 Removed passive and ultimate ability descriptions from <code>/profile</code>, keeping profiles focused on species, inventory, fight record, badges, and membership.</div>
-        <div class="patch-item">ᯓ★ Added the <strong>ᯓ★</strong> marker to every displayed profile badge, including Founder, Creator, legacy, and leaderboard badges.</div>
-        <div class="patch-item">🎲 Added a <strong>10-second <code>/species-roll</code> command cooldown</strong> and allowed players to open a fresh roll panel without cancelling an older one first.</div>
-        <div class="patch-item">✅ The old roll panel is invalidated only after the new panel posts successfully. Opening or replacing a panel does not spend a roll; only pressing <code>Reroll</code> does.</div>
-      </div>
-    </div>
-
-    <div class="patch-card reveal">
+    <div class="patch-card open reveal">       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 6.0</span></div><div class="patch-meta"><span class="pdate">2026-10-15</span><span class="ptoggle">▾</span></div></div>       <div class="patch-body">         <div class="patch-item">🏆 Introduced the Glory achievement system with claimable normal milestones, individual species trials, and rewards based on existing records where the database supports them.</div>         <div class="patch-item">🐉 Added True Dragon, a secret awakening that requires separately awakening Fire, Thunder, Ice, and Earth Dragon variants. True Dragon has 200 HP, 32–42 ATK, 18–28 HEAL, Dragon Spirit Haki, Universal Perception, and Fourfold Cataclysm.</div>         <div class="patch-item">📊 Added the global Glory Top 25 leaderboard, with dedicated ranks for the Top 10 and a Top 25 role for ranks 11–25.</div>         <div class="patch-item">⚔️ Combined PvP and bot battle records in <code>/fight stats</code>. The retired <code>/fightstats</code>, <code>/botstats</code>, and <code>/quest</code> commands have been removed in favor of the unified commands.</div>         <div class="patch-item">⏳ Rotating quests now refresh every six hours. Mechangel’s ultimate cooldown is now nine rounds.</div>         <div class="patch-item">🎁 Registered LOZ 6.0 event participants are eligible for a one-time launch reward of 25 Species Rolls and 1 Species Token.</div>         <div class="patch-item">🎃 The Halloween update drops next week. Be prepared with your tricks or treats.</div>       </div>     </div>     <div class="patch-card reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.8</span></div><div class="patch-meta"><span class="pdate">2026-10-13</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🛠️ Fixed a fight-lock failure where an error during battle resolution could leave players marked as fighting.</div>
@@ -1558,7 +1548,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
         <div class="patch-item">🗳️ Added a permanent Top.gg vote quest. Each eligible, verified vote grants <strong>2 Species Rolls</strong> once every 12 hours, with automatic delivery and a confirmation DM.</div>
         <div class="patch-item">🎲 Added rotating quests with Common 45%, Uncommon 27%, Rare 15%, Epic 8%, Legendary 4%, and Mythic 1% appearance chances. Rewards scale with difficulty and rarity.</div>
         <div class="patch-item">🔑 The Mythic Trial of the Rift is a long-term but achievable objective that rewards <strong>1 Species Token</strong>. Other quest tiers reward Species Rolls.</div>
-        <div class="patch-item">⏳ Quest boards start with one random quest and gain another every 12 hours when space is available, up to 3 rotating quests plus the permanent vote quest. Active quest progress does not reset or expire when new quests arrive.</div>
+        <div class="patch-item">⏳ Quest boards start with one random quest and gain another every 6 hours when space is available, up to 3 rotating quests plus the permanent vote quest. Active quest progress does not reset or expire when new quests arrive.</div>
         <div class="patch-item">🟡 Quest buttons show In Progress, Claim Reward, and Claimed states. Claimed quests remain visible for 5 minutes before disappearing. Vote reminders repeat every 12 hours and can be switched off.</div>
         <div class="patch-item">🛡️ Vote rewards are granted only through Top.gg's authenticated webhook. Duplicate/cooldown events and test votes do not earn rewards.</div>
       </div>
@@ -1627,7 +1617,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 4.5</span></div><div class="patch-meta"><span class="pdate">2026-10-09</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🤖 Fixed bot-fight leaderboard rewards: Easy 1 point, Medium 2, Hard 3, and Impossible 5.</div>
-        <div class="patch-item">💀 Added Brutal difficulty with Reaper, Mechangel, and Archdemon opponents.</div>
+        <div class="patch-item">💀 Added Brutal difficulty with Reaper, Mechangel, Archdemon, and True Dragon opponents.</div>
         <div class="patch-item">🧠 Brutal bots use species-aware ultimate decisions and more tactical timing.</div>
         <div class="patch-item">🏆 Brutal wins award 10 leaderboard points and one species roll. Brutal results are included in <code>/botstats</code>.</div>
       </div>
