@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ Version 6.0: earn Glory through achievements, awaken True Dragon, and climb the Top 25 leaderboard.">
+<meta name="description" content="Enter the Rift in LOZ Version 6.0: earn Glory, awaken True Dragon, follow update announcements, and use the current slash-command system.">
 <meta name="theme-color" content="#03080f">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="LOZ Version 6.0: master species, earn Glory through achievements, and awaken True Dragon.">
+<meta property="og:description" content="LOZ Version 6.0: master species, earn Glory, awaken True Dragon, and manage update announcements with slash commands.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 6.0: master species, earn Glory through achievements, and awaken True Dragon.">
+<meta name="twitter:description" content="LOZ Version 6.0: master species, earn Glory, awaken True Dragon, and manage update announcements with slash commands.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1304,7 +1304,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 
     <!-- INTRO -->
     <p class="reveal" style="font-size:1.05rem;font-weight:300;color:var(--text-muted);max-width:640px;line-height:1.85;">
-      LOZ is an evolving Discord RPG with 25 playable species, competitive fights, quests, awakenings, and rare unlocks — built and maintained by Teal.
+      LOZ is an evolving Discord RPG with 27 playable species, competitive fights, quests, awakenings, and rare unlocks — built and maintained by Teal.
     </p>
 
     <!-- FOUNDER CARDS -->
@@ -1339,7 +1339,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
       <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan-bright),var(--amber-bright),var(--crimson-bright));"></div>
       <div style="font-family:var(--font-display);font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">About the Bot</div>
       <p style="font-size:1rem;font-weight:300;color:var(--text-muted);line-height:1.8;">
-        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 25 playable species, five bot difficulties, progression through quests and awakenings, and rare boss encounters. Created by Teal.
+        <strong style="color:var(--text);font-weight:600;">Legends of the Rift</strong> is a Discord RPG bot built entirely from scratch — no templates, no frameworks, just a vision and the desire to build something worth playing. It features a full combat engine, 27 playable species, five bot difficulties, progression through quests and awakenings, and rare boss encounters. Created by Teal.
       </p>
       <div style="margin-top:1.25rem;display:flex;gap:1.5rem;flex-wrap:wrap;">
         <div style="text-align:center;">
@@ -1351,7 +1351,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Bot Difficulties</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v5.9</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v6.0</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Current Version</div>
         </div>
       </div>
@@ -1363,59 +1363,81 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 <!-- COMMANDS -->
 <div id="page-commands" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">Live command reference</div>
+    <div class="page-eyebrow">Live command reference · Version 6.0</div>
     <h1 class="page-title">Commands</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">This reference mirrors the bot's current slash-command registrations. Restricted commands are only available to authorized users.</p>
+    <p class="page-desc">Current slash-command reference for LOZ Version 6.0. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
   </div>
+
   <div class="cmd-cat reveal"><span>🚀</span> Getting Started</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/help</span><span class="cmd-desc">Show the command guide and categories.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/guide</span><span class="cmd-desc">Open the step-by-step tutorial and one-time tutorial reward.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/daily</span><span class="cmd-desc">Claim your daily species-roll reward.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/species</span><span class="cmd-desc">Browse species and rarity ranks; add species:&lt;name&gt; for stats and abilities.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/species-roll</span><span class="cmd-desc">Roll for a new species.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Switch to a permanently unlocked species; a 3-hour cooldown applies.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/profile user:&lt;user&gt;</span><span class="cmd-desc">View a player&#39;s species, resources, and progression. The user is optional.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/help</span><span class="cmd-desc">Browse the paginated command directory.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/guide</span><span class="cmd-desc">Open the interactive new-player tutorial and earn the one-time tutorial reward.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/daily</span><span class="cmd-desc">Claim one Species Roll every 24 hours; a 7-day streak grants one extra roll.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/species [species]</span><span class="cmd-desc">Browse the species codex, rarity, stats, passives, ultimates, and type matchups.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/species-roll</span><span class="cmd-desc">Open a roll panel. Reroll spends one roll; Cancel keeps your current species. A 10-second command cooldown applies.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/profile [user]</span><span class="cmd-desc">View a player's species, resources, battle record, badges, and progression. Ability descriptions are shown in the species codex instead.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Equip a permanently unlocked species or awakening form; a three-hour cooldown normally applies.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Spend a Species Token to choose an eligible species.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
   <div class="cmd-cat reveal"><span>⚔️</span> Combat & Records</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/fight player user:&lt;user&gt;</span><span class="cmd-desc">Send a player challenge. The other player must accept it.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight bot difficulty:&lt;difficulty&gt;</span><span class="cmd-desc">Fight Easy, Medium, Hard, Impossible, or Brutal bot opponents.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/fight stats user:&lt;user&gt;</span><span class="cmd-desc">View combined PvP and bot battle statistics; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/history user:&lt;user&gt;</span><span class="cmd-desc">View fight history; the user is optional.</span><span class="cmd-tag">Everyone</span></div>
-    
-    <div class="cmd-row"><span class="cmd-name">/leaderboard type:&lt;Fight Wins | Species Rolls | Glory&gt;</span><span class="cmd-desc">View the Fight Wins, Species Rolls, or global Glory ranking.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/togglerequests status:&lt;enable|disable&gt;</span><span class="cmd-desc">Choose whether to accept incoming player challenges.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fight player user:&lt;user&gt;</span><span class="cmd-desc">Challenge a player. They must accept before the fight begins.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fight bot difficulty:&lt;difficulty&gt;</span><span class="cmd-desc">Fight an LOZ bot on Easy, Medium, Hard, Impossible, or Brutal difficulty.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/fight stats [user]</span><span class="cmd-desc">View combined PvP and bot wins, losses, win rate, streak, and per-difficulty records.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/history [user]</span><span class="cmd-desc">Review recent battle results for yourself or another player.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/leaderboard type:&lt;Fight Wins | Species Rolls | Glory&gt;</span><span class="cmd-desc">View the global Fight Wins, Species Rolls, or Top 25 Glory leaderboard.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/togglerequests status:&lt;enable|disable&gt;</span><span class="cmd-desc">Choose whether other players can send you challenge requests.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
-  <div class="cmd-cat reveal"><span>🌑</span> Quests & Items</div>
+  <div class="cmd-cat reveal"><span>🏆</span> Quests, Glory & Awakenings</div>
   <div class="cmd-list reveal">
-    
-    <div class="cmd-row"><span class="cmd-name">/achievements</span><span class="cmd-desc">Track normal milestones and species mastery trials; claim available Glory rewards individually or with Claim All.</span><span class="cmd-tag">Everyone</span></div> <div class="cmd-row"><span class="cmd-name">/quests</span><span class="cmd-desc">View the permanent vote quest and rotating quests, track objectives, and claim rewards.</span><span class="cmd-tag">Everyone</span></div>
-    
-    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening requirements and progress.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Use an eligible inventory Species Token to choose a new species.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/gift user:&lt;user&gt; amount:&lt;1–5&gt;</span><span class="cmd-desc">Gift 1–5 Species Rolls. Requires at least 10 rolls on hand, with daily caps of 5 sent and 5 received.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/quests</span><span class="cmd-desc">Open your personal quest board to track rotating objectives, vote rewards, and claim quest rewards.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/achievements</span><span class="cmd-desc">View normal Glory milestones and species trials. Claim ready rewards individually or use Claim All on the current page. Human remains playable but has no Species Achievement entry.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/awakening</span><span class="cmd-desc">Check your species awakening path, including the three trials for each elemental Dragon and True Dragon's four-variant requirement.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/gift user:&lt;user&gt; amount:&lt;1–5&gt;</span><span class="cmd-desc">Gift 1–5 Species Rolls. You need at least 10 rolls before gifting; daily send and receive limits apply.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
-  <div class="cmd-cat reveal"><span>📣</span> Updates & Information</div>
+  <div class="cmd-cat reveal"><span>📣</span> Update Notifications & Release Information</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">Read release notes and historical changes.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates subscribe</span><span class="cmd-desc">Opt in to major-update direct messages.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates unsubscribe</span><span class="cmd-desc">Opt out of major-update direct messages.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates status</span><span class="cmd-desc">Check your update-notification preference.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/view subscribers</span><span class="cmd-desc">View the active update-subscriber count.</span><span class="cmd-tag">Admin / Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">Read the latest bot release notes and recent follow-up fixes.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates subscribe</span><span class="cmd-desc">Opt in to major LOZ release-announcement DMs.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates unsubscribe</span><span class="cmd-desc">Opt out of major LOZ release-announcement DMs.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates status</span><span class="cmd-desc">Check whether you are subscribed to major update DMs.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/updates reward</span><span class="cmd-desc">Deliver the one-time LOZ 6.0 registration reward to eligible registrants. Duplicate rewards are prevented.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/broadcast</span><span class="cmd-desc">Send the current major-update announcement to subscribed users.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/broadtest</span><span class="cmd-desc">Send the current update-announcement preview to the owner's DMs.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/view subscribers</span><span class="cmd-desc">View active update subscribers and LOZ 6.0 event registrations.</span><span class="cmd-tag">Server Admin / LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/servers</span><span class="cmd-desc">View LOZ servers and available invite links.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
   </div>
 
-  <div class="cmd-cat reveal"><span>⌨️</span> Text-prefix commands</div>
+  <div class="cmd-cat reveal"><span>🛡️</span> Server Administration</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">&#39;disable all</span><span class="cmd-desc">Disable LOZ commands in the current channel. Requires Discord Administrator permission.</span><span class="cmd-tag">Admin</span></div>
-    <div class="cmd-row"><span class="cmd-name">&#39;enable all</span><span class="cmd-desc">Re-enable LOZ commands in the current channel. Requires Discord Administrator permission.</span><span class="cmd-tag">Admin</span></div>
+    <div class="cmd-row"><span class="cmd-name">/disable-all</span><span class="cmd-desc">Disable LOZ commands in the current channel. To restore access, run /enable-all in that same channel; the recovery command remains usable while disabled.</span><span class="cmd-tag">Server Admin</span></div>
+    <div class="cmd-row"><span class="cmd-name">/enable-all</span><span class="cmd-desc">Re-enable LOZ commands in the current channel.</span><span class="cmd-tag">Server Admin</span></div>
   </div>
-  <p class="page-desc" style="margin-top:1.5rem">Retired aliases include <code>/fightstats</code>, <code>/botstats</code>, <code>/quest</code>, <code>/botfight</code>, <code>/roll</code>, and <code>/setchannel</code>; use the current command names above.</p>
+
+  <div class="cmd-cat reveal"><span>🔐</span> LOZ Owner Tools</div>
+  <div class="cmd-list reveal">
+    <div class="cmd-row"><span class="cmd-name">/disintegrate</span><span class="cmd-desc">End the primary owner's active PvP fight through divine intervention. Uses the normal battle-resolution pipeline and posts the effects in the fight channel.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner menu</span><span class="cmd-desc">Show the restricted owner command menu.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner ban user:&lt;user&gt; [time]</span><span class="cmd-desc">Block a user from LOZ without deleting their data. Durations support 1s, 1m, 1h, 1d, 1w, or 1y; omit time for a permanent ban.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner unban user:&lt;user&gt;</span><span class="cmd-desc">Restore a user's access to LOZ.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner clear-fight user:&lt;user&gt;</span><span class="cmd-desc">Clear a stuck fight or pending challenge without awarding wins, losses, or rewards.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-unlock user:&lt;user&gt; species:&lt;name&gt;</span><span class="cmd-desc">Permanently unlock an eligible exclusive species for a user.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner add items user:&lt;user&gt; item:Species Token quantity:&lt;quantity&gt;</span><span class="cmd-desc">Grant Species Tokens to a player.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-change user:&lt;user&gt; species:&lt;name&gt;</span><span class="cmd-desc">Set a user's species. The successful response is private to the command user.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user's species to Human.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner species-add user:&lt;user&gt; amount:&lt;amount&gt;</span><span class="cmd-desc">Grant Species Rolls to a player.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner rolls-reset user:&lt;user&gt;</span><span class="cmd-desc">Reset a user's Species Roll balance to zero.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner quest-reset user:&lt;user&gt; quest:&lt;Reaper|All&gt;</span><span class="cmd-desc">Reset the selected historical Reaper quest or all tracked quest state for a user.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner debug-db</span><span class="cmd-desc">Inspect database keys for diagnostics.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/owner repair-user-db</span><span class="cmd-desc">Archive and repair duplicate player database records.</span><span class="cmd-tag">LOZ Owners</span></div>
+  </div>
+  <p class="page-desc" style="margin-top:1.5rem">Retired command names include <code>/fightstats</code>, <code>/botstats</code>, root <code>/quest</code>, <code>/botfight</code>, <code>/roll</code>, and <code>/setchannel</code>. Use the slash commands listed above. All owner-sensitive actions are still checked by LOZ's owner-ID allowlist.</p>
 </div>
+
 
 <!-- QUESTS -->
 <div id="page-quests" class="page">
@@ -1516,6 +1538,11 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
         <div class="patch-item">🛠️ Fixed duplicate achievement component IDs that could cause achievement interactions to fail.</div>
         <div class="patch-item">🏅 Polished the Glory leaderboard to show current Discord display names and explicit Glory totals without pinging ranked users.</div>
         <div class="patch-item">🔒 Made successful <code>/owner species-change</code> replies private to the owner.</div>
+        <div class="patch-item"><strong>6.0 follow-up fixes · 2026-10-16</strong></div>
+        <div class="patch-item">⌨️ Migrated the remaining legacy text commands to <code>/disable-all</code>, <code>/enable-all</code>, and <code>/disintegrate</code>. These tools now use slash commands; no text-prefix syntax is required.</div>
+        <div class="patch-item">🔐 Removed the privileged Message Content and Server Members intents from the bot configuration. Mention-based welcome help remains, without reading ordinary message text or requesting those privileged intents.</div>
+        <div class="patch-item">🧹 Removed default Human from the Species Achievements roster. Human remains playable, and saved player data and achievement records were not reset.</div>
+        <div class="patch-item">📣 Expanded the command reference for <code>/updates subscribe</code>, <code>/updates unsubscribe</code>, <code>/updates status</code>, primary-owner <code>/updates reward</code>, <code>/broadcast</code>, and <code>/broadtest</code>, plus subscriber counts and server administration tools.</div>
       </div>
     </div>
     <div class="patch-card reveal">
@@ -1582,14 +1609,14 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
         <div class="patch-item">⚖️ Balanced God’s Divine Judgment: it now removes <strong>40% of the opponent’s current HP</strong> and restores <strong>40% of God’s current HP</strong>, down from 50% for each effect.</div>
         <div class="patch-item">⏱️ Reduced God’s ultimate cooldown from 12 to <strong>8 rounds</strong> to compensate for the damage and healing reduction.</div>
         <div class="patch-item">🔐 Renamed the privileged slash-command group from <code>/god</code> to <code>/owner</code>. Owner-ID checks remain in place; rolling God does not grant access to owner commands.</div>
-        <div class="patch-item">💀 The <code>'disintegrate</code> prefix command remains restricted to the bot owner, independently of the user's species.</div>
+        <div class="patch-item">💀 The earlier owner-only text command for divine intervention was later migrated to <code>/disintegrate</code> during the Version 6.0 follow-up.</div>
       </div>
     </div>
 
     <div class="patch-card open reveal">
       <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 5.3</span></div><div class="patch-meta"><span class="pdate">2026-10-11</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
-        <div class="patch-item">📜 Added the personal quest board. Use <code>/quest</code> for the introduction and <code>/quests</code> to view progress and claim rewards; the previous <code>/quest view</code> and <code>/quest claim</code> subcommands are retired.</div>
+        <div class="patch-item">📜 Introduced the personal quest board. At the original release, <code>/quest</code> showed an introduction and <code>/quests</code> handled progress and rewards; the root <code>/quest</code> command has since been retired. Use <code>/quests</code> now.</div>
         <div class="patch-item">🗳️ Added a permanent Top.gg vote quest. Each eligible, verified vote grants <strong>2 Species Rolls</strong> once every 12 hours, with automatic delivery and a confirmation DM.</div>
         <div class="patch-item">🎲 Added rotating quests with Common 45%, Uncommon 27%, Rare 15%, Epic 8%, Legendary 4%, and Mythic 1% appearance chances. Rewards scale with difficulty and rarity.</div>
         <div class="patch-item">🔑 The Mythic Trial of the Rift is a long-term but achievable objective that rewards <strong>1 Species Token</strong>. Other quest tiers reward Species Rolls.</div>
