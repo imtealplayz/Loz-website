@@ -902,7 +902,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="feature-card reveal"><span class="feature-icon">🏆</span><div class="feature-name">Glory &amp; Achievements</div><p class="feature-desc">Claim Glory from normal milestones and species mastery trials, then climb the global Top 25 Glory leaderboard.</p></div> <div class="feature-card reveal"><span class="feature-icon">🎁</span><div class="feature-name">Daily Rewards & Gifts</div><p class="feature-desc">Claim daily Species Rolls, keep a seven-day streak for a bonus, and gift 1–5 rolls to another player within the daily limits.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">🎒</span><div class="feature-name">Species Tokens</div><p class="feature-desc">Use eligible inventory items to choose a new species; exclusive unlocks are protected from token rerolls.</p></div>
     <div class="feature-card reveal"><span class="feature-icon">📊</span><div class="feature-name">Records &amp; Leaderboards</div><p class="feature-desc">Review combined PvP and bot stats, match history, Fight Wins and Species Rolls rankings, and the global Top 25 Glory leaderboard.</p></div>
-    <div class="feature-card reveal"><span class="feature-icon">📢</span><div class="feature-name">Update Notifications</div><p class="feature-desc">Opt in or out of major update announcements with <code>/updates</code>.</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🔔</span><div class="feature-name">Developer Alerts</div><p class="feature-desc">Read release alerts with <code>/alert</code> and get private reminders until you have viewed them.</p></div>
   </div>
 </div>
 
@@ -1399,16 +1399,10 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="cmd-row"><span class="cmd-name">/gift user:&lt;user&gt; amount:&lt;1–5&gt;</span><span class="cmd-desc">Gift 1–5 Species Rolls. You need at least 10 rolls before gifting; daily send and receive limits apply.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
-  <div class="cmd-cat reveal"><span>📣</span> Update Notifications & Release Information</div>
+  <div class="cmd-cat reveal"><span>📣</span> Developer Alerts & Release Information</div>
   <div class="cmd-list reveal">
+    <div class="cmd-row"><span class="cmd-name">/alert</span><span class="cmd-desc">Read the current developer alert privately. LOZ reminds you at most once every 24 hours until you view it.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">Read the latest bot release notes and recent follow-up fixes.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates subscribe</span><span class="cmd-desc">Opt in to major LOZ release-announcement DMs.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates unsubscribe</span><span class="cmd-desc">Opt out of major LOZ release-announcement DMs.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates status</span><span class="cmd-desc">Check whether you are subscribed to major update DMs.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/updates reward</span><span class="cmd-desc">Deliver the one-time LOZ 6.0 registration reward to eligible registrants. Duplicate rewards are prevented.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
-    <div class="cmd-row"><span class="cmd-name">/broadcast</span><span class="cmd-desc">Send the current major-update announcement to subscribed users.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
-    <div class="cmd-row"><span class="cmd-name">/broadtest</span><span class="cmd-desc">Send the current update-announcement preview to the owner's DMs.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
-    <div class="cmd-row"><span class="cmd-name">/view subscribers</span><span class="cmd-desc">View active update subscribers and LOZ 6.0 event registrations.</span><span class="cmd-tag">Server Admin / LOZ Owner</span></div>
     <div class="cmd-row"><span class="cmd-name">/servers</span><span class="cmd-desc">View LOZ servers and available invite links.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
   </div>
 
@@ -1542,7 +1536,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
         <div class="patch-item">⌨️ Migrated the remaining legacy text commands to <code>/disable-all</code>, <code>/enable-all</code>, and <code>/disintegrate</code>. These tools now use slash commands; no text-prefix syntax is required.</div>
         <div class="patch-item">🔐 Removed the privileged Message Content and Server Members intents from the bot configuration. Mention-based welcome help remains, without reading ordinary message text or requesting those privileged intents.</div>
         <div class="patch-item">🧹 Removed default Human from the Species Achievements roster. Human remains playable, and saved player data and achievement records were not reset.</div>
-        <div class="patch-item">📣 Expanded the command reference for <code>/updates subscribe</code>, <code>/updates unsubscribe</code>, <code>/updates status</code>, primary-owner <code>/updates reward</code>, <code>/broadcast</code>, and <code>/broadtest</code>, plus subscriber counts and server administration tools.</div>
+        <div class="patch-item">📣 Added <code>/alert</code> for a private developer update card, with reminders no more than once every 24 hours until viewed. Removed the old update-subscription prompt and <code>/updates</code>, <code>/broadcast</code>, and <code>/broadtest</code> commands. The one-time LOZ 6.0 registration reward action is now <code>/owner reward-registrants</code>.</div>
       </div>
     </div>
     <div class="patch-card reveal">
