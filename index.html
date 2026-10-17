@@ -1363,10 +1363,10 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 <!-- COMMANDS -->
 <div id="page-commands" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">Live command reference · Version 6.1</div>
+    <div class="page-eyebrow">Live command reference · Version 6.2</div>
     <h1 class="page-title">Commands</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Current slash-command reference for LOZ Version 6.1. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
+    <p class="page-desc">Current slash-command reference for LOZ Version 6.2. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
   </div>
 
   <div class="cmd-cat reveal"><span>🚀</span> Getting Started</div>
@@ -1379,6 +1379,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="cmd-row"><span class="cmd-name">/profile [user]</span><span class="cmd-desc">View a player's species, resources, battle record, badges, and progression. Ability descriptions are shown in the species codex instead.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Equip a permanently unlocked species or awakening form; a three-hour cooldown normally applies.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Spend a Species Token to choose an eligible species.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/codes redeem code:&lt;code&gt;</span><span class="cmd-desc">Redeem a valid, unused limited-time code for its configured reward.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
   <div class="cmd-cat reveal"><span>⚔️</span> Combat & Records</div>
@@ -1387,7 +1388,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
     <div class="cmd-row"><span class="cmd-name">/fight bot difficulty:&lt;difficulty&gt;</span><span class="cmd-desc">Fight an LOZ bot on Easy, Medium, Hard, Impossible, or Brutal difficulty.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/fight stats [user]</span><span class="cmd-desc">View combined PvP and bot wins, losses, win rate, streak, and per-difficulty records.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/history [user]</span><span class="cmd-desc">Review recent battle results for yourself or another player.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/leaderboard type:&lt;Fight Wins | Species Rolls | Glory&gt;</span><span class="cmd-desc">View the global Fight Wins, Species Rolls, or Top 25 Glory leaderboard.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/leaderboard</span><span class="cmd-desc">View the global leaderboard. Use the dropdown below the board to switch between Fight Wins, Species Rolls, and Glory.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/togglerequests status:&lt;enable|disable&gt;</span><span class="cmd-desc">Choose whether other players can send you challenge requests.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
@@ -1401,7 +1402,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 
   <div class="cmd-cat reveal"><span>📣</span> Developer Alerts & Release Information</div>
   <div class="cmd-list reveal">
-    <div class="cmd-row"><span class="cmd-name">/alert</span><span class="cmd-desc">Read the current developer alert privately. LOZ reminds you at most once every 24 hours until you view it.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/alert</span><span class="cmd-desc">Read the current update privately, including Build Your Own Species information and limited-time code availability.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/patchnotes</span><span class="cmd-desc">Read the latest bot release notes and recent follow-up fixes.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/servers</span><span class="cmd-desc">View LOZ servers and available invite links.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
   </div>
@@ -1416,6 +1417,8 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
   <div class="cmd-list reveal">
     <div class="cmd-row"><span class="cmd-name">/disintegrate</span><span class="cmd-desc">End the primary owner's active PvP fight through divine intervention. Uses the normal battle-resolution pipeline and posts the effects in the fight channel.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
     <div class="cmd-row"><span class="cmd-name">/owner menu</span><span class="cmd-desc">Show the restricted owner command menu.</span><span class="cmd-tag">LOZ Owners</span></div>
+    <div class="cmd-row"><span class="cmd-name">/codes generate [code] reward:&lt;rolls|tokens&gt; amount:&lt;amount&gt; expires-minutes:&lt;minutes&gt; max-claims:&lt;users&gt;</span><span class="cmd-desc">Primary-owner-only. Create a code with a selected reward, expiry, and user claim limit; defaults to 1 roll and 30 minutes.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
+    <div class="cmd-row"><span class="cmd-name">/codes view</span><span class="cmd-desc">Primary-owner-only. View active, exhausted, and expired redemption codes.</span><span class="cmd-tag">Primary LOZ Owner</span></div>
     <div class="cmd-row"><span class="cmd-name">/owner ban user:&lt;user&gt; [time]</span><span class="cmd-desc">Block a user from LOZ without deleting their data. Durations support 1s, 1m, 1h, 1d, 1w, or 1y; omit time for a permanent ban.</span><span class="cmd-tag">LOZ Owners</span></div>
     <div class="cmd-row"><span class="cmd-name">/owner unban user:&lt;user&gt;</span><span class="cmd-desc">Restore a user's access to LOZ.</span><span class="cmd-tag">LOZ Owners</span></div>
     <div class="cmd-row"><span class="cmd-name">/owner clear-fight user:&lt;user&gt;</span><span class="cmd-desc">Clear a stuck fight or pending challenge without awarding wins, losses, or rewards.</span><span class="cmd-tag">LOZ Owners</span></div>
