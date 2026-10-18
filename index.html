@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ Version 6.2: redeem limited-time codes, master species challenges, and explore the Rift.">
-<meta name="theme-color" content="#03080f">
+<meta name="description" content="Enter the Rift in LOZ Version 6.3: master species, claim Glory, redeem UPDATE6.3, and count down to the Halloween update.">
+<meta name="theme-color" content="#100a17">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
 <!-- Link previews for Discord, social platforms, and messaging apps -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="LOZ Version 6.2: redeem limited-time codes, earn Glory, and explore the Rift.">
+<meta property="og:description" content="LOZ Version 6.3: Halloween season is here. Explore the Rift, earn Glory, and count down to the seasonal update.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 6.2: redeem limited-time codes, earn Glory, and explore the Rift.">
+<meta name="twitter:description" content="LOZ Version 6.3: Halloween season is here. Explore the Rift, earn Glory, and count down to the seasonal update.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1004,6 +1004,68 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
 }
 @media(prefers-reduced-motion:reduce){.lore-sigil{animation:none!important}}
 
+
+/* ==================== HALLOWEEN SEASON THEME · LOZ 6.3 ==================== */
+:root{--black:#090610;--surface:#110c18;--surface2:#1a1222;--surface3:#25172e;--border:rgba(255,143,69,.2);--border-bright:rgba(255,143,69,.42);--cyan:#a54d20;--cyan-bright:#ff9b4b;--cyan-glow:rgba(255,112,45,.23);--amber:#ac8742;--amber-bright:#f5d07a;--amber-glow:rgba(245,208,122,.18);--emerald-bright:#b7dc78;--text:#fff0dc;--text-muted:#c7b4c7;--text-dim:#8c7893;--crimson:#782b45;--crimson-bright:#df5666;--wiki-line:rgba(175,104,87,.22);--wiki-link:#ffb26e;--wiki-link-hover:#c4e58c}
+html{scroll-padding-top:120px}
+body{background:radial-gradient(ellipse at 8% 4%,rgba(111,49,135,.2),transparent 34%),radial-gradient(ellipse at 94% 21%,rgba(183,75,28,.13),transparent 31%),radial-gradient(ellipse at 63% 83%,rgba(65,83,41,.1),transparent 34%),#090610!important;color:var(--text)!important}
+body:before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.2;background:repeating-linear-gradient(135deg,transparent 0 74px,rgba(199,116,73,.025) 75px 76px,transparent 77px 145px),radial-gradient(circle at 5% 13%,rgba(255,147,69,.13) 0 1px,transparent 2px),radial-gradient(circle at 76% 39%,rgba(184,136,220,.13) 0 1px,transparent 2px),radial-gradient(circle at 88% 74%,rgba(183,220,120,.11) 0 1px,transparent 2px)}
+#particles{opacity:.31!important}
+nav.wiki-topbar{background:rgba(12,8,18,.97)!important;border-bottom-color:rgba(255,143,69,.26)!important;box-shadow:0 5px 26px rgba(0,0,0,.42)!important}
+.wiki-topbar .nav-logo .l{color:#ff9b4b!important}.wiki-topbar .nav-logo .z{color:#b7dc78!important}
+.wiki-search-wrap{background:rgba(23,14,29,.96)!important;border-color:rgba(255,143,69,.2)!important}.wiki-search-wrap:focus-within{border-color:rgba(255,155,75,.55)!important;box-shadow:0 0 0 3px rgba(255,120,50,.08)!important}.wiki-search-icon,.wiki-search-result-meta{color:#d19e75!important}.wiki-search-results{background:#140d1b!important;border-color:rgba(255,143,69,.3)!important}.wiki-search-result:hover,.wiki-search-result:focus-visible{background:rgba(255,143,69,.08)!important}
+.nav-invite{color:#fff3e2!important;background:linear-gradient(135deg,#b85625,#7d3b27)!important;border-color:rgba(255,164,89,.42)!important}.nav-invite:hover{background:linear-gradient(135deg,#d4692b,#965132)!important;color:#fff!important}
+.sidebar{top:112px!important;background:linear-gradient(180deg,rgba(20,12,27,.985),rgba(12,8,18,.99))!important;border-right-color:rgba(255,143,69,.16)!important}
+.wiki-sidebar-brand{border-bottom-color:rgba(255,143,69,.18)!important}.wiki-sidebar-brand-mark{border-color:rgba(255,155,75,.42)!important;background:linear-gradient(145deg,rgba(179,74,29,.29),rgba(93,50,123,.2))!important}.wiki-sidebar-brand strong{color:#f2d9c2!important}.wiki-sidebar-brand small{color:#d69c70!important}.sidebar-label{color:#a887a5!important}
+.nav-item{color:#b6a5ba!important}.nav-item .nav-icon{color:#c98b5d!important}.nav-item:hover{background:rgba(255,143,69,.055)!important;color:#fff1df!important}.nav-item.active{color:#ffc18a!important;background:linear-gradient(90deg,rgba(255,128,54,.15),rgba(255,128,54,.025))!important;border-left-color:#ff984b!important}.nav-item.active .nav-icon{color:#b7dc78!important}.wiki-status-dot{background:#b7dc78!important}
+.main{padding-top:112px!important;background:transparent!important}.page{min-height:calc(100vh - 112px)!important}.page-header{border-bottom-color:rgba(255,143,69,.18)!important}.page-header:before{background:linear-gradient(180deg,#ff984b,rgba(255,152,75,0))!important}
+.page-eyebrow,.hero-eyebrow,.guide-kicker,.lore-kicker{color:#ffad68!important}.glow-line{background:linear-gradient(90deg,#ff984b,#b7dc78)!important;box-shadow:0 0 9px rgba(255,130,55,.16)!important}
+.hero-logo .l{color:#ff984b!important;text-shadow:0 0 30px rgba(255,125,45,.22)!important}.hero-logo .o{color:#fff0df!important}.hero-logo .z{color:#b7dc78!important;text-shadow:0 0 28px rgba(183,220,120,.14)!important}.hero-sub{color:#d1b6d2!important}.home-hero-title em,.guide-hero h2 em{color:#ffad68!important}
+.home-hero-panel{border-color:rgba(255,143,69,.24)!important;background:radial-gradient(ellipse at 88% 6%,rgba(112,57,130,.24),transparent 39%),radial-gradient(ellipse at 5% 100%,rgba(170,70,27,.14),transparent 42%),linear-gradient(135deg,#17101f,#100b17 66%,#18101b)!important;box-shadow:0 15px 48px rgba(0,0,0,.18)!important}
+.home-hero-panel:before{opacity:.48!important;background:radial-gradient(circle at 8% 18%,#f5c28a 0 1px,transparent 1.8px),radial-gradient(circle at 16% 63%,#b7dc78 0 1px,transparent 1.8px),radial-gradient(circle at 82% 20%,#c4a3ef 0 1px,transparent 1.8px),radial-gradient(ellipse at 92% 80%,rgba(255,123,47,.15),transparent 50%)!important}
+.rift-core{background:radial-gradient(circle,#3a1b3c,#130b1c 66%,transparent 68%)!important;border-color:rgba(255,143,69,.28)!important;box-shadow:0 0 60px rgba(255,106,36,.12)!important}.rift-core span{color:#ffad68!important}.rift-core small{color:#b7dc78!important}.rift-orbit{border-color:rgba(255,155,75,.24)!important}.rift-orbit.orbit-two{border-color:rgba(183,220,120,.2)!important}.rift-orbit.orbit-three{border-color:rgba(174,125,201,.25)!important}.rift-shard{background:linear-gradient(135deg,rgba(255,164,89,.82),rgba(120,52,100,.32))!important}
+.hero-art-label{color:#b9a2b9!important}.hero-art-label span{color:#b7dc78!important}.home-hero-foot i{background:#b7dc78!important}
+.home-quick-card,.home-featured-card,.lore-chapter,.lore-prologue,.lore-bloodline,.lore-awakening,.guide-step,.guide-difficulty,.guide-callout,.guide-reward-card,.feature-card,.sp-card,.cmd-row,.cmd-list,.patch-card,.wiki-related-link,.wiki-toc,.guide-utility-card,.quest-card,.system-card{border-color:rgba(189,119,86,.23)!important}
+.home-quick-card,.home-featured-card,.lore-chapter,.lore-bloodline,.lore-awakening,.guide-step,.guide-difficulty,.guide-callout,.feature-card,.sp-card,.cmd-row,.cmd-list,.patch-card,.wiki-related-link,.guide-utility-card,.quest-card,.system-card{background-color:rgba(22,14,29,.94)!important}.home-quick-card:hover,.lore-chapter:hover,.home-featured-card:hover{border-color:rgba(255,151,73,.4)!important}
+.home-quick-icon{background:rgba(255,143,69,.08)!important;border-color:rgba(255,143,69,.2)!important}.home-card-link,.wiki-link{color:#ffb16e!important}.home-card-link:hover,.wiki-link:hover{color:#c4e58c!important}
+.quick-guide{--card-accent:#ff9b4b!important}.quick-species{--card-accent:#bca0ed!important}.quick-patch{--card-accent:#b7dc78!important}.quick-lore{--card-accent:#e16f70!important}
+.home-version-pill{border-color:rgba(183,220,120,.25)!important;color:#c9e69b!important;background:rgba(183,220,120,.05)!important}.hstat{border-color:rgba(189,119,86,.19)!important;background:rgba(18,12,24,.6)!important}.hstat-icon{color:#ffab69!important}.hstat-num .a{color:#c5e58e!important}
+.guide-hero,.lore-hero{border-color:rgba(255,143,69,.23)!important;background:radial-gradient(ellipse at 91% 0%,rgba(105,56,127,.19),transparent 39%),radial-gradient(ellipse at 3% 100%,rgba(178,77,30,.12),transparent 40%),linear-gradient(135deg,#17101f,#100b17 68%,#181019)!important}
+.guide-reward-card{background:linear-gradient(155deg,#211428,#15101c)!important;border-color:rgba(255,143,69,.22)!important}.guide-reward-seal,.guide-step-number,.guide-stat-icon{color:#ffb16e!important}.guide-reward-line strong,.guide-awakening-note,.guide-reward-title{color:#c4e58c!important}.guide-section-label,.guide-step-tag,.guide-stat strong{color:#ffad68!important}.guide-callout{background:linear-gradient(125deg,rgba(111,56,127,.12),rgba(176,78,29,.1))!important}
+.lore-hero:before{opacity:.37!important}.lore-sigil-wrap{border-color:rgba(255,143,69,.3)!important;box-shadow:0 0 0 9px rgba(255,143,69,.025)!important}.lore-sigil-wrap:before{border-color:rgba(255,164,89,.34)!important}.lore-sigil-wrap:after{border-color:rgba(183,220,120,.25)!important}.lore-sigil{color:#ffad68!important;text-shadow:0 0 20px rgba(255,130,55,.25)!important}.lore-title span{color:#c4e58c!important}
+.lore-toc-number,.lore-chapter-tag,.lore-rule{color:#ffb16e!important}nav.lore-toc>a{background:linear-gradient(135deg,#1a1223,#100b18)!important;border-color:rgba(189,119,86,.23)!important;box-shadow:inset 2px 0 rgba(255,143,69,.13)!important}nav.lore-toc>a:nth-child(3n + 2){box-shadow:inset 2px 0 rgba(183,220,120,.24)!important}nav.lore-toc>a:hover{background:linear-gradient(135deg,#28162a,#15101d)!important;border-color:rgba(255,143,69,.4)!important}.lore-endgame{background:linear-gradient(125deg,#1e1021,#150c19)!important;border-color:rgba(223,86,102,.3)!important}.lore-quote{border-left-color:#b7dc78!important;background:linear-gradient(90deg,rgba(183,220,120,.06),transparent 85%)!important;color:#f3dcc3!important}
+.wiki-toc-summary,.wiki-related-title{color:#f4d1a7!important}.wiki-inline-link{border-bottom-color:rgba(255,177,110,.5)!important;color:#ffb16e!important}.wiki-inline-link:hover{color:#c4e58c!important;border-bottom-color:#c4e58c!important}
+.btn-primary{background:linear-gradient(135deg,#b65725,#77332d)!important;border-color:rgba(255,163,88,.4)!important;color:#fff2df!important}.btn-primary:hover{background:linear-gradient(135deg,#cf692f,#8e4334)!important;border-color:rgba(255,188,123,.57)!important}.btn-ghost{background:rgba(255,255,255,.025)!important;border-color:rgba(189,119,86,.3)!important;color:#d7c3d3!important}.btn-ghost:hover{background:rgba(255,143,69,.065)!important;border-color:rgba(255,143,69,.43)!important;color:#fff0dc!important}
+.filter-btn{background:rgba(20,12,27,.9)!important;border-color:rgba(189,119,86,.25)!important;color:#c7b4c7!important}.filter-btn.active{background:rgba(255,143,69,.13)!important;border-color:rgba(255,143,69,.42)!important;color:#ffc18a!important}.patch-header:hover{background:rgba(255,143,69,.055)!important}.pver,.platest{color:#ffb16e!important}.patch-item code,.guide-callout code{background:rgba(255,143,69,.1)!important;border-color:rgba(255,143,69,.22)!important;color:#ffce9b!important}
+.page-desc,.hero-desc,.home-section-heading p,.feature-desc,.guide-section-intro,.lore-hero-copy,.lore-prologue p,.lore-chapter p{color:#c3b2c7!important}.cmd-tag{color:#c4e58c!important;background:rgba(183,220,120,.06)!important;border-color:rgba(183,220,120,.19)!important}.sp-badge,.chip{border-color:rgba(189,119,86,.22)!important}.ability-passive{border-left-color:#b7dc78!important;background:rgba(183,220,120,.045)!important}.ability-active{border-left-color:#ff984b!important;background:rgba(255,143,69,.045)!important}.label-passive{color:#c4e58c!important}.label-active{color:#ffb16e!important}.chip-strong{color:#c4e58c!important;background:rgba(183,220,120,.07)!important}.chip-weak{color:#f29aa3!important;background:rgba(223,86,102,.07)!important}.wiki-sidebar-foot{border-top-color:rgba(255,143,69,.16)!important;color:#c9b5c9!important}
+button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
+
+/* Halloween countdown ribbon */
+.halloween-ribbon{position:fixed;top:68px;left:var(--wiki-sidebar-width);right:0;z-index:180;height:44px;display:flex;align-items:center;justify-content:center;gap:.75rem;padding:0 1rem;overflow:hidden;background:linear-gradient(90deg,rgba(33,17,39,.98),rgba(72,31,36,.97),rgba(25,30,20,.98));border-bottom:1px solid rgba(255,143,69,.34);box-shadow:0 5px 20px rgba(0,0,0,.2);color:#ffdab7;font:500 .61rem var(--font-mono);letter-spacing:.11em;text-transform:uppercase}
+.halloween-ribbon:before,.halloween-ribbon:after{content:"";position:absolute;top:0;bottom:0;width:90px;pointer-events:none;opacity:.28}.halloween-ribbon:before{left:0;background:linear-gradient(90deg,rgba(255,143,69,.18),transparent)}.halloween-ribbon:after{right:0;background:linear-gradient(270deg,rgba(183,220,120,.12),transparent)}
+.halloween-ribbon-mark{font-size:1.1rem;filter:drop-shadow(0 0 8px rgba(255,129,44,.22))}.halloween-ribbon-label{color:#ffb16e;font-weight:600}.halloween-ribbon-countdown{color:#e1f3b8;font-size:.68rem;font-variant-numeric:tabular-nums;letter-spacing:.09em;white-space:nowrap}.halloween-ribbon-divider{height:18px;width:1px;background:rgba(255,177,110,.25)}.halloween-ribbon-note{color:#c9afc8;white-space:nowrap}.halloween-ribbon-link{margin-left:auto;position:relative;z-index:1;border:0;background:transparent;color:#f5c780;font:500 .59rem var(--font-mono);letter-spacing:.04em;white-space:nowrap;cursor:pointer}.halloween-ribbon-link:hover{color:#c4e58c}
+
+/* Halloween home panel */
+.halloween-event-board{position:relative;isolation:isolate;overflow:hidden;max-width:1250px;margin:2rem auto 3rem;padding:clamp(1.2rem,2.8vw,2.15rem);border:1px solid rgba(255,143,69,.3);border-radius:10px;background:radial-gradient(ellipse at 94% 4%,rgba(105,51,127,.28),transparent 36%),radial-gradient(ellipse at 0% 100%,rgba(178,77,30,.13),transparent 40%),linear-gradient(130deg,#1a1021,#100b18 54%,#15141b);box-shadow:0 18px 48px rgba(0,0,0,.25)}
+.halloween-event-board:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.5;background:radial-gradient(circle at 7% 18%,rgba(255,181,111,.8) 0 1px,transparent 1.7px),radial-gradient(circle at 87% 19%,rgba(183,220,120,.8) 0 1px,transparent 1.7px)}
+.halloween-board-head{display:flex;align-items:center;justify-content:space-between;gap:1.6rem;margin-bottom:1.5rem}.halloween-board-copy{min-width:0;max-width:780px}.halloween-kicker{display:flex;align-items:center;gap:.5rem;margin-bottom:.7rem;color:#ffad68;font:500 .61rem var(--font-mono);letter-spacing:.18em}.halloween-kicker span{color:#b7dc78}
+.halloween-board-copy h2{font:700 clamp(1.8rem,4.1vw,3.2rem)/1.12 var(--font-display);letter-spacing:-.025em;color:#fff0dc;margin:0 0 .65rem}.halloween-board-copy h2 em{font-style:normal;color:#ff9b4b}.halloween-board-copy p{max-width:730px;color:#c9b6ca;font-size:1rem;line-height:1.8;margin:0}
+.halloween-pumpkin{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;flex-shrink:0;width:135px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,143,69,.28);background:radial-gradient(circle,rgba(255,143,69,.11),rgba(105,51,127,.11) 62%,transparent 64%);box-shadow:0 0 0 8px rgba(255,143,69,.025)}.halloween-pumpkin span{font-size:3.3rem;filter:drop-shadow(0 0 16px rgba(255,117,39,.25))}.halloween-pumpkin small{color:#c5e58e;font:500 .46rem var(--font-mono);letter-spacing:.14em}
+.halloween-countdown-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.halloween-timer-card{position:relative;min-width:0;overflow:hidden;padding:1.25rem;border:1px solid rgba(255,143,69,.22);border-radius:7px;background:linear-gradient(145deg,rgba(37,20,44,.94),rgba(20,13,27,.98))}
+.halloween-timer-card:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#ff9b4b,rgba(255,155,75,.05),#b7dc78);opacity:.8}.halloween-timer-night{background:linear-gradient(145deg,rgba(30,22,44,.96),rgba(17,14,26,.98));border-color:rgba(180,143,219,.25)}.halloween-timer-night:before{background:linear-gradient(90deg,#b89adb,rgba(184,154,219,.03),#b7dc78)}
+.halloween-timer-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.95rem}.halloween-timer-type{color:#d5a778;font:500 .53rem var(--font-mono);letter-spacing:.13em}.halloween-timer-night .halloween-timer-type{color:#c4a7e5}.halloween-timer-status{color:#c4e58c;font:500 .48rem var(--font-mono);letter-spacing:.06em}
+.halloween-timer-card h3{color:#fff0dc;font:600 clamp(1rem,1.8vw,1.28rem)/1.3 var(--font-display);margin:0 0 .35rem}.halloween-timer-card p{color:#b9a6be;font-size:.83rem;line-height:1.6;margin:0 0 1.05rem}
+.halloween-digits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.5rem}.halloween-digit{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;padding:.72rem .25rem .65rem;border:1px solid rgba(255,143,69,.17);border-radius:5px;background:rgba(8,6,13,.46)}.halloween-timer-night .halloween-digit{border-color:rgba(184,154,219,.2)!important}
+.halloween-digit strong{color:#ffad68;font:700 clamp(1.25rem,3vw,2rem)/1.05 var(--font-mono);font-variant-numeric:tabular-nums;letter-spacing:-.04em}.halloween-timer-night .halloween-digit strong{color:#d3b6f3}.halloween-digit span{display:block;margin-top:.4rem;color:#9f8ca7;font:500 .48rem var(--font-mono);letter-spacing:.13em}
+.halloween-timer-footer{display:flex;align-items:center;justify-content:space-between;gap:.7rem;flex-wrap:wrap;margin-top:.9rem;padding-top:.75rem;border-top:1px solid rgba(189,119,86,.16);color:#9d8ba5;font:500 .49rem var(--font-mono);letter-spacing:.06em}.halloween-timer-footer span:last-child{color:#c4e58c}.halloween-timer-night .halloween-timer-footer span:last-child{color:#d3b6f3}
+.halloween-timer-card.is-ended{border-color:rgba(183,220,120,.3)}.halloween-timer-card.is-ended .halloween-timer-status,.halloween-timer-card.is-ended .halloween-digit strong{color:#c4e58c}
+.halloween-board-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.1rem;padding:1rem 1.05rem;border:1px solid rgba(183,220,120,.16);border-radius:6px;background:rgba(183,220,120,.035)}.halloween-code-label{display:block;margin-bottom:.25rem;color:#b7dc78;font:500 .5rem var(--font-mono);letter-spacing:.14em}.halloween-board-foot strong{color:#fff0dc;font:600 .86rem var(--font-display)}.halloween-board-foot strong code{color:#ffb16e;background:rgba(255,143,69,.09);padding:.1rem .35rem;border-radius:3px}.halloween-board-foot p{margin:.2rem 0 0;color:#bbaac0;font-size:.8rem;line-height:1.6}.halloween-notes-button{min-height:42px;flex-shrink:0}
+.feature-icon,.feature-name,.sp-name,.cmd-name,.patch-card .pver{color:#f8e4cf!important}
+@media(max-width:900px){.halloween-ribbon{left:0}.sidebar{top:112px!important}.main{margin-left:0;padding-top:112px!important}.page{min-height:calc(100vh - 112px)!important}.halloween-ribbon-link{margin-left:auto}}
+@media(max-width:680px){.halloween-board-head{align-items:flex-start}.halloween-pumpkin{width:86px}.halloween-pumpkin span{font-size:2.35rem}.halloween-pumpkin small{font-size:.39rem}.halloween-countdown-grid{grid-template-columns:1fr}.halloween-ribbon{gap:.5rem;padding:0 .55rem}.halloween-ribbon-note,.halloween-ribbon-divider{display:none}.halloween-ribbon-label{font-size:.52rem;letter-spacing:.06em}.halloween-ribbon-countdown{font-size:.58rem;letter-spacing:.025em}.halloween-ribbon-link{font-size:.5rem}.halloween-board-foot{align-items:flex-start}}
+@media(max-width:540px){.halloween-ribbon{top:62px;height:42px}.sidebar{top:104px!important}.main{padding-top:104px!important}.page{min-height:calc(100vh - 104px)!important}.halloween-ribbon-mark{font-size:.92rem}.halloween-ribbon-link{display:none}.halloween-ribbon-countdown{font-size:.61rem}.halloween-board-head{gap:.45rem}.halloween-pumpkin{width:62px;background:none;border:0;box-shadow:none}.halloween-pumpkin span{font-size:1.9rem}.halloween-pumpkin small{display:none}.halloween-board-copy h2{font-size:1.7rem}.halloween-board-copy p{font-size:.9rem}.halloween-timer-card{padding:1rem .8rem}.halloween-digits{gap:.35rem}.halloween-digit{padding:.65rem .12rem}.halloween-digit strong{font-size:clamp(1.05rem,6vw,1.6rem)}.halloween-digit span{font-size:.43rem;letter-spacing:.09em}}
+@media(prefers-reduced-motion:reduce){.halloween-pumpkin span{filter:none}}
+
 </style>
 </head>
 <body>
@@ -1022,11 +1084,20 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
   </div>
 </nav>
 
+<div class="halloween-ribbon" id="halloween-ribbon" role="status" aria-live="off">
+  <span class="halloween-ribbon-mark" aria-hidden="true">🎃</span>
+  <span class="halloween-ribbon-label" id="halloween-ribbon-label">THE VEIL LIFTS IN</span>
+  <span class="halloween-ribbon-countdown" id="halloween-ribbon-countdown">Loading countdown…</span>
+  <span class="halloween-ribbon-divider" aria-hidden="true"></span>
+  <span class="halloween-ribbon-note">LOZ 6.3 · OCT 22</span>
+  <button type="button" class="halloween-ribbon-link" onclick="showPage('patchnotes')">Read the release notes <span aria-hidden="true">↗</span></button>
+</div>
+
 <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar" aria-label="LOZ Wiki navigation">
-  <div class="wiki-sidebar-brand"><span class="wiki-sidebar-brand-mark">LOZ</span><div><strong>LEGENDS OF THE RIFT</strong><small>Community Wiki · v6.2</small></div></div>
+  <div class="wiki-sidebar-brand"><span class="wiki-sidebar-brand-mark">LOZ</span><div><strong>LEGENDS OF THE RIFT</strong><small>Community Wiki · v6.3</small></div></div>
   <span class="sidebar-label">Discover</span><button class="nav-item active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⌂</span>Wiki Home</button>
   <span class="sidebar-label">Guides</span><button class="nav-item" data-page="guide" onclick="showPage('guide')"><span class="nav-icon">✧</span>New Player Guide</button>
   <button class="nav-item" data-page="battles" onclick="showPage('battles')"><span class="nav-icon">⚔</span>Combat Guide</button>
@@ -1041,7 +1112,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
   <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">♙</span>Creators</button>
   <span class="sidebar-label">Community</span><a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Add LOZ to Discord</a>
   <a href="https://discord.gg/TKBYpjqnPC" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Support Server</a>
-  <div class="wiki-sidebar-foot"><span class="wiki-status-dot"></span> The Rift is online <small>Documentation for LOZ v6.2</small></div>
+  <div class="wiki-sidebar-foot"><span class="wiki-status-dot"></span> The Rift is online <small>Documentation for LOZ v6.3 · Halloween season</small></div>
 </div>
 
 <div class="main">
@@ -1051,7 +1122,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
 <div id="page-home" class="page active">
   <section class="home-hero-panel">
     <div class="home-hero-copy">
-      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 6.2</div>
+      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 6.3 · HALLOWEEN SEASON</div>
       <div class="hero-logo" aria-label="LOZ"><span class="l">L</span><span class="o">O</span><span class="z">Z</span></div>
       <div class="hero-sub">Legends of the Rift</div>
       <h1 class="home-hero-title">The next legend could be <em>you.</em></h1>
@@ -1075,9 +1146,50 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
     <div class="hstat"><span class="hstat-icon">✧</span><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species to Discover</span></div>
     <div class="hstat"><span class="hstat-icon">⚔</span><span class="hstat-num"><span class="a">05</span></span><span class="hstat-lbl">Battle Difficulties</span></div>
     <div class="hstat"><span class="hstat-icon">🫧</span><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Slime Lord Spawn Chance</span></div>
-    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num">v<span class="a">6.1</span></span><span class="hstat-lbl">Latest Release</span></div>
+    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num">v<span class="a">6.3</span></span><span class="hstat-lbl">Latest Release</span></div>
   </div>
 
+
+  <section class="halloween-event-board reveal" aria-labelledby="halloween-event-title">
+    <div class="halloween-board-head">
+      <div class="halloween-board-copy">
+        <div class="halloween-kicker"><span aria-hidden="true">✦</span> THE RIFT · HALLOWEEN SEASON 2026</div>
+        <h2 id="halloween-event-title">Something stirs <em>in the dark.</em></h2>
+        <p>The veil is thinning. Prepare your species, complete your trials, and keep watch for the Halloween update. Two live clocks track the next release and Halloween night.</p>
+      </div>
+      <div class="halloween-pumpkin" aria-hidden="true"><span>🎃</span><small>WATCH THE RIFT</small></div>
+    </div>
+    <div class="halloween-countdown-grid">
+      <article class="halloween-timer-card halloween-timer-update" data-countdown-target="2026-10-22T00:00:00+05:30" data-countdown-title="Halloween Update">
+        <div class="halloween-timer-top"><span class="halloween-timer-type">01 / RELEASE NIGHT</span><span class="halloween-timer-status">COUNTING DOWN</span></div>
+        <h3>LOZ 6.3 · Halloween Update</h3>
+        <p>Thursday, October 22 · midnight IST</p>
+        <div class="halloween-digits" aria-label="Time remaining until the Halloween update">
+          <div class="halloween-digit"><strong data-countdown-unit="days">00</strong><span>DAYS</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="hours">00</strong><span>HRS</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="minutes">00</strong><span>MIN</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="seconds">00</strong><span>SEC</span></div>
+        </div>
+        <div class="halloween-timer-footer"><span>THE PORTAL OPENS</span><span data-countdown-end>October 22, 2026</span></div>
+      </article>
+      <article class="halloween-timer-card halloween-timer-night" data-countdown-target="2026-10-31T00:00:00+05:30" data-countdown-title="Halloween Night">
+        <div class="halloween-timer-top"><span class="halloween-timer-type">02 / ALL HALLOWS' EVE</span><span class="halloween-timer-status">COUNTING DOWN</span></div>
+        <h3>Halloween Night</h3>
+        <p>Saturday, October 31 · midnight IST</p>
+        <div class="halloween-digits" aria-label="Time remaining until Halloween night">
+          <div class="halloween-digit"><strong data-countdown-unit="days">00</strong><span>DAYS</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="hours">00</strong><span>HRS</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="minutes">00</strong><span>MIN</span></div>
+          <div class="halloween-digit"><strong data-countdown-unit="seconds">00</strong><span>SEC</span></div>
+        </div>
+        <div class="halloween-timer-footer"><span>THE LONGEST NIGHT</span><span data-countdown-end>October 31, 2026</span></div>
+      </article>
+    </div>
+    <div class="halloween-board-foot">
+      <div><span class="halloween-code-label">SEASONAL REWARD</span><strong><code>UPDATE6.3</code> · 🎲 3 Species Rolls</strong><p>Redeem it with <code>/codes redeem</code>. One claim per player; 24-hour code expiry.</p></div>
+      <button class="btn-primary halloween-notes-button" onclick="showPage('patchnotes')">Read Version 6.3 <span aria-hidden="true">↗</span></button>
+    </div>
+  </section>
   <div class="home-section-heading reveal">
     <div><div class="home-section-kicker">Your story begins here</div><h2>Choose your first <span>chapter.</span></h2></div>
     <p>Learn the systems, explore the roster, and follow the latest discoveries in the Rift.</p>
@@ -1097,7 +1209,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
     </article>
     <article class="home-quick-card quick-patch reveal">
       <div class="quick-card-top"><div class="home-quick-icon">✦</div><span class="quick-card-number">03 / CURRENT</span></div>
-      <div class="home-version-pill"><span class="status-pip"></span> CURRENT RELEASE · v6.1</div>
+      <div class="home-version-pill"><span class="status-pip"></span> CURRENT RELEASE · v6.3</div>
       <h2>Glory &amp; True Dragon</h2>
       <p>Earn Glory through milestones and species mastery, awaken all four elemental Dragons to unlock True Dragon, and track the Rift’s latest changes.</p>
       <button class="home-card-link" onclick="showPage('patchnotes')">Read the Patch Notes <span>→</span></button>
@@ -1113,7 +1225,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
 
 <!-- NEW PLAYER GUIDE -->
 <div id="page-guide" class="page">
-  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 6.2</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
+  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 6.3</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
   <section class="guide-hero reveal">
     <div class="guide-hero-main"><div class="guide-kicker">Recruit's briefing · Begin here</div><h2>Before you chase legends, learn how to <em>survive.</em></h2><p>LOZ is a turn-based Discord RPG. Start by running /guide: it is a seven-page interactive tutorial. Click Next Page through the lessons, then press Complete Tutorial to claim +1 Species Roll once. Use this website as a visual reference whenever you need a refresher.</p><div class="guide-hero-actions"><a class="btn-primary" href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer">Add LOZ to Discord</a><button class="btn-ghost" onclick="showPage('commands')">Full Command List</button></div></div>
     <aside class="guide-reward-card"><div class="guide-reward-top"><span>Starter Benefits</span><span class="guide-reward-seal">✦</span></div><div><div class="guide-reward-title">Start with resources, not guesswork.</div><p class="guide-reward-copy">You can earn rolls without spending money. Use these starting rewards before grinding battles.</p><div class="guide-reward-line"><span>Daily claim</span><strong>+1 ROLL</strong></div><div class="guide-reward-line"><span>7-day daily streak</span><strong>+1 BONUS</strong></div><div class="guide-reward-line"><span>Complete /guide once</span><strong>+1 ROLL</strong></div></div><div class="guide-reward-copy">Daily claims have a 24-hour cooldown. The tutorial reward is one-time only.</div></aside>
@@ -1131,7 +1243,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
     <article class="guide-step reveal"><div class="guide-step-number">06</div><div class="guide-step-content"><div class="guide-step-topline"><span class="guide-step-tag">Know your record</span><span>Help & rankings</span></div><h3>Track results and find commands</h3><p><code>/help</code> has six paginated categories. Use <code>/fight stats</code> and <code>/history</code> for combined PvP/bot statistics and recent battles. <code>/leaderboard</code> supports Fight Wins, Species Rolls, and Glory.</p><div class="guide-command-list"><div class="guide-command"><code>/help</code><button class="command-copy" onclick="copyGuideCommand('/help', this)">Copy</button></div><div class="guide-command"><code>/fight stats</code><button class="command-copy" onclick="copyGuideCommand('/fight stats', this)">Copy</button></div><div class="guide-command"><code>/leaderboard</code><button class="command-copy" onclick="copyGuideCommand('/leaderboard', this)">Copy</button></div></div></div></article>
   </div>
 
-  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 6.2 · Redeem your reward code</h3><p>Redeem <code>UPDATE6.2</code> through <code>/codes redeem</code>. New codes support configurable rewards, expiry times, and claim limits.</p></div></div>
+  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 6.3 · The Halloween reward code</h3><p>Redeem <code>UPDATE6.3</code> through <code>/codes redeem</code> for <strong>3 Species Rolls</strong>. The code expires 24 hours after its creation and has unlimited uses, but each player can redeem it only once. New owner-generated codes can award a second prize, use a duration from seconds to years, or be permanent.</p></div></div>
 
   <div class="guide-section-label">02 / Choose a battle that fits</div><p class="guide-section-intro">Winning a bot fight earns Fight Wins leaderboard points. Higher difficulties also offer a chance to earn a Species Roll, while Brutal guarantees one on a genuine victory.</p>
   <div class="guide-difficulty-grid">
@@ -1676,7 +1788,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Bot Difficulties</div>
         </div>
         <div style="text-align:center;">
-          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v6.1</div>
+          <div style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--crimson-bright);">v6.3</div>
           <div style="font-family:var(--font-mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);">Current Version</div>
         </div>
       </div>
@@ -1688,10 +1800,10 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
 <!-- COMMANDS -->
 <div id="page-commands" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">Live command reference · Version 6.2</div>
+    <div class="page-eyebrow">Live command reference · Version 6.3</div>
     <h1 class="page-title">Commands</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Current slash-command reference for LOZ Version 6.2. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
+    <p class="page-desc">Current slash-command reference for LOZ Version 6.3. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
   </div>
 
   <div class="cmd-cat reveal"><span>🚀</span> Getting Started</div>
@@ -1704,7 +1816,7 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
     <div class="cmd-row"><span class="cmd-name">/profile [user]</span><span class="cmd-desc">View a player's species, resources, battle record, badges, and progression. Ability descriptions are shown in the species codex instead.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/switch</span><span class="cmd-desc">Equip a permanently unlocked species or awakening form; a three-hour cooldown normally applies.</span><span class="cmd-tag">Everyone</span></div>
     <div class="cmd-row"><span class="cmd-name">/items use item:Species Token</span><span class="cmd-desc">Spend a Species Token to choose an eligible species.</span><span class="cmd-tag">Everyone</span></div>
-    <div class="cmd-row"><span class="cmd-name">/codes redeem code:&lt;code&gt;</span><span class="cmd-desc">Redeem a valid, unused limited-time code for its configured reward.</span><span class="cmd-tag">Everyone</span></div>
+    <div class="cmd-row"><span class="cmd-name">/codes redeem code:&lt;code&gt;</span><span class="cmd-desc">Redeem a valid code for its configured rewards. A code can grant Species Rolls and Species Tokens together.</span><span class="cmd-tag">Everyone</span></div>
   </div>
 
   <div class="cmd-cat reveal"><span>⚔️</span> Combat & Records</div>
@@ -1840,12 +1952,25 @@ nav.lore-toc>a:hover{background:linear-gradient(135deg,rgba(20,57,70,.98),rgba(1
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">The current release is Version 6.2, released October 17, 2026. Older release notes are preserved below.</p>
+    <p class="page-desc">Version 6.3 · October 19, 2026. The Rift takes on a Halloween-season appearance; earlier release notes remain preserved below.</p>
   </div>
   <div class="patch-list">
     
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 6.2</span></div><div class="patch-meta"><span class="pdate">2026-10-17</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 6.3</span></div><div class="patch-meta"><span class="pdate">2026-10-19</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">🎃 <strong>Halloween season is live on the LOZ Wiki.</strong> The October 22 update and October 31 Halloween night each have a live countdown on the homepage.</div>
+        <div class="patch-item">💬 Mention help now triggers only when the LOZ mention starts the message, and its help card is shorter.</div>
+        <div class="patch-item">⚡ Thunder Dragon's ultimate paralyzes an opponent for two turns. Reaper instantly executes targets at or below 20% HP when activated, subject to existing species-specific defenses.</div>
+        <div class="patch-item">🐉 Elemental Dragon awakening trials are sequential. <code>/awakening</code> shows the current objective, progress, and the number of awakened Dragon variants toward True Dragon.</div>
+        <div class="patch-item">🔎 Species Achievements now includes a species dropdown; viewing a species opens its detail panel in a separate private message.</div>
+        <div class="patch-item">🎟️ Redemption codes support a second reward, custom durations (<code>1s</code>, <code>1m</code>, <code>1h</code>, <code>1d</code>, <code>1w</code>, <code>1y</code>), permanent duration with <code>0</code>, and unlimited uses with <code>max-claims: 0</code>.</div>
+        <div class="patch-item">🎁 <strong><code>UPDATE6.3</code></strong> awards 3 Species Rolls, has unlimited global uses, and expires 24 hours after creation. Each player can redeem it once.</div>
+        <div class="patch-item">🧪 The developer alert is shorter and includes Build Your Own Species, the reward code, and the October 22 Halloween update date.</div>
+      </div>
+    </div>
+    <div class="patch-card reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 6.2</span></div><div class="patch-meta"><span class="pdate">2026-10-17</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🎟️ Added codes. Use <code>UPDATE6.2</code> to claim your reward.</div>
       </div>
@@ -2117,7 +2242,7 @@ canvas.width=W;canvas.height=H;
 window.addEventListener('resize',()=>{W=window.innerWidth;H=window.innerHeight;canvas.width=W;canvas.height=H;});
 class P{
   constructor(){this.reset(true);}
-  reset(init){this.x=Math.random()*W;this.y=init?Math.random()*H:H+5;this.s=Math.random()*1.3+0.3;this.vy=-(Math.random()*0.35+0.1);this.vx=(Math.random()-0.5)*0.15;this.life=0;this.ml=Math.random()*180+80;const r=Math.random();this.c=r>0.65?'#0891b2':r>0.35?'#fbbf24':'#22d3ee';}
+  reset(init){this.x=Math.random()*W;this.y=init?Math.random()*H:H+5;this.s=Math.random()*1.3+0.3;this.vy=-(Math.random()*0.35+0.1);this.vx=(Math.random()-0.5)*0.15;this.life=0;this.ml=Math.random()*180+80;const r=Math.random();this.c=r>0.65?'#ff9347':r>0.35?'#b7dc78':'#b78ad8';}
   update(){this.x+=this.vx;this.y+=this.vy;this.life++;if(this.life>this.ml||this.y<-5)this.reset(false);}
   draw(){ctx.globalAlpha=Math.sin((this.life/this.ml)*Math.PI)*0.45;ctx.fillStyle=this.c;ctx.beginPath();ctx.arc(this.x,this.y,this.s,0,Math.PI*2);ctx.fill();}
 }
@@ -2389,6 +2514,29 @@ function setupSearch(){
   if((e.key==="/"&&!typing)||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k")){e.preventDefault();input.focus();input.select();}
  });
 }
+
+
+function startHalloweenCountdowns(){
+ const ribbon=document.getElementById("halloween-ribbon-countdown"),label=document.getElementById("halloween-ribbon-label");
+ const timers=Array.from(document.querySelectorAll(".halloween-timer-card[data-countdown-target]")).map(card=>({card,target:new Date(card.dataset.countdownTarget).getTime(),end:card.querySelector("[data-countdown-end]"),status:card.querySelector(".halloween-timer-status"),units:{days:card.querySelector('[data-countdown-unit="days"]'),hours:card.querySelector('[data-countdown-unit="hours"]'),minutes:card.querySelector('[data-countdown-unit="minutes"]'),seconds:card.querySelector('[data-countdown-unit="seconds"]')}}));
+ const two=n=>String(n).padStart(2,"0");
+ function tick(){
+  const now=Date.now();
+  timers.forEach(t=>{
+   const remain=Math.max(0,t.target-now),total=Math.floor(remain/1000),v={days:Math.floor(total/86400),hours:Math.floor(total%86400/3600),minutes:Math.floor(total%3600/60),seconds:total%60};
+   Object.entries(t.units).forEach(([u,node])=>{if(node)node.textContent=u==="days"?String(v[u]).padStart(2,"0"):two(v[u]);});
+   const ended=remain<=0;t.card.classList.toggle("is-ended",ended);if(t.status)t.status.textContent=ended?"THE VEIL IS OPEN":"COUNTING DOWN";if(t.end&&ended)t.end.textContent="The time has come";
+  });
+  if(ribbon){
+   const update=timers.find(t=>t.card.classList.contains("halloween-timer-update")),night=timers.find(t=>t.card.classList.contains("halloween-timer-night"));
+   const next=update&&update.target>now?update:night&&night.target>now?night:null;
+   if(next){const total=Math.floor((next.target-now)/1000),d=Math.floor(total/86400),h=Math.floor(total%86400/3600),m=Math.floor(total%3600/60),s=total%60;ribbon.textContent=d+"D "+two(h)+"H "+two(m)+"M "+two(s)+"S";if(label)label.textContent=next.card.classList.contains("halloween-timer-update")?"THE VEIL LIFTS IN":"HALLOWEEN NIGHT IN";}
+   else{ribbon.textContent="31 OCT · HALLOWEEN IS HERE";if(label)label.textContent="THE RIFT IS HAUNTED";}
+  }
+ }
+ tick();window.setInterval(tick,1000);
+}
+startHalloweenCountdowns();
 
 splitGuide();wrapPages();addRelated();addCrossLinks();
 const originalShowPage=window.showPage;
