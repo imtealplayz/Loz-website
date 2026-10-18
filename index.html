@@ -684,39 +684,136 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
  #particles{display:none;}
 }
 
+
+/* LOZ WIKI REDESIGN — retain the existing dark cyan/amber visual identity */
+:root{--wiki-sidebar-width:245px;--wiki-line:rgba(107,190,220,.16);--wiki-link:#67d7ed;--wiki-link-hover:#fbbf24}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+nav.wiki-topbar{height:68px;padding:0 1.4rem;gap:1.25rem;justify-content:flex-start;background:rgba(3,8,15,.97);border-bottom:1px solid var(--wiki-line);box-shadow:0 5px 24px rgba(0,0,0,.18)}
+.wiki-topbar .nav-logo{font-size:1.34rem;flex-shrink:0}
+.wiki-search-wrap{position:relative;display:flex;align-items:center;flex:0 1 570px;min-width:120px;height:39px;margin-left:clamp(.5rem,3vw,2.3rem);border:1px solid rgba(90,138,159,.35);background:rgba(12,21,32,.92);border-radius:5px;transition:border-color .18s,box-shadow .18s}
+.wiki-search-wrap:focus-within{border-color:rgba(34,211,238,.65);box-shadow:0 0 0 3px rgba(34,211,238,.07)}
+.wiki-search-icon{font:1.5rem/1 var(--font-body);color:var(--text-muted);padding:0 .65rem .16rem .8rem}
+#wiki-search{width:100%;min-width:0;height:100%;outline:0;border:0;background:transparent;color:var(--text);font:400 .91rem var(--font-body);padding:0 .35rem}
+#wiki-search::placeholder{color:#7193a4;opacity:.9}
+.wiki-search-shortcut{flex-shrink:0;margin:0 .55rem;padding:.05rem .38rem;border:1px solid rgba(90,138,159,.4);border-radius:3px;color:#88aab8;background:rgba(255,255,255,.025);font:.72rem var(--font-mono)}
+.wiki-search-results{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:400;max-height:min(65vh,490px);overflow:auto;padding:.4rem;background:#07111d;border:1px solid rgba(34,211,238,.3);border-radius:7px;box-shadow:0 18px 50px rgba(0,0,0,.55)}
+.wiki-search-results.open{display:block}
+.wiki-search-result{display:flex;flex-direction:column;gap:.18rem;width:100%;padding:.7rem .8rem;border:0;border-radius:4px;background:transparent;color:var(--text);text-align:left;cursor:pointer}
+.wiki-search-result:hover,.wiki-search-result:focus-visible{background:rgba(34,211,238,.09);outline:0}
+.wiki-search-result-title{font:600 .93rem var(--font-body);color:#dff8ff}
+.wiki-search-result-meta{font:.65rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cyan-bright)}
+.wiki-search-result-snippet{font:.84rem/1.45 var(--font-body);color:var(--text-muted)}
+.wiki-search-empty{padding:.85rem;color:var(--text-muted);font:.86rem var(--font-body)}
+nav.wiki-topbar .nav-right{margin-left:auto;flex-shrink:0;gap:10px}
+nav.wiki-topbar .nav-invite{white-space:nowrap;padding:9px 15px;font-size:.64rem}
+.sidebar{top:68px;width:var(--wiki-sidebar-width);padding:.75rem .7rem 1rem;background:#060d16;border-right:1px solid var(--wiki-line);box-shadow:6px 0 28px rgba(0,0,0,.1)}
+.wiki-sidebar-brand{display:flex;align-items:center;gap:.7rem;margin:0 .25rem .6rem;padding:.55rem .45rem .95rem;border-bottom:1px solid var(--wiki-line)}
+.wiki-sidebar-brand-mark{display:grid;place-items:center;width:39px;height:39px;flex-shrink:0;border:1px solid rgba(34,211,238,.36);border-radius:5px;background:linear-gradient(145deg,rgba(8,145,178,.2),rgba(217,119,6,.09));font:900 .9rem var(--font-display);color:var(--text)}
+.wiki-sidebar-brand strong{display:block;font:600 .57rem/1.45 var(--font-mono);letter-spacing:.07em;color:#d5edf5}
+.wiki-sidebar-brand small{display:block;margin-top:.2rem;color:var(--text-dim);font:.56rem var(--font-mono)}
+.sidebar-label{margin:.9rem 0 .28rem;padding:0 .8rem;color:#6e8fa0;font:500 .59rem var(--font-mono);letter-spacing:.16em}
+.nav-item{display:flex;align-items:center;gap:.65rem;margin:2px 0;padding:.53rem .75rem;border:0;border-left:2px solid transparent;border-radius:3px;font:400 .91rem var(--font-body);letter-spacing:.005em;color:#a4c0cd;line-height:1.3}
+.nav-item:hover{color:#edfbff;background:rgba(34,211,238,.055)}
+.nav-item.active{color:#80e6f5;border-left-color:var(--cyan-bright);background:rgba(34,211,238,.09);font-weight:600}
+.nav-icon{width:17px;font-size:.93rem;color:#7ba6b7;text-align:center}
+.nav-item.active .nav-icon{color:var(--amber-bright)}
+.wiki-sidebar-foot{margin:auto .35rem 0;padding:1rem .6rem .35rem;border-top:1px solid var(--wiki-line);font:.72rem var(--font-body);color:#9ab7c5}
+.wiki-status-dot{display:inline-block;width:7px;height:7px;margin-right:.35rem;border-radius:50%;background:#34d399;box-shadow:0 0 9px rgba(52,211,153,.45)}
+.wiki-sidebar-foot small{display:block;margin:.25rem 0 0 1rem;color:var(--text-dim);font:.58rem var(--font-mono)}
+.main{margin-left:var(--wiki-sidebar-width);padding-top:68px}
+.page{padding:2.05rem clamp(1.2rem,2.9vw,2.8rem);min-height:calc(100vh - 68px)}
+.page-header{padding:0 0 1.2rem;margin-bottom:1.65rem;border-bottom:1px solid var(--wiki-line)}
+.page-eyebrow{font-size:.61rem;letter-spacing:.18em;color:#59d8ef}
+.page-title{font-size:clamp(1.9rem,3.1vw,2.65rem);letter-spacing:-.025em;line-height:1.15;margin-bottom:.55rem}
+.page-desc{max-width:800px;font-size:1.08rem;line-height:1.65;color:#a5c3d0}
+.glow-line{width:46px;height:2px;margin:.75rem 0 1rem;box-shadow:none}
+.wiki-layout{display:grid;grid-template-columns:minmax(0,1fr) 195px;align-items:start;gap:1.65rem;max-width:1530px;margin:0 auto}
+.wiki-layout.wiki-home-layout{grid-template-columns:minmax(0,1fr)}
+.wiki-article{min-width:0;max-width:100%}
+.wiki-breadcrumbs{display:flex;align-items:center;gap:.45rem;margin:0 0 1rem;color:var(--text-dim);font:.64rem var(--font-mono);letter-spacing:.04em}
+.wiki-breadcrumbs a{color:#81aeba;text-decoration:none}.wiki-breadcrumbs a:hover{color:var(--cyan-bright)}
+.wiki-breadcrumb-separator{color:#365968}.wiki-breadcrumb-current{color:#8fb2c1}
+.wiki-generated-header{margin-bottom:1.3rem}
+.wiki-toc{position:sticky;top:86px;align-self:start;min-width:0;border:1px solid var(--wiki-line);border-radius:5px;background:rgba(7,14,24,.78);overflow:hidden}
+.wiki-toc[hidden]{display:none!important}
+.wiki-toc-summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.75rem .8rem;border-bottom:1px solid var(--wiki-line);color:#d8edf6;font:600 .82rem var(--font-body)}
+.wiki-toc-summary::-webkit-details-marker{display:none}.wiki-toc-summary:after{content:"⌄";color:var(--cyan-bright);font:.8rem var(--font-mono)}
+.wiki-toc details:not([open]) .wiki-toc-summary{border-bottom:0}
+.wiki-toc-list{list-style:none;padding:.45rem .45rem .65rem;margin:0}
+.wiki-toc-list li{margin:.05rem 0}
+.wiki-toc-list a{display:block;padding:.34rem .4rem;border-left:2px solid transparent;color:#85a8b8;text-decoration:none;font:.82rem/1.35 var(--font-body);border-radius:2px;overflow-wrap:anywhere}
+.wiki-toc-list a:hover{color:var(--cyan-bright);background:rgba(34,211,238,.055);border-left-color:var(--cyan-bright)}
+.wiki-toc-list li.level-3 a{padding-left:.85rem;font-size:.77rem}
+.wiki-article h2,.wiki-article h3{scroll-margin-top:88px}
+.wiki-inline-link{color:var(--wiki-link);text-decoration:none;border-bottom:1px dotted rgba(103,215,237,.55);cursor:pointer}
+.wiki-inline-link:hover{color:var(--wiki-link-hover);border-bottom-color:var(--wiki-link-hover)}
+.wiki-related{margin:2.4rem 0 .35rem;padding:1.15rem 0 0;border-top:1px solid var(--wiki-line)}
+.wiki-related-title{margin:0 0 .8rem;color:#d9f0f8;font:600 1.1rem var(--font-display)}
+.wiki-related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.wiki-related-link{display:flex;align-items:flex-start;gap:.7rem;padding:.8rem .85rem;border:1px solid var(--wiki-line);border-radius:4px;background:rgba(9,18,29,.65);color:var(--text);text-align:left;cursor:pointer;transition:border-color .18s,background .18s}
+.wiki-related-link:hover{border-color:rgba(34,211,238,.4);background:rgba(8,145,178,.09)}
+.wiki-related-symbol{display:grid;place-items:center;width:29px;height:29px;flex-shrink:0;border:1px solid rgba(34,211,238,.22);border-radius:3px;color:var(--cyan-bright);font:.9rem var(--font-mono)}
+.wiki-related-name{display:block;font:600 .92rem var(--font-body);color:#d7eff8}
+.wiki-related-description{display:block;margin-top:.18rem;color:var(--text-muted);font:.8rem/1.4 var(--font-body)}
+.wiki-home-layout .wiki-toc{display:none}
+.wiki-article>.page-header:first-child{margin-top:0}
+.wiki-article .guide-hero{margin-top:0}.wiki-article .guide-section-label{margin-top:1.65rem}
+.wiki-article .guide-steps{gap:.65rem}.wiki-article .guide-step{border-color:var(--wiki-line)}
+.wiki-article .page-desc,.wiki-article p{overflow-wrap:anywhere}
+@media(max-width:1100px){.wiki-layout{grid-template-columns:minmax(0,1fr) 175px;gap:1rem}.wiki-topbar .nav-logo{font-size:1.2rem}.wiki-search-wrap{margin-left:.25rem;flex-basis:480px}.wiki-sidebar-brand strong{font-size:.52rem}}
+@media(max-width:900px){
+ nav.wiki-topbar{padding:0 .9rem;gap:.7rem}.main{margin-left:0;padding-top:68px}
+ .sidebar{top:68px;width:min(285px,85vw);transform:translateX(-100%);padding:.75rem .7rem 1rem;z-index:250}.sidebar.open{transform:translateX(0)}
+ .hamburger{display:flex}.wiki-search-wrap{flex:1 1 auto;margin-left:0}.wiki-search-shortcut{display:none}
+ .wiki-layout{grid-template-columns:minmax(0,1fr);gap:1rem}.wiki-toc{position:static;order:-1;margin:0 0 .2rem}
+ .wiki-toc-summary{cursor:pointer}.page{padding:1.4rem 1rem}.page-header{margin-bottom:1.25rem}
+ .wiki-related-grid{grid-template-columns:1fr}.sidebar-overlay{z-index:240}
+}
+@media(max-width:540px){
+ nav.wiki-topbar{height:62px;gap:.55rem;padding:0 .65rem}.main{padding-top:62px}.sidebar{top:62px}
+ .nav-logo{font-size:1.06rem!important;letter-spacing:.1em!important}nav.wiki-topbar .nav-invite{display:none}
+ .wiki-search-wrap{height:36px}#wiki-search{font-size:.84rem}.wiki-search-icon{padding-left:.5rem;padding-right:.35rem}
+ .page{padding:1.1rem .8rem}.wiki-search-results{max-height:65vh}
+}
+
 </style>
 </head>
 <body>
 <canvas id="particles"></canvas>
 
 <!-- TOP NAV -->
-<nav>
-  <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="l">L</span><span>O</span><span class="z">Z</span></a>
-  <div class="nav-right">
-    <a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" class="nav-invite">Add to Discord</a>
-    <div class="hamburger" id="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></div>
+<nav class="wiki-topbar">
+  <a href="#home" class="nav-logo" onclick="showPage('home');return false;" aria-label="LOZ Wiki home"><span class="l">L</span><span>O</span><span class="z">Z</span></a>
+  <div class="wiki-search-wrap" id="wiki-search-wrap">
+    <label class="sr-only" for="wiki-search">Search the LOZ Wiki</label><span class="wiki-search-icon" aria-hidden="true">⌕</span>
+    <input id="wiki-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search the LOZ Wiki…" aria-label="Search the LOZ Wiki" aria-controls="wiki-search-results" aria-expanded="false">
+    <kbd class="wiki-search-shortcut">/</kbd><div id="wiki-search-results" class="wiki-search-results" role="listbox" aria-label="Wiki search results"></div>
+  </div>
+  <div class="nav-right"><a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer" class="nav-invite">Add to Discord</a>
+    <div class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Toggle navigation" role="button" tabindex="0"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
 <div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
 
 <!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
-  <span class="sidebar-label">Navigation</span>
-  <button class="nav-item active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⚔️</span>Home</button>
-  <span class="sidebar-label">Start Here</span>
-  <button class="nav-item" data-page="guide" onclick="showPage('guide')"><span class="nav-icon">🧭</span>New Player Guide</button>
-  <button class="nav-item" data-page="features" onclick="showPage('features')"><span class="nav-icon">✨</span>Features</button>
-  <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">👑</span>Creators</button>
-    <span class="sidebar-label">The Game</span>
-  <button class="nav-item" data-page="species" onclick="showPage('species')"><span class="nav-icon">🎲</span>Species</button>
-  <button class="nav-item" data-page="commands" onclick="showPage('commands')"><span class="nav-icon">💬</span>Commands</button>
-  <button class="nav-item" data-page="quests" onclick="showPage('quests')"><span class="nav-icon">🌑</span>Quests</button>
-  <button class="nav-item" data-page="lore" onclick="showPage('lore')"><span class="nav-icon">📖</span>Rift Lore</button>
-  <button class="nav-item" data-page="patchnotes" onclick="showPage('patchnotes')"><span class="nav-icon">📋</span>Patch Notes</button>
-  <span class="sidebar-label">Server</span>
-  <a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" class="nav-item"><span class="nav-icon">🔗</span>Invite LOZ</a>
-  <a href="https://discord.gg/TKBYpjqnPC" target="_blank" class="nav-item"><span class="nav-icon">💬</span>Support Server</a>
+<div class="sidebar" id="sidebar" aria-label="LOZ Wiki navigation">
+  <div class="wiki-sidebar-brand"><span class="wiki-sidebar-brand-mark">LOZ</span><div><strong>LEGENDS OF THE RIFT</strong><small>Community Wiki · v6.2</small></div></div>
+  <span class="sidebar-label">Discover</span><button class="nav-item active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⌂</span>Wiki Home</button>
+  <span class="sidebar-label">Guides</span><button class="nav-item" data-page="guide" onclick="showPage('guide')"><span class="nav-icon">✧</span>New Player Guide</button>
+  <button class="nav-item" data-page="battles" onclick="showPage('battles')"><span class="nav-icon">⚔</span>Combat Guide</button>
+  <button class="nav-item" data-page="awakenings" onclick="showPage('awakenings')"><span class="nav-icon">◈</span>Awakenings &amp; Forms</button>
+  <button class="nav-item" data-page="systems" onclick="showPage('systems')"><span class="nav-icon">✦</span>Systems &amp; Rewards</button>
+  <span class="sidebar-label">Game Reference</span><button class="nav-item" data-page="species" onclick="showPage('species')"><span class="nav-icon">◇</span>Species</button>
+  <button class="nav-item" data-page="quests" onclick="showPage('quests')"><span class="nav-icon">☼</span>Quests &amp; Glory</button>
+  <button class="nav-item" data-page="commands" onclick="showPage('commands')"><span class="nav-icon">⌘</span>Commands</button>
+  <button class="nav-item" data-page="features" onclick="showPage('features')"><span class="nav-icon">✧</span>Features</button>
+  <span class="sidebar-label">World &amp; Updates</span><button class="nav-item" data-page="lore" onclick="showPage('lore')"><span class="nav-icon">▤</span>Rift Lore</button>
+  <button class="nav-item" data-page="patchnotes" onclick="showPage('patchnotes')"><span class="nav-icon">≡</span>Patch Notes</button>
+  <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">♙</span>Creators</button>
+  <span class="sidebar-label">Community</span><a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Add LOZ to Discord</a>
+  <a href="https://discord.gg/TKBYpjqnPC" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Support Server</a>
+  <div class="wiki-sidebar-foot"><span class="wiki-status-dot"></span> The Rift is online <small>Documentation for LOZ v6.2</small></div>
 </div>
 
 <div class="main">
@@ -726,7 +823,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 <div id="page-home" class="page active">
   <section class="home-hero-panel">
     <div class="home-hero-copy">
-      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 6.1</div>
+      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 6.2</div>
       <div class="hero-logo" aria-label="LOZ"><span class="l">L</span><span class="o">O</span><span class="z">Z</span></div>
       <div class="hero-sub">Legends of the Rift</div>
       <h1 class="home-hero-title">The next legend could be <em>you.</em></h1>
@@ -788,7 +885,7 @@ footer>div:first-child{line-height:1.8;}footer a{display:inline-flex;align-items
 
 <!-- NEW PLAYER GUIDE -->
 <div id="page-guide" class="page">
-  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 6.1</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
+  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 6.2</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
   <section class="guide-hero reveal">
     <div class="guide-hero-main"><div class="guide-kicker">Recruit's briefing · Begin here</div><h2>Before you chase legends, learn how to <em>survive.</em></h2><p>LOZ is a turn-based Discord RPG. Start by running /guide: it is a seven-page interactive tutorial. Click Next Page through the lessons, then press Complete Tutorial to claim +1 Species Roll once. Use this website as a visual reference whenever you need a refresher.</p><div class="guide-hero-actions"><a class="btn-primary" href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer">Add LOZ to Discord</a><button class="btn-ghost" onclick="showPage('commands')">Full Command List</button></div></div>
     <aside class="guide-reward-card"><div class="guide-reward-top"><span>Starter Benefits</span><span class="guide-reward-seal">✦</span></div><div><div class="guide-reward-title">Start with resources, not guesswork.</div><p class="guide-reward-copy">You can earn rolls without spending money. Use these starting rewards before grinding battles.</p><div class="guide-reward-line"><span>Daily claim</span><strong>+1 ROLL</strong></div><div class="guide-reward-line"><span>7-day daily streak</span><strong>+1 BONUS</strong></div><div class="guide-reward-line"><span>Complete /guide once</span><strong>+1 ROLL</strong></div></div><div class="guide-reward-copy">Daily claims have a 24-hour cooldown. The tutorial reward is one-time only.</div></aside>
@@ -1864,6 +1961,220 @@ function copyGuideCommand(command, button){
   if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(command).then(confirmCopy).catch(fallbackCopy);
   else fallbackCopy();
 }
+
+
+// LOZ Wiki: split the long field guide into searchable, cross-linked articles.
+(function initializeLozWiki(){
+"use strict";
+const titles={home:"LOZ Wiki Home",guide:"New Player Guide",battles:"Combat Guide",awakenings:"Awakenings & Forms",systems:"Systems & Rewards",species:"Species",quests:"Quests & Glory",commands:"Commands",features:"Features",lore:"Rift Lore",patchnotes:"Patch Notes",about:"Creators"};
+const descriptions={
+home:"Everything about Legends of the Rift, collected in one searchable reference.",
+guide:"A beginner-friendly path through your first rolls, species, battles, and progression systems.",
+battles:"Learn battle difficulties, turn controls, PvP challenges, and battle rewards.",
+awakenings:"Explore the awakening paths, unlock requirements, and forms that change your fighter.",
+systems:"Understand Species Tokens, leaderboards, gifts, reward codes, and other useful systems.",
+species:"Browse the species roster and learn what makes each species different.",
+quests:"Track quests, achievements, Glory, and the rewards connected to progression.",
+commands:"Find LOZ commands, what they do, and where to start with each system.",
+features:"Explore LOZ features and how its major systems fit together.",
+lore:"Read the Rift Chronicles and the lore behind LOZ's species and transformations.",
+patchnotes:"Review LOZ update notes and recent changes.",about:"Learn about the creators and the people behind LOZ."
+};
+const related={
+home:["guide","species","commands","quests","patchnotes"],guide:["battles","species","commands","quests"],
+battles:["species","commands","awakenings","quests"],awakenings:["species","quests","lore","commands"],
+systems:["quests","commands","species","patchnotes"],species:["awakenings","commands","quests","lore"],
+quests:["awakenings","commands","species","systems"],commands:["guide","battles","quests","species"],
+features:["species","quests","commands","lore"],lore:["species","awakenings","features"],
+patchnotes:["commands","systems","guide"],about:["features","commands","lore"]
+};
+const relatedDesc={guide:"Get your first session right, step by step.",battles:"Understand turn-based combat and rewards.",awakenings:"See the transformation and True Dragon paths.",systems:"Find progression rewards and useful systems.",species:"Explore the roster, traits, and species details.",quests:"See objectives, achievements, and Glory progression.",commands:"Look up the slash commands that power each feature.",features:"Get an overview of LOZ's major systems.",lore:"Read the story and world-building behind the Rift.",patchnotes:"Check what changed in each LOZ update.",about:"Meet the people behind the project.",home:"The starting point for every LOZ topic."};
+const symbols={home:"⌂",guide:"✧",battles:"⚔",awakenings:"◈",systems:"✦",species:"◇",quests:"☼",commands:"⌘",features:"✧",lore:"▤",patchnotes:"≡",about:"♙"};
+
+function makeHeader(title,desc){
+ const h=document.createElement("header");h.className="page-header wiki-generated-header";
+ const e=document.createElement("div");e.className="page-eyebrow";e.textContent="LOZ Wiki / Field Guide · Version 6.2";
+ const t=document.createElement("h1");t.className="page-title";t.textContent=title;
+ const line=document.createElement("div");line.className="glow-line";
+ const p=document.createElement("p");p.className="page-desc";p.textContent=desc;
+ h.append(e,t,line,p);return h;
+}
+function splitGuide(){
+ const guide=document.getElementById("page-guide");if(!guide||document.getElementById("page-battles"))return;
+ const nodes=Array.from(guide.children);
+ const cuts=[
+  {marker:"02 / Choose",id:"page-battles",key:"battles",title:"Combat Guide"},
+  {marker:"03 / Awakening",id:"page-awakenings",key:"awakenings",title:"Awakenings & Forms"},
+  {marker:"04 / Systems",id:"page-systems",key:"systems",title:"Systems & Rewards"}
+ ];
+ const positions=cuts.map(c=>nodes.findIndex(el=>el.classList.contains("guide-section-label")&&el.textContent.trim().startsWith(c.marker)));
+ if(positions.some(n=>n<0))return;
+ const pages=[];
+ cuts.forEach((c,i)=>{
+  const page=document.createElement("div");page.className="page";page.id=c.id;page.dataset.wikiPage=c.key;
+  page.appendChild(makeHeader(c.title,descriptions[c.key]));
+  nodes.slice(positions[i],i+1<positions.length?positions[i+1]:nodes.length).forEach(node=>page.appendChild(node));
+  pages.push(page);
+ });
+ guide.after(...pages);
+}
+function go(pageId,anchorId){
+ if(!document.getElementById("page-"+pageId))return;
+ window.showPage(pageId);
+ if(anchorId)window.setTimeout(()=>{
+  const el=document.getElementById(anchorId);
+  if(el){el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});history.replaceState(null,"","#"+pageId+"/"+anchorId);}
+ },45);
+}
+function breadcrumb(article,id,title){
+ if(id==="home")return;
+ const row=document.createElement("div");row.className="wiki-breadcrumbs";
+ const a=document.createElement("a");a.href="#home";a.textContent="LOZ Wiki";a.addEventListener("click",e=>{e.preventDefault();go("home");});
+ const sep=document.createElement("span");sep.className="wiki-breadcrumb-separator";sep.textContent="›";
+ const name=document.createElement("span");name.className="wiki-breadcrumb-current";name.textContent=title;
+ row.append(a,sep,name);article.prepend(row);
+}
+function wrapPages(){
+ Array.from(document.querySelectorAll(".main > .page")).forEach(page=>{
+  if(page.querySelector(":scope > .wiki-layout"))return;
+  const id=page.id.replace(/^page-/,""),layout=document.createElement("div"),article=document.createElement("article");
+  layout.className="wiki-layout"+(id==="home"?" wiki-home-layout":"");article.className="wiki-article";
+  while(page.firstChild)article.appendChild(page.firstChild);
+  breadcrumb(article,id,titles[id]||id);layout.appendChild(article);
+  if(id!=="home"){
+   const aside=document.createElement("aside");aside.className="wiki-toc";aside.setAttribute("aria-label","On this page");
+   const details=document.createElement("details");details.open=true;
+   const summary=document.createElement("summary");summary.className="wiki-toc-summary";summary.textContent="On this page";
+   const list=document.createElement("ul");list.className="wiki-toc-list";
+   const headings=Array.from(article.querySelectorAll("h2,h3")).filter(h=>h.textContent.trim()&&!h.closest(".guide-step,.guide-difficulty,.sp-card,.species-card,.feature-card,.patch-entry,.wiki-related,.wiki-generated-header")).slice(0,12);
+   const used=new Set();
+   headings.forEach(h=>{
+    const base=(h.textContent||"section").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"section";
+    let anchor=id+"-"+base,n=2;while(used.has(anchor)||(document.getElementById(anchor)&&document.getElementById(anchor)!==h))anchor=id+"-"+base+"-"+n++;
+    used.add(anchor);h.id=anchor;
+    const li=document.createElement("li");li.className=h.tagName.toLowerCase()==="h3"?"level-3":"level-2";
+    const a=document.createElement("a");a.href="#"+id+"/"+anchor;a.textContent=h.textContent.trim();a.addEventListener("click",e=>{e.preventDefault();go(id,anchor);});
+    li.appendChild(a);list.appendChild(li);
+   });
+   details.append(summary,list);aside.appendChild(details);if(headings.length<2)aside.hidden=true;layout.appendChild(aside);
+  }
+  page.appendChild(layout);
+ });
+}
+function addRelated(){
+ Object.keys(related).forEach(id=>{
+  const page=document.getElementById("page-"+id),article=page&&page.querySelector(".wiki-article");if(!article||article.querySelector(".wiki-related"))return;
+  const box=document.createElement("section");box.className="wiki-related";
+  const heading=document.createElement("h2");heading.className="wiki-related-title";heading.textContent="Related pages";
+  const grid=document.createElement("div");grid.className="wiki-related-grid";
+  related[id].forEach(target=>{
+   if(!document.getElementById("page-"+target))return;
+   const button=document.createElement("button");button.type="button";button.className="wiki-related-link";button.addEventListener("click",()=>go(target));
+   const sym=document.createElement("span");sym.className="wiki-related-symbol";sym.textContent=symbols[target]||"↗";
+   const block=document.createElement("span"),name=document.createElement("span"),desc=document.createElement("span");
+   name.className="wiki-related-name";name.textContent=titles[target]||target;
+   desc.className="wiki-related-description";desc.textContent=relatedDesc[target]||descriptions[target]||"";
+   block.append(name,desc);button.append(sym,block);grid.appendChild(button);
+  });
+  box.append(heading,grid);article.appendChild(box);
+ });
+}
+function addCrossLinks(){
+ const rules=[
+  {term:"Species Tokens",page:"quests"},{term:"True Dragon",page:"awakenings"},
+  {term:"Cyborg",page:"awakenings"},{term:"Archdemon",page:"awakenings"},
+  {term:"Eclipsed Sovereign",page:"awakenings"},{term:"Patch Notes",page:"patchnotes"},
+  {term:"Leaderboards",page:"commands"},{term:"New Player Guide",page:"guide"},
+  {term:"/achievements",page:"quests"},{term:"/quests",page:"quests"},
+  {term:"/awakening",page:"awakenings"},{term:"/switch",page:"awakenings"},{term:"/leaderboard",page:"commands"}
+ ];
+ document.querySelectorAll(".wiki-article").forEach(article=>{
+  const linked=new Set(),walker=document.createTreeWalker(article,NodeFilter.SHOW_TEXT),nodes=[];
+  while(walker.nextNode())nodes.push(walker.currentNode);
+  nodes.forEach(node=>{
+   if(!node.parentElement||!node.nodeValue.trim()||node.parentElement.closest("a,button,pre,h1,h2,h3,h4,script,style,.nav-item,.wiki-toc,.wiki-related,.guide-command-list"))return;
+   for(const rule of rules){
+    if(linked.has(rule.term))continue;
+    const escaped=rule.term.replace(/[.*+?^$()|[\]\\]/g,"\\$&").replace(/[{}]/g,"\\$&");
+    const m=new RegExp(escaped,"i").exec(node.nodeValue);if(!m)continue;
+    const fragment=document.createDocumentFragment(),before=node.nodeValue.slice(0,m.index),after=node.nodeValue.slice(m.index+m[0].length);
+    if(before)fragment.appendChild(document.createTextNode(before));
+    const a=document.createElement("a");a.href="#"+rule.page;a.className="wiki-inline-link";a.textContent=m[0];a.addEventListener("click",e=>{e.preventDefault();go(rule.page);});fragment.appendChild(a);
+    if(after)fragment.appendChild(document.createTextNode(after));node.parentNode.replaceChild(fragment,node);linked.add(rule.term);break;
+   }
+  });
+ });
+}
+function pageTitle(id){const page=document.getElementById("page-"+id),h=page&&page.querySelector(".wiki-article .page-title");return titles[id]||(h?h.textContent.trim():id);}
+function snippet(text,query){
+ const clean=String(text||"").replace(/\s+/g," ").trim();if(clean.length<=142)return clean;
+ const pos=clean.toLowerCase().indexOf(String(query||"").toLowerCase()),start=pos>35?pos-32:0;
+ return(start?"…":"")+clean.slice(start,start+139)+(start+139<clean.length?"…":"");
+}
+function setupSearch(){
+ const input=document.getElementById("wiki-search"),results=document.getElementById("wiki-search-results"),wrap=document.getElementById("wiki-search-wrap");if(!input||!results||!wrap)return;
+ const records=[];
+ Array.from(document.querySelectorAll(".main > .page")).forEach(page=>{
+  const id=page.id.replace(/^page-/,""),article=page.querySelector(".wiki-article");if(!article)return;
+  const title=pageTitle(id),description=descriptions[id]||"",body=article.innerText||article.textContent||"";
+  records.push({id,title,description,body,hay:(title+" "+description+" "+body).toLowerCase(),anchor:"",kind:"article"});
+  Array.from(article.querySelectorAll("h2,h3")).forEach(h=>{
+   if(h.closest(".guide-step,.guide-difficulty,.sp-card,.species-card,.feature-card,.patch-entry,.wiki-related,.wiki-generated-header"))return;
+   const p=h.parentElement?(h.parentElement.innerText||h.parentElement.textContent||""):"";
+   records.push({id,title:h.textContent.trim(),description:snippet(p,h.textContent.trim()),body:p,hay:(h.textContent+" "+p+" "+title).toLowerCase(),anchor:h.id||"",kind:"section"});
+  });
+ });
+ function close(){results.classList.remove("open");input.setAttribute("aria-expanded","false");}
+ function render(){
+  const query=input.value.trim().toLowerCase();results.replaceChildren();if(!query){close();return;}
+  const words=query.split(/\s+/).filter(Boolean);
+  const hits=records.map(r=>{
+   if(!words.every(w=>r.hay.includes(w)))return null;
+   let score=r.title.toLowerCase()===query?30:0;
+   if(r.title.toLowerCase().startsWith(query))score+=18;else if(r.title.toLowerCase().includes(query))score+=11;
+   if(r.kind==="section")score+=2;if(r.description.toLowerCase().includes(query))score+=2;
+   return Object.assign({score},r);
+  }).filter(Boolean).sort((a,b)=>b.score-a.score);
+  if(!hits.length){const empty=document.createElement("div");empty.className="wiki-search-empty";empty.textContent="No matching articles. Try species, combat, commands, quests, or awakenings.";results.appendChild(empty);}
+  else{
+   const unique=[],seen=new Set();
+   hits.forEach(h=>{const key=h.id+"/"+h.anchor;if(!seen.has(key)){seen.add(key);unique.push(h);}});
+   unique.slice(0,8).forEach(hit=>{
+    const b=document.createElement("button");b.type="button";b.className="wiki-search-result";b.setAttribute("role","option");
+    const meta=document.createElement("span");meta.className="wiki-search-result-meta";meta.textContent=(titles[hit.id]||hit.id)+(hit.kind==="section"?" · Article section":" · Article");
+    const name=document.createElement("span");name.className="wiki-search-result-title";name.textContent=hit.title;
+    const desc=document.createElement("span");desc.className="wiki-search-result-snippet";desc.textContent=snippet(hit.description||hit.body,query)||descriptions[hit.id]||"";
+    b.append(meta,name,desc);b.addEventListener("click",()=>{close();input.blur();go(hit.id,hit.anchor||"");});results.appendChild(b);
+   });
+  }
+  results.classList.add("open");input.setAttribute("aria-expanded","true");
+ }
+ input.addEventListener("input",render);input.addEventListener("focus",()=>{if(input.value.trim())render();});
+ input.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){close();input.blur();}
+  if(e.key==="Enter"){const first=results.querySelector(".wiki-search-result");if(first){e.preventDefault();first.click();}}
+  if(e.key==="ArrowDown"){const first=results.querySelector(".wiki-search-result");if(first){e.preventDefault();first.focus();}}
+ });
+ document.addEventListener("click",e=>{if(!wrap.contains(e.target))close();});
+ document.addEventListener("keydown",e=>{
+  const t=e.target,typing=t&&(t.matches("input,textarea,select")||t.isContentEditable);
+  if((e.key==="/"&&!typing)||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k")){e.preventDefault();input.focus();input.select();}
+ });
+}
+
+splitGuide();wrapPages();addRelated();addCrossLinks();
+const originalShowPage=window.showPage;
+window.showPage=function(id){originalShowPage(id);if(document.getElementById("page-"+id))history.replaceState(null,"","#"+id);};
+setupSearch();
+const hash=window.location.hash.replace(/^#/,"");
+if(hash){
+ const parts=hash.split("/"),id=parts[0].replace(/^page-/,"");
+ if(document.getElementById("page-"+id)){
+  window.showPage(id);
+  if(parts[1])window.setTimeout(()=>{const target=document.getElementById(parts.slice(1).join("/"));if(target)target.scrollIntoView({behavior:"auto",block:"start"});},30);
+ }
+}
+})();
 
 </script>
 </body>
