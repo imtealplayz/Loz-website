@@ -776,6 +776,127 @@ nav.wiki-topbar .nav-invite{white-space:nowrap;padding:9px 15px;font-size:.64rem
  .page{padding:1.1rem .8rem}.wiki-search-results{max-height:65vh}
 }
 
+
+/* ==================== VISUAL POLISH · CALMER ACCENTS & GRID REPAIR ==================== */
+:root{
+ --cyan:#347b8b;
+ --cyan-bright:#83bbc5;
+ --cyan-glow:rgba(52,123,139,.14);
+ --amber:#ac782b;
+ --amber-bright:#d5b16f;
+ --amber-glow:rgba(172,120,43,.13);
+ --border:rgba(137,173,190,.14);
+ --border-bright:rgba(131,187,197,.27);
+ --text-muted:#93aab6;
+ --text-dim:#6b8491;
+ --wiki-line:rgba(137,173,190,.16);
+ --wiki-link:#8fc6ce;
+ --wiki-link-hover:#e0c084;
+}
+/* Use accent colour as a cue, not as a glow effect. */
+#particles{opacity:.13!important}
+.glow-line{background:#6c9ca7;box-shadow:none!important}
+.hero-logo .l,.hero-logo .z{text-shadow:none!important}
+.hero-eyebrow,.page-eyebrow{color:#8bc0c9}
+.guide-kicker:before,.lore-kicker:before{box-shadow:none!important}
+.lore-title span{color:#91bec5;text-shadow:none!important}
+.lore-sigil-wrap{border-color:rgba(131,187,197,.18)!important;box-shadow:inset 0 0 22px rgba(131,187,197,.025)!important}
+.lore-sigil-wrap:before,.lore-sigil-wrap:after{border-color:rgba(213,177,111,.2)!important}
+.lore-sigil-wrap:after{border-color:rgba(131,187,197,.22)!important}
+.lore-sigil{color:#a2c8cd!important;text-shadow:none!important;animation:none!important}
+.lore-hero:before{opacity:.2!important}
+.lore-hero{border-color:rgba(131,187,197,.19)!important;background:linear-gradient(135deg,#0b1823 0%,#08111a 62%,#15121a 100%)!important;box-shadow:none!important}
+.home-hero-panel{border-color:rgba(131,187,197,.18)!important;background:linear-gradient(135deg,#0b1925 0%,#08111a 62%,#15121a 100%)!important;box-shadow:none!important}
+.home-hero-panel:before,.home-hero-panel:after{opacity:.3}
+.lore-endgame{border-color:rgba(172,120,43,.2)!important;background:linear-gradient(125deg,#11131a 0%,#09131d 100%)!important}
+.lore-chapter,.lore-prologue,.lore-bloodline,.lore-awakening,.home-quick-card,.home-featured-card{border-color:var(--wiki-line)!important;box-shadow:none!important}
+.lore-chapter:hover,.home-quick-card:hover,.lore-toc a:hover{transform:none!important;box-shadow:none!important;border-color:rgba(131,187,197,.34)!important}
+.lore-awakening:before{height:2px;opacity:.62}
+.lore-bloodline-symbol{border-color:rgba(131,187,197,.22)!important;background:rgba(131,187,197,.035)!important}
+.lore-chapter-tag{color:#8ebcc5!important}
+.lore-rule{color:#d0b278!important}
+.lore-quote{background:rgba(172,120,43,.045)!important}
+.wiki-related-link:hover{border-color:rgba(131,187,197,.34)!important;background:rgba(131,187,197,.045)!important}
+.wiki-related-symbol{border-color:rgba(131,187,197,.22)!important;color:#9bc9d0!important}
+.wiki-inline-link{border-bottom-color:rgba(143,198,206,.48)!important}
+.wiki-inline-link:hover{color:var(--wiki-link-hover)!important;border-bottom-color:var(--wiki-link-hover)!important}
+.wiki-search-wrap:focus-within{border-color:rgba(131,187,197,.55)!important;box-shadow:0 0 0 2px rgba(131,187,197,.07)!important}
+.wiki-search-results{border-color:rgba(131,187,197,.25)!important}
+.wiki-search-result-meta{color:#91bec5!important}
+.wiki-search-result:hover,.wiki-search-result:focus-visible{background:rgba(131,187,197,.07)!important}
+.nav-item.active{color:#a5d0d5!important;border-left-color:#83bbc5!important;background:rgba(131,187,197,.075)!important}
+.nav-item:hover{background:rgba(131,187,197,.045)!important}
+.nav-item.active .nav-icon{color:#d5b16f!important}
+.btn-primary,.btn-ghost{min-height:44px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:none!important;transform:none;transition:background .16s,border-color .16s,color .16s}
+.btn-primary{color:#f0f7f8!important;background:#2e7180!important;border:1px solid rgba(131,187,197,.28)!important}
+.btn-primary:hover{color:#fff!important;background:#397f8d!important;border-color:rgba(143,198,206,.45)!important;box-shadow:none!important;transform:translateY(-1px)}
+.btn-ghost{color:#b0c1c9!important;background:rgba(255,255,255,.018)!important;border:1px solid rgba(137,173,190,.25)!important}
+.btn-ghost:hover{color:#e6f0f3!important;background:rgba(131,187,197,.045)!important;border-color:rgba(131,187,197,.4)!important;transform:translateY(-1px)}
+.filter-btn,.filter-btn.active{box-shadow:none!important}
+.filter-btn{border-color:rgba(137,173,190,.23)!important;color:#9db2bd!important}
+.filter-btn:hover{border-color:rgba(131,187,197,.42)!important;background:rgba(131,187,197,.045)!important}
+.filter-btn.active{background:rgba(131,187,197,.1)!important;border-color:rgba(131,187,197,.42)!important;color:#b4d9de!important}
+.home-card-link{color:#96c7ce!important}.home-card-link:hover{color:#d5b16f!important}
+.nav-invite{background:#2e7180!important;box-shadow:none!important}.nav-invite:hover{background:#397f8d!important;color:#fff!important;box-shadow:none!important}
+/* Critical fix: the global nav rule was pinning the lore table of contents over the viewport. */
+nav.lore-toc{
+ position:relative!important;inset:auto!important;z-index:1!important;width:100%!important;height:auto!important;min-height:0!important;
+ display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:stretch!important;justify-content:stretch!important;
+ gap:.65rem!important;margin:0 0 2.15rem!important;padding:0!important;background:transparent!important;backdrop-filter:none!important;
+ border:0!important;box-shadow:none!important;overflow:visible!important;
+}
+nav.lore-toc>a{
+ display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:.7rem!important;box-sizing:border-box!important;
+ width:100%!important;min-width:0!important;min-height:68px!important;height:100%!important;padding:.8rem .9rem!important;
+ border:1px solid var(--wiki-line)!important;border-radius:5px!important;background:#09141e!important;text-decoration:none!important;
+ transform:none!important;box-shadow:none!important;
+}
+nav.lore-toc>a:hover{background:#101f2b!important;border-color:rgba(131,187,197,.36)!important}
+.lore-toc-number{flex:0 0 1.3rem!important;color:#d5b16f!important;font:600 .72rem var(--font-mono)!important;text-align:center}
+.lore-toc-label{display:block!important;min-width:0!important;color:#c0d0d8!important;font:500 .87rem/1.35 var(--font-body)!important;letter-spacing:0!important;text-transform:none!important;overflow-wrap:anywhere!important}
+.lore-toc>a:last-child{grid-column:auto}
+.lore-toc,.lore-bloodline-grid,.lore-chapter-grid,.lore-awakening-grid{align-items:stretch}
+.lore-bloodline-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:.8rem!important}
+.lore-bloodline{height:100%;padding:1.1rem!important}
+.lore-bloodline h3{font-size:.86rem!important;line-height:1.4!important}
+.lore-bloodline p{font-size:.82rem!important;line-height:1.65!important}
+.lore-chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:1rem!important}
+.lore-chapter{height:100%;padding:1.4rem!important}
+.lore-chapter p{line-height:1.78!important}
+.lore-awakening-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:.9rem!important}
+.lore-awakening{height:100%;padding:1.2rem!important}
+.lore-prologue{gap:clamp(1rem,2.5vw,2rem)!important;border-radius:7px!important;background:#0a141e!important}
+.lore-section-head{align-items:flex-end!important;gap:1rem 2rem!important}
+.lore-section-note{max-width:300px!important}
+@media(max-width:1150px){.lore-bloodline-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:920px){
+ nav.lore-toc{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ nav.lore-toc>a:last-child{grid-column:1/-1}
+ .lore-bloodline-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .lore-awakening-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .lore-awakening:last-child{grid-column:1/-1}
+ .wiki-layout{gap:1rem}
+}
+@media(max-width:600px){
+ nav.lore-toc{grid-template-columns:minmax(0,1fr)!important;gap:.5rem!important;margin-bottom:1.7rem!important}
+ nav.lore-toc>a:last-child{grid-column:auto}
+ nav.lore-toc>a{min-height:54px!important;padding:.7rem .8rem!important}
+ .lore-toc-label{font-size:.9rem!important}
+ .lore-bloodline-grid,.lore-chapter-grid,.lore-awakening-grid{grid-template-columns:minmax(0,1fr)!important}
+ .lore-awakening:last-child{grid-column:auto}
+ .lore-prologue{padding:1.05rem!important}
+ .lore-hero{padding:1.25rem!important;border-radius:7px!important}
+ .lore-sigil-wrap{display:none!important}
+ .lore-title{max-width:100%!important;font-size:clamp(2rem,9vw,3.2rem)!important}
+ .lore-meta span{font-size:.57rem!important}
+ .lore-section-head{align-items:flex-start!important;flex-direction:column!important}
+ .lore-section-note{text-align:left!important}
+ .lore-chapter-top{align-items:flex-start!important;flex-wrap:wrap!important}
+ .lore-chapter-type{text-align:left!important}
+ .home-hero-panel{border-radius:8px!important}
+}
+@media(prefers-reduced-motion:reduce){.lore-chapter,.lore-toc a,.home-quick-card,.btn-primary,.btn-ghost{transition:none!important}}
+
 </style>
 </head>
 <body>
