@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOZ — Legends of the Rift | Discord RPG</title>
-<meta name="description" content="Enter the Rift in LOZ Version 6.3: master species, claim Glory, redeem UPDATE6.3, and count down to the Halloween update.">
+<meta name="description" content="Enter the Rift in LOZ Version 7.0v: level up, challenge Halloween bosses, collect Candies, and unlock seasonal rewards.">
 <meta name="theme-color" content="#100a17">
 <link rel="canonical" href="https://lozbot.vercel.app/">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LOZ — Legends of the Rift">
 <meta property="og:title" content="LOZ — Legends of the Rift">
-<meta property="og:description" content="LOZ Version 6.3: Halloween season is here. Explore the Rift, earn Glory, and count down to the seasonal update.">
+<meta property="og:description" content="LOZ Version 7.0v Halloween update: player leveling, Werewolf boss, Halloween Candies, limited Reaper shop stock, and server leaderboards.">
 <meta property="og:url" content="https://lozbot.vercel.app/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LOZ — Legends of the Rift">
-<meta name="twitter:description" content="LOZ Version 6.3: Halloween season is here. Explore the Rift, earn Glory, and count down to the seasonal update.">
+<meta name="twitter:description" content="LOZ Version 7.0v Halloween update: player leveling, Werewolf boss, Halloween Candies, limited Reaper shop stock, and server leaderboards.">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1051,7 +1051,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
 .halloween-board-head{display:flex;align-items:center;justify-content:space-between;gap:1.6rem;margin-bottom:1.5rem}.halloween-board-copy{min-width:0;max-width:780px}.halloween-kicker{display:flex;align-items:center;gap:.5rem;margin-bottom:.7rem;color:#ffad68;font:500 .61rem var(--font-mono);letter-spacing:.18em}.halloween-kicker span{color:#b7dc78}
 .halloween-board-copy h2{font:700 clamp(1.8rem,4.1vw,3.2rem)/1.12 var(--font-display);letter-spacing:-.025em;color:#fff0dc;margin:0 0 .65rem}.halloween-board-copy h2 em{font-style:normal;color:#ff9b4b}.halloween-board-copy p{max-width:730px;color:#c9b6ca;font-size:1rem;line-height:1.8;margin:0}
 .halloween-pumpkin{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;flex-shrink:0;width:135px;aspect-ratio:1;border-radius:50%;border:1px solid rgba(255,143,69,.28);background:radial-gradient(circle,rgba(255,143,69,.11),rgba(105,51,127,.11) 62%,transparent 64%);box-shadow:0 0 0 8px rgba(255,143,69,.025)}.halloween-pumpkin span{font-size:3.3rem;filter:drop-shadow(0 0 16px rgba(255,117,39,.25))}.halloween-pumpkin small{color:#c5e58e;font:500 .46rem var(--font-mono);letter-spacing:.14em}
-.halloween-countdown-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.halloween-timer-card{position:relative;min-width:0;overflow:hidden;padding:1.25rem;border:1px solid rgba(255,143,69,.22);border-radius:7px;background:linear-gradient(145deg,rgba(37,20,44,.94),rgba(20,13,27,.98))}
+.halloween-countdown-grid{display:grid;grid-template-columns:minmax(0,1fr);max-width:650px;margin:0 auto;gap:1rem}.halloween-timer-card{position:relative;min-width:0;overflow:hidden;padding:1.25rem;border:1px solid rgba(255,143,69,.22);border-radius:7px;background:linear-gradient(145deg,rgba(37,20,44,.94),rgba(20,13,27,.98))}
 .halloween-timer-card:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#ff9b4b,rgba(255,155,75,.05),#b7dc78);opacity:.8}.halloween-timer-night{background:linear-gradient(145deg,rgba(30,22,44,.96),rgba(17,14,26,.98));border-color:rgba(180,143,219,.25)}.halloween-timer-night:before{background:linear-gradient(90deg,#b89adb,rgba(184,154,219,.03),#b7dc78)}
 .halloween-timer-top{display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.95rem}.halloween-timer-type{color:#d5a778;font:500 .53rem var(--font-mono);letter-spacing:.13em}.halloween-timer-night .halloween-timer-type{color:#c4a7e5}.halloween-timer-status{color:#c4e58c;font:500 .48rem var(--font-mono);letter-spacing:.06em}
 .halloween-timer-card h3{color:#fff0dc;font:600 clamp(1rem,1.8vw,1.28rem)/1.3 var(--font-display);margin:0 0 .35rem}.halloween-timer-card p{color:#b9a6be;font-size:.83rem;line-height:1.6;margin:0 0 1.05rem}
@@ -1089,7 +1089,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
   <span class="halloween-ribbon-label" id="halloween-ribbon-label">THE VEIL LIFTS IN</span>
   <span class="halloween-ribbon-countdown" id="halloween-ribbon-countdown">Loading countdown…</span>
   <span class="halloween-ribbon-divider" aria-hidden="true"></span>
-  <span class="halloween-ribbon-note">LOZ 6.3 · OCT 22</span>
+  <span class="halloween-ribbon-note">LOZ 7.0v · HALLOWEEN</span>
   <button type="button" class="halloween-ribbon-link" onclick="showPage('patchnotes')">Read the release notes <span aria-hidden="true">↗</span></button>
 </div>
 
@@ -1097,7 +1097,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
 
 <!-- SIDEBAR -->
 <div class="sidebar" id="sidebar" aria-label="LOZ Wiki navigation">
-  <div class="wiki-sidebar-brand"><span class="wiki-sidebar-brand-mark">LOZ</span><div><strong>LEGENDS OF THE RIFT</strong><small>Community Wiki · v6.3</small></div></div>
+  <div class="wiki-sidebar-brand"><span class="wiki-sidebar-brand-mark">LOZ</span><div><strong>LEGENDS OF THE RIFT</strong><small>Community Wiki · v7.0v</small></div></div>
   <span class="sidebar-label">Discover</span><button class="nav-item active" data-page="home" onclick="showPage('home')"><span class="nav-icon">⌂</span>Wiki Home</button>
   <span class="sidebar-label">Guides</span><button class="nav-item" data-page="guide" onclick="showPage('guide')"><span class="nav-icon">✧</span>New Player Guide</button>
   <button class="nav-item" data-page="battles" onclick="showPage('battles')"><span class="nav-icon">⚔</span>Combat Guide</button>
@@ -1112,7 +1112,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
   <button class="nav-item" data-page="about" onclick="showPage('about')"><span class="nav-icon">♙</span>Creators</button>
   <span class="sidebar-label">Community</span><a href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Add LOZ to Discord</a>
   <a href="https://discord.gg/TKBYpjqnPC" target="_blank" rel="noopener noreferrer" class="nav-item"><span class="nav-icon">↗</span>Support Server</a>
-  <div class="wiki-sidebar-foot"><span class="wiki-status-dot"></span> The Rift is online <small>Documentation for LOZ v6.3 · Halloween season</small></div>
+  <div class="wiki-sidebar-foot"><span class="wiki-status-dot"></span> The Rift is online <small>Documentation for LOZ v7.0v · Halloween season</small></div>
 </div>
 
 <div class="main">
@@ -1122,7 +1122,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
 <div id="page-home" class="page active">
   <section class="home-hero-panel">
     <div class="home-hero-copy">
-      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 6.3 · HALLOWEEN SEASON</div>
+      <div class="hero-eyebrow"><span class="status-pip"></span> DISCORD RPG <span class="eyebrow-separator">/</span> VERSION 7.0v · HALLOWEEN SEASON</div>
       <div class="hero-logo" aria-label="LOZ"><span class="l">L</span><span class="o">O</span><span class="z">Z</span></div>
       <div class="hero-sub">Legends of the Rift</div>
       <h1 class="home-hero-title">The next legend could be <em>you.</em></h1>
@@ -1145,8 +1145,8 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
   <div class="hero-stats home-stat-grid">
     <div class="hstat"><span class="hstat-icon">✧</span><span class="hstat-num"><span class="a">25</span>+</span><span class="hstat-lbl">Species to Discover</span></div>
     <div class="hstat"><span class="hstat-icon">⚔</span><span class="hstat-num"><span class="a">05</span></span><span class="hstat-lbl">Battle Difficulties</span></div>
-    <div class="hstat"><span class="hstat-icon">🫧</span><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Slime Lord Spawn Chance</span></div>
-    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num">v<span class="a">6.3</span></span><span class="hstat-lbl">Latest Release</span></div>
+    <div class="hstat"><span class="hstat-icon">🫧</span><span class="hstat-num"><span class="a">7.5%</span></span><span class="hstat-lbl">Combined Boss Spawn Chance</span></div>
+    <div class="hstat"><span class="hstat-icon">◈</span><span class="hstat-num"><span class="a">7.0v</span></span><span class="hstat-lbl">Latest Release</span></div>
   </div>
 
 
@@ -1155,25 +1155,13 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
       <div class="halloween-board-copy">
         <div class="halloween-kicker"><span aria-hidden="true">✦</span> THE RIFT · HALLOWEEN SEASON 2026</div>
         <h2 id="halloween-event-title">Something stirs <em>in the dark.</em></h2>
-        <p>The veil is thinning. Prepare your species, complete your trials, and keep watch for the Halloween update. Two live clocks track the next release and Halloween night.</p>
+        <p>The veil is open. Train your species, challenge the Halloween bosses, and collect Candies before the season ends. The live clock now tracks Halloween night.</p>
       </div>
       <div class="halloween-pumpkin" aria-hidden="true"><span>🎃</span><small>WATCH THE RIFT</small></div>
     </div>
     <div class="halloween-countdown-grid">
-      <article class="halloween-timer-card halloween-timer-update" data-countdown-target="2026-10-22T22:00:00+05:30" data-countdown-title="Halloween Update">
-        <div class="halloween-timer-top"><span class="halloween-timer-type">01 / RELEASE NIGHT</span><span class="halloween-timer-status">COUNTING DOWN</span></div>
-        <h3>LOZ 6.3 · Halloween Update</h3>
-        <p>Thursday, October 22 · midnight IST</p>
-        <div class="halloween-digits" aria-label="Time remaining until the Halloween update">
-          <div class="halloween-digit"><strong data-countdown-unit="days">00</strong><span>DAYS</span></div>
-          <div class="halloween-digit"><strong data-countdown-unit="hours">00</strong><span>HRS</span></div>
-          <div class="halloween-digit"><strong data-countdown-unit="minutes">00</strong><span>MIN</span></div>
-          <div class="halloween-digit"><strong data-countdown-unit="seconds">00</strong><span>SEC</span></div>
-        </div>
-        <div class="halloween-timer-footer"><span>THE PORTAL OPENS</span><span data-countdown-end>October 22, 2026</span></div>
-      </article>
       <article class="halloween-timer-card halloween-timer-night" data-countdown-target="2026-10-31T00:00:00+05:30" data-countdown-title="Halloween Night">
-        <div class="halloween-timer-top"><span class="halloween-timer-type">02 / ALL HALLOWS' EVE</span><span class="halloween-timer-status">COUNTING DOWN</span></div>
+        <div class="halloween-timer-top"><span class="halloween-timer-type">01 / ALL HALLOWS' EVE</span><span class="halloween-timer-status">COUNTING DOWN</span></div>
         <h3>Halloween Night</h3>
         <p>Saturday, October 31 · midnight IST</p>
         <div class="halloween-digits" aria-label="Time remaining until Halloween night">
@@ -1186,8 +1174,8 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
       </article>
     </div>
     <div class="halloween-board-foot">
-      <div><span class="halloween-code-label">SEASONAL REWARD</span><strong><code>UPDATE6.3</code> · 🎲 3 Species Rolls</strong><p>Redeem it with <code>/codes redeem</code>. One claim per player; 24-hour code expiry.</p></div>
-      <button class="btn-primary halloween-notes-button" onclick="showPage('patchnotes')">Read Version 6.3 <span aria-hidden="true">↗</span></button>
+      <div><span class="halloween-code-label">SEASONAL REWARD</span><strong><code>HALLOWEEN</code> · <span class="candies-emoji">🍬</span> 250 Candies + 🎲 5 Species Rolls</strong><p>Redeem it with <code>/codes redeem</code>. One claim per player before November 1, 2026 at 12:00 AM IST.</p></div>
+      <button class="btn-primary halloween-notes-button" onclick="showPage('patchnotes')">Read Version 7.0v <span aria-hidden="true">↗</span></button>
     </div>
   </section>
   <div class="home-section-heading reveal">
@@ -1209,7 +1197,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
     </article>
     <article class="home-quick-card quick-patch reveal">
       <div class="quick-card-top"><div class="home-quick-icon">✦</div><span class="quick-card-number">03 / CURRENT</span></div>
-      <div class="home-version-pill"><span class="status-pip"></span> CURRENT RELEASE · v6.3</div>
+      <div class="home-version-pill"><span class="status-pip"></span> CURRENT RELEASE · v7.0v</div>
       <h2>Glory &amp; True Dragon</h2>
       <p>Earn Glory through milestones and species mastery, awaken all four elemental Dragons to unlock True Dragon, and track the Rift’s latest changes.</p>
       <button class="home-card-link" onclick="showPage('patchnotes')">Read the Patch Notes <span>→</span></button>
@@ -1225,7 +1213,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
 
 <!-- NEW PLAYER GUIDE -->
 <div id="page-guide" class="page">
-  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 6.3</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
+  <div class="page-header"><div class="page-eyebrow">Field Guide / Edition 7.0v</div><h1 class="page-title">New Player Guide</h1><div class="glow-line"></div><p class="page-desc">Your first steps in Legends of the Rift, built around the actual commands, rewards, battle rules, and awakening paths in the bot.</p></div>
   <section class="guide-hero reveal">
     <div class="guide-hero-main"><div class="guide-kicker">Recruit's briefing · Begin here</div><h2>Before you chase legends, learn how to <em>survive.</em></h2><p>LOZ is a turn-based Discord RPG. Start by running /guide: it is a seven-page interactive tutorial. Click Next Page through the lessons, then press Complete Tutorial to claim +1 Species Roll once. Use this website as a visual reference whenever you need a refresher.</p><div class="guide-hero-actions"><a class="btn-primary" href="https://discord.com/oauth2/authorize?client_id=1470164310339616938" target="_blank" rel="noopener noreferrer">Add LOZ to Discord</a><button class="btn-ghost" onclick="showPage('commands')">Full Command List</button></div></div>
     <aside class="guide-reward-card"><div class="guide-reward-top"><span>Starter Benefits</span><span class="guide-reward-seal">✦</span></div><div><div class="guide-reward-title">Start with resources, not guesswork.</div><p class="guide-reward-copy">You can earn rolls without spending money. Use these starting rewards before grinding battles.</p><div class="guide-reward-line"><span>Daily claim</span><strong>+1 ROLL</strong></div><div class="guide-reward-line"><span>7-day daily streak</span><strong>+1 BONUS</strong></div><div class="guide-reward-line"><span>Complete /guide once</span><strong>+1 ROLL</strong></div></div><div class="guide-reward-copy">Daily claims have a 24-hour cooldown. The tutorial reward is one-time only.</div></aside>
@@ -1243,7 +1231,7 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
     <article class="guide-step reveal"><div class="guide-step-number">06</div><div class="guide-step-content"><div class="guide-step-topline"><span class="guide-step-tag">Know your record</span><span>Help & rankings</span></div><h3>Track results and find commands</h3><p><code>/help</code> has six paginated categories. Use <code>/fight stats</code> and <code>/history</code> for combined PvP/bot statistics and recent battles. <code>/leaderboard</code> supports Fight Wins, Species Rolls, and Glory.</p><div class="guide-command-list"><div class="guide-command"><code>/help</code><button class="command-copy" onclick="copyGuideCommand('/help', this)">Copy</button></div><div class="guide-command"><code>/fight stats</code><button class="command-copy" onclick="copyGuideCommand('/fight stats', this)">Copy</button></div><div class="guide-command"><code>/leaderboard</code><button class="command-copy" onclick="copyGuideCommand('/leaderboard', this)">Copy</button></div></div></div></article>
   </div>
 
-  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 6.3 · The Halloween reward code</h3><p>Redeem <code>UPDATE6.3</code> through <code>/codes redeem</code> for <strong>3 Species Rolls</strong>. The code expires 24 hours after its creation and has unlimited uses, but each player can redeem it only once. New owner-generated codes can award a second prize, use a duration from seconds to years, or be permanent.</p></div></div>
+  <div class="guide-callout reveal"><div class="guide-callout-icon">⏱</div><div><h3>Version 7.0v · The Halloween reward code</h3><p>Redeem <code>HALLOWEEN</code> through <code>/codes redeem</code> for <strong>250 Candies and 5 Species Rolls</strong>. Each player can redeem it once before November 1, 2026 at 12:00 AM IST. The Halloween shop uses Candies to buy Species Rolls, Species Tokens, or a limited-stock permanent Reaper unlock.</p></div></div>
 
   <div class="guide-section-label">02 / Choose a battle that fits</div><p class="guide-section-intro">Winning a bot fight earns Fight Wins leaderboard points. Higher difficulties also offer a chance to earn a Species Roll, while Brutal guarantees one on a genuine victory.</p>
   <div class="guide-difficulty-grid">
@@ -1800,10 +1788,10 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
 <!-- COMMANDS -->
 <div id="page-commands" class="page">
   <div class="page-header">
-    <div class="page-eyebrow">Live command reference · Version 6.3</div>
+    <div class="page-eyebrow">Live command reference · Version 7.0v</div>
     <h1 class="page-title">Commands</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Current slash-command reference for LOZ Version 6.3. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
+    <p class="page-desc">Current slash-command reference for LOZ Version 7.0v. Legacy text-prefix commands have been removed. Restricted tools are enforced by LOZ even when Discord displays the command.</p>
   </div>
 
   <div class="cmd-cat reveal"><span>🚀</span> Getting Started</div>
@@ -1952,12 +1940,27 @@ button:focus-visible,a:focus-visible{outline-color:#b7dc78!important}
     <div class="page-eyebrow">Changelog</div>
     <h1 class="page-title">Patch Notes</h1>
     <div class="glow-line"></div>
-    <p class="page-desc">Version 6.3 · October 19, 2026. The Rift takes on a Halloween-season appearance; earlier release notes remain preserved below.</p>
+    <p class="page-desc">Version 7.0v · October 22, 2026. Halloween progression, bosses, shop, and combat balance; previous release history remains preserved below.</p>
   </div>
   <div class="patch-list">
     
     <div class="patch-card open reveal">
-      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 6.3</span></div><div class="patch-meta"><span class="pdate">2026-10-19</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="platest">LATEST</span><span class="pver">Version 7.0v</span></div><div class="patch-meta"><span class="pdate">2026-10-22</span><span class="ptoggle">▾</span></div></div>
+      <div class="patch-body">
+        <div class="patch-item">⭐ <strong>Player leveling:</strong> Levels are capped at 500, and every level requires exactly 100 XP. Eligible bot and PvP battles grant XP based on difficulty, result, and fight length. Level-up messages rotate through 15 variants, are sent by DM when possible, and fall back to the battle channel.</div>
+        <div class="patch-item">🎁 <strong>Level rewards:</strong> Every 5th level grants a Species Roll, every 25th level grants a Species Token, and each level-up grants 5 Halloween Candies while the event is active. Candy rewards end on November 1, 2026 at 12:00 AM IST.</div>
+        <div class="patch-item">🐺 <strong>Halloween bosses:</strong> Winning a Medium-or-higher bot fight has a 7.5% combined boss spawn chance. A spawned boss is Slime Lord 60% of the time or Werewolf 40% of the time. Boss stats scale with the triggering difficulty. A confirmed Werewolf victory has a separate 5% chance to permanently unlock the playable Werewolf.</div>
+        <div class="patch-item">🌕 <strong>Werewolf:</strong> Added the damage-focused Halloween species with 125 HP, 24–36 ATK, 12–20 HEAL, 14% crit chance, and a 10-round ultimate cooldown. Blood Moon Frenzy empowers two attacks at or below 50% HP; Lunar Rend deals 1.8× damage and applies 4 Bleed damage for two ticks.</div>
+        <div class="patch-item">🍬 <strong>Halloween Candy Shop:</strong> Use <code>/events shop</code>. Species Rolls cost 50 Candies and restock per player every hour (5–50 in stock). Species Tokens cost 1,000 Candies and have a 15% chance to restock at 1–3. Reaper costs 2,250 Candies and is limited to 50 globally; the Reaper stock never resets. Purchases require confirmation and are checked against current balances and stock.</div>
+        <div class="patch-item">🎟️ <strong>Seasonal code:</strong> <code>HALLOWEEN</code> grants 250 Candies and 5 Species Rolls. Each player can redeem it once before November 1, 2026 at 12:00 AM IST.</div>
+        <div class="patch-item">🏆 <strong>Leaderboards:</strong> Added the Player Level leaderboard and a Global/Server scope option. PvP progression rewards are limited to three eligible fights per opponent pair per day to reduce reward farming.</div>
+        <div class="patch-item">⚖️ <strong>Combat balance:</strong> Archdemon ATK is now 16–22; Thunder Dragon no longer receives a 1.4× ultimate damage multiplier alongside its two-turn paralysis; Earth Dragon's Terra Strike is 1.4× and Terra Shield blocks 90% of the next hit; Half-Blood gains 5 HP; Ice Dragon gains 2 ATK at both ends; True Dragon drops to 175 HP; and Goblin ATK increases to 10–16.</div>
+        <div class="patch-item">💥 <strong>Criticals and unlocks:</strong> Added critical-hit profiles to eligible species that lacked one. God now deals damage equal to 50% of the opponent's maximum HP and heals 50% of its own maximum HP, and God is available to Species Token users. Reaper gains 10 HP and its non-execution ultimate now correctly applies its 1.7× attack and 50% ultimate life-steal.</div>
+        <div class="patch-item">🛡️ <strong>Data safety:</strong> Progression, Candy balances, shop stock, reward receipts, and boss unlocks use additive persistent records. Existing player data and the existing Slime Lord difficulty table are preserved.</div>
+      </div>
+    </div>
+    <div class="patch-card open reveal">
+      <div class="patch-header" onclick="togglePatch(this)"><div class="pvwrap"><span class="pver">Version 6.3</span></div><div class="patch-meta"><span class="pdate">2026-10-19</span><span class="ptoggle">▾</span></div></div>
       <div class="patch-body">
         <div class="patch-item">🎃 <strong>Halloween season is live on the LOZ Wiki.</strong> The October 22 update and October 31 Halloween night each have a live countdown on the homepage.</div>
         <div class="patch-item">💬 Mention help now triggers only when the LOZ mention starts the message, and its help card is shorter.</div>
